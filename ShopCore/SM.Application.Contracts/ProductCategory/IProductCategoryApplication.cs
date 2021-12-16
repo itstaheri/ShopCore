@@ -13,5 +13,8 @@ namespace SM.Application.Contracts.ProductCategory
         EditProductCategory GetIdForEdit(long id);
         List<ProductCategoryViewModel> SearchByNames(SearchProductCategoryByName commend);
         ProductCategoryViewModel GetBy(long id);
+        void Delete(long id);
+        void Active(long id);
+    
     }
 }

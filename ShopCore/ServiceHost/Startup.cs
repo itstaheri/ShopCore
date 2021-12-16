@@ -1,3 +1,5 @@
+using DM.Configuration;
+using DM.infrastructure.Efcore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -21,16 +23,15 @@ namespace ServiceHost
 
         public IConfiguration Configuration { get; }
 
-        //Connection String
         string ConnectionString = "Data Source =.; Initial Catalog = ShopCoreDB; Integrated Security = true";
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
             ShopBootestrapper.Configuration(services, ConnectionString);
+            DiscountBootestrapper.Configuration(services, ConnectionString);
         }
 
-        // This method gets ca  lled by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -40,7 +41,6 @@ namespace ServiceHost
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -54,6 +54,7 @@ namespace ServiceHost
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }

@@ -1,0 +1,18 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Shop.ProductCategories.EditModel
+@{
+}
+
+<h1>ویرایش گروه</h1>
+
+<form action="" method="post">
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">نام گروه</label>
+        <input value="@Model.productCategory.CategoryName" type="text" class="form-control" id="CategoryName" name="CategoryName" placeholder="نام گروه را وارد کنید ...">
+        <label for="exampleInputEmail1">Slug </label>
+        <input type="text" class="form-control" id="Slug" name="Slug" />
+
+    </div>
+    <button type="submit" class="success">ویرایش</button>
+</form>

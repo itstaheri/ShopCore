@@ -18,3 +18,9 @@ D:\ShopCore\ShopCore\SM.Infrastructure.EfCore\obj\Debug\net5.0\SM.Infrastructure
 D:\ShopCore\ShopCore\SM.Infrastructure.EfCore\obj\Debug\net5.0\ref\SM.Infrastructure.EfCore.dll
 D:\ShopCore\ShopCore\SM.Infrastructure.EfCore\obj\Debug\net5.0\SM.Infrastructure.EfCore.pdb
 D:\ShopCore\ShopCore\SM.Infrastructure.EfCore\obj\Debug\net5.0\SM.Infrastructure.EfCore.genruntimeconfig.cache
+D:\ShopCore\ShopCore\SM.Infrastructure.EfCore\bin\Debug\net5.0\DM.Application.Contract.dll
+D:\ShopCore\ShopCore\SM.Infrastructure.EfCore\bin\Debug\net5.0\DM.Domain.dll
+D:\ShopCore\ShopCore\SM.Infrastructure.EfCore\bin\Debug\net5.0\DM.infrastructure.Efcore.dll
+D:\ShopCore\ShopCore\SM.Infrastructure.EfCore\bin\Debug\net5.0\DM.infrastructure.Efcore.pdb
+D:\ShopCore\ShopCore\SM.Infrastructure.EfCore\bin\Debug\net5.0\DM.Application.Contract.pdb
+D:\ShopCore\ShopCore\SM.Infrastructure.EfCore\bin\Debug\net5.0\DM.Domain.pdb

@@ -1,0 +1,39 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Shop.Sliders.ShopSlider.EditModel
+@{
+}
+
+<div class="panel-heading"><h3 class="panel-title">ویرایش اسلایدر</h3></div>
+<div class="panel-body">
+    <div class=" form">
+        <form action="" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-Title" id="Title" name="Title" value="@Model.Slider.Title" />
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <input type="text" class="form-Title" id="Description" name="Description" value="@Model.Slider.Description"/>
+            </div>
+            <div class="form-group">
+                <label>Url</label>
+                <input type="text" class="form-control" id="Url" name="Url" value="@Model.Slider.Url" />
+            </div>
+            <div class="form-group">
+                <label>ButtonText</label>
+                <input type="text" class="form-control" id="ButtonText" name="ButtonText" value="@Model.Slider.ButtonText" />
+            </div>
+            <div class="form-group">
+                <label>PictureAlt</label>
+                <input type="text" class="form-control" id="PictureAlt" name="PictureAlt" value="@Model.Slider.PictureAlt" />
+            </div>
+
+            <div class="form-group">
+                <label>بارگذاری تصویر</label>
+                <input type="file" class="form-control" id="Picture" name="Picture" />
+            </div>
+            <button type="submit" class="btn-success">ویرایش</button>
+        </form>
+    </div>
+</div>

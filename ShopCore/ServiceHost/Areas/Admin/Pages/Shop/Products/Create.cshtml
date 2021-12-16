@@ -1,0 +1,161 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Shop.Products.CreateModel
+@{
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading"><h3 class="panel-title">ایجاد محصول</h3></div>
+    <div class="panel-body">
+        <div class=" form">
+            <form action="" method="post" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label>ProductName</label>
+                    <input type="text" class="form-control" id="ProductName" name="ProductName" />
+                </div>
+                <div class="form-group">
+                    <label>ProductCode</label>
+                    <input type="text" class="form-control" id="ProductCode" name="ProductCode" />
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" class="form-control" id="Description" name="Description" />
+                </div>
+                <div class="form-group">
+                    <label>ShortDescription</label>
+                    <input type="text" class="form-control" id="ShortDescription" name="ShortDescription" />
+                </div>
+                <div class="form-group">
+                    <label>QuantityInStock</label>
+                    <input type="number" class="form-control" id="QuantityInStock" name="QuantityInStock" />
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" id="Price" name="Price" />
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-body">
+                                    <div class="card" style="width: 40rem;">
+                                        <div class="card-header">سئو</div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>PictureTitle</label>
+                                                    <input type="text" class="form-control" id="PictureTitle" name="PictureTitle" />
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>PictureAlt</label>
+                                                    <input type="text" class="form-control" id="PictureAlt" name="PictureAlt" />
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>Slug</label>
+                                                    <input type="text" class="form-control" id="Slug" name="Slug" />
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>Keywoard</label>
+                                                    <input type="text" class="form-control" id="Keywoard" name="Keywoard" />
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>MetaDescription</label>
+                                                    <input type="text" class="form-control" id="MetaDescription" name="MetaDescription" />
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="card" style="width: 40rem;">
+                                        <div class="card-header">مشخصات موبایل</div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>Storage</label>
+                                                    <input type="text" class="form-control" id="Storage" name="Storage" />
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>ScreenSize</label>
+                                                    <input type="text" class="form-control" id="ScreenSize" name="ScreenSize" />
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>NetworkSupport</label>
+                                                    <input type="text" class="form-control" id="NetworkSupport" name="NetworkSupport" />
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>OperatingSystem</label>
+                                                    <input type="text" class="form-control" id="OperatingSystem" name="OperatingSystem" />
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>Resolution</label>
+                                                    <input type="text" class="form-control" id="Resolution" name="Resolution" />
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>Ram</label>
+                                                    <input type="text" class="form-control" id="Ram" name="Ram" />
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-group">
+                                                    <label>TouchId</label>
+                                                    <input type="text" class="form-control" id="TouchId" name="TouchId" />
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>بارگذاری تصویر اصلی</label>
+                    <input type="file" class="form-control" id="OriginalImage" name="OriginalImage" />
+                </div>
+
+                <div class="form-group">
+                    <label>بارگذاری کاتالوگ </label>
+                    <input type="file" class="form-control" id="CatalogeImages" name="CatalogeImages" multiple />
+                </div>
+
+
+                <div class="form-group">
+                    <label>
+                        انتخاب گروه
+                    </label>
+                    <select asp-items="Model.ProductCategories" name="CategoryId" id="CategoryId" class="form-control">
+                        <option value="0">انتخاب گروه</option>
+                    </select>
+                </div>
+
+
+                <button type="submit">ایجاد</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+

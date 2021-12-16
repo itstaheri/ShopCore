@@ -1,0 +1,17 @@
+D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.Application.deps.json
+D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.Application.dll
+D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\ref\DM.Application.dll
+D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.Application.pdb
+D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\DM.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\DM.Application.AssemblyInfoInputs.cache
+D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\DM.Application.AssemblyInfo.cs
+D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\DM.Application.csproj.CoreCompileInputs.cache
+D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\DM.Application.dll
+D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\ref\DM.Application.dll
+D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\DM.Application.pdb
+D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.Application.Contract.dll
+D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.Application.Contract.pdb
+D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\DM.Application.csprojAssemblyReference.cache
+D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\DM.Application.csproj.CopyComplete
+D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.Domain.dll
+D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.Domain.pdb

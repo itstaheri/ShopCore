@@ -1,0 +1,24 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Shop.ProductCategories.CreateModel
+@{
+}
+
+<h1>ایجاد گروه</h1>
+
+<form action="" method="post">
+
+    <div class="form-group">
+        <div asp-validation-summary="ModelOnly"></div>
+        <label for="exampleInputEmail1">نام گروه</label>
+        <input type="text" class="form-control" id="CategoryName" name="CategoryName" placeholder="نام گروه را وارد کنید ...">
+        <span asp-validation-for="@Model.Pcategory.CategoryName" class="text-danger"></span>
+        <input type="text" class="form-control" id="Slug" name="Slug">
+        <span asp-validation-for="@Model.Pcategory" class="text-danger"></span>
+
+    </div>
+    <button type="submit" class="success">ایجاد</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

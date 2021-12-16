@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DM.Domain/1.0.0": {
+        "dependencies": {
+          "DM.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "DM.Domain.dll": {}
+        }
+      },
+      "DM.Application.Contract/1.0.0": {
+        "runtime": {
+          "DM.Application.Contract.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DM.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

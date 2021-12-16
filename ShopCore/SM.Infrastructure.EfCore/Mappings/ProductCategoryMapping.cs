@@ -14,8 +14,8 @@ namespace SM.Infrastructure.EfCore.Mappings
         public void Configure(EntityTypeBuilder<ProductCategoryModel> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.CategoryName).IsRequired().HasMaxLength(255);
-
+            builder.Property(x => x.CategoryName);
+            builder.HasMany(x => x.products).WithOne(x => x.productcategory).HasForeignKey(x => x.CategoryId);
         }
     }
 }

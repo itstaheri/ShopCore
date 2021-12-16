@@ -1,0 +1,47 @@
+﻿using DM.Application;
+using DM.Application.Contract.CustomerDiscount;
+using DM.Domain.CustomerDiscount;
+using DM.infrastructure.Efcore.Repositories;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Query.Contract.Productcategory;
+using Query.Contract.Slider;
+using Query.Quary;
+using SM.Application;
+using SM.Application.Contracts.Product;
+using SM.Application.Contracts.ProductCategory;
+using SM.Application.Contracts.Slider;
+using SM.Domain.Product;
+using SM.Domain.ProductCategory;
+using SM.Domain.Sliders;
+using SM.Infrastructure.EfCore;
+using SM.Infrastructure.EfCore.Repositories;
+using System;
+
+namespace EfCore
+{
+    public class Bootestrapper
+    {
+        public static void Configuration(IServiceCollection service, string connectionstring)
+        {
+            service.AddTransient<IProductCategoryApplication, ProductCategoryApplication>();
+            service.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+
+            service.AddDbContext<ShopContext>(x => { x.UseSqlServer(connectionstring); });
+
+            service.AddTransient<IProductApplication, ProductAppication>();
+            service.AddTransient<IProductRepository, ProductRepository>();
+
+            service.AddTransient<IShopSliderRepository, ShopSliderRepository>();
+            service.AddTransient<IShopSliderApplication, ShopSliderApplication>();
+
+            service.AddTransient<IProductcategoryQuery, ProductCategoryQuery>();
+            service.AddTransient<ISliderQuary, SliderQuary>();
+
+            service.AddTransient<ICustomerDiscountRepository, CustomerDiscountRepository>();
+            service.AddTransient<ICustomerDiscountApplication, CustomerDiscountApplication>();
+        }
+       
+
+    }
+}

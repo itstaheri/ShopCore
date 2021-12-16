@@ -14,6 +14,7 @@ namespace SM.Domain.ProductCategory
         ProductCategoryModel Get(long id);
         bool ExistByName(string Name);
         List<ProductCategoryViewModel> SearchByNames(SearchProductCategoryByName commend);
-        void Save();    
+        void Save();
+       // List<ProductCategoryModel> List();
     }
 }

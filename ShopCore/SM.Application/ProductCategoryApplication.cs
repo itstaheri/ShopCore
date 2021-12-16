@@ -16,6 +16,13 @@ namespace SM.Application
             _repository = repository;
         }
 
+        public void Active(long id)
+        {
+            var ProductCategory = _repository.Get(id);
+            ProductCategory.Active();
+            _repository.Save();
+        }
+
         public void Create(CreateProductCategory commend)
         {
             if (_repository.ExistByName(commend.CategoryName))
@@ -29,7 +36,12 @@ namespace SM.Application
             }
         }
 
-      
+        public void Delete(long id)
+        {
+            var ProductCategory = _repository.Get(id);
+            ProductCategory.Deleted();
+            _repository.Save();
+        }
 
         public void Edit(EditProductCategory commend)
         {
@@ -37,6 +49,8 @@ namespace SM.Application
             productcategory.Edit(commend.CategoryName, commend.Slug);
             _repository.Save();
         }
+
+   
 
         public ProductCategoryViewModel GetBy(long id)
         {

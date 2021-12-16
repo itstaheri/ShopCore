@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Frameworks;
 namespace SM.Infrastructure.EfCore.Repositories
 {
     public class ProductCategoryRepository : IProductCategoryRepository
@@ -50,15 +50,19 @@ namespace SM.Infrastructure.EfCore.Repositories
             var query = _context.productcategories.Select(x => new ProductCategoryViewModel
             {
                 id = x.Id,
-                CreationDate = x.CreationDate,
+                CreationDate = x.CreationDate.ToFarsi(),
                 CategoryName = x.CategoryName,
-                Slug = x.Slug
-            });
-            if (!string.IsNullOrEmpty(commend.Name))
-            {
-                query = query.Where(x => x.CategoryName.Contains(commend.Name));
+                Slug = x.Slug,
+                Isdeleted = x.IsDeleted,
+                ProductCount = x.products.Count()
 
-            }
+                
+            });
+            if (!string.IsNullOrEmpty(commend.Name))            
+                query = query.Where(x => x.CategoryName.Contains(commend.Name));
+            
+          
+            
             return query.OrderByDescending(x => x.id).ToList();
 
         }
