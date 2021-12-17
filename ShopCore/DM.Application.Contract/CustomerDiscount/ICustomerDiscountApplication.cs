@@ -11,7 +11,7 @@ namespace DM.Application.Contract.CustomerDiscount
         void Create(CreateCustomerDiscount commend);
         void Edit(EditCustomerDiscount commend);
         EditCustomerDiscount GetValueForEdit(long id);
-        List<CustomerDiscountViewmodel> GetAll();
+        List<CustomerDiscountViewmodel> GetAll(SearchCustomerDiscount x);
         
     }
 }

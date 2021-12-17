@@ -15,7 +15,7 @@
 
   
 
-
+    <link href="~/AdminTheme/assets/css/persian-datepicker.min.css" rel="stylesheet" />
     <link href="~/AdminTheme/css/animate.css" rel="stylesheet" />
     <link href="~/AdminTheme/css/bootstrap-theme.css" rel="stylesheet" />
     <link href="~/AdminTheme/css/bootstrap.css" rel="stylesheet" />
@@ -336,6 +336,8 @@
     <!-- CUSTOM JS -->
     <script src="~/AdminTheme/js/jquery.app.js"></script>
 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
     <!-- Dashboard -->
     <script src="~/AdminTheme/js/jquery.dashboard.js"></script>
 
@@ -349,6 +351,10 @@
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
+    <!--Persian Date Picker-->
+    <script src="~/AdminTheme/assets/js/persian-date.min.js"></script>
+    <script src="~/AdminTheme/assets/js/persian-datepicker.min.js"></script>
+
 
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
@@ -356,7 +362,14 @@
 
     @RenderSection("Scripts", false)
 
+    <script>
 
+        $('.PersianDateInput').persianDatepicker({
+
+            format: 'YYYY/MM/DD',
+            autoClose: true
+        });
+    </script>
 
 </body>
 </html>

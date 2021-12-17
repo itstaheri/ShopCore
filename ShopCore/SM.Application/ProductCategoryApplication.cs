@@ -58,7 +58,7 @@ namespace SM.Application
             return new ProductCategoryViewModel
             {
                 id = Pcategory.Id,
-                CreationDate = Pcategory.CreationDate,
+                CreationDate = Pcategory.CreationDate.ToString(),
                 CategoryName = Pcategory.CategoryName
             };
         }

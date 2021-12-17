@@ -186,3 +186,7 @@ D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\DM.Application.pdb
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\DM.Application.Contract.pdb
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\DM.Domain.pdb
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\DM.infrastructure.Efcore.pdb
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\Frameworks.dll
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\Frameworks.pdb
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\CustomerDiscount\Create.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\CustomerDiscount\Index.cshtml.g.cs

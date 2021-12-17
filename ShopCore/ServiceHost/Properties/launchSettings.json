@@ -24,7 +24,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
 
-      "launchUrl": "https://localhost:5001/"
+      "launchUrl": "https://localhost:5001/admin/shop/customerdiscount"
 
     }
   }

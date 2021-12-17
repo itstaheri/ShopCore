@@ -30,8 +30,8 @@ namespace DM.Application
             discount.Edit(commend.ProductId, commend.DiscountRate, commend.Start.ToGeorgianDateTime(), commend.End.ToGeorgianDateTime(),commend.reason);
             _repository.Save();
         }
-        SearchCustomerDiscount x;
-        public List<CustomerDiscountViewmodel> GetAll()
+      
+        public List<CustomerDiscountViewmodel> GetAll(SearchCustomerDiscount x)
         {
             return _repository.GetBy(x);
         }

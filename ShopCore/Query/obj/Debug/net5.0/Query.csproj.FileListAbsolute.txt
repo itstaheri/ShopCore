@@ -23,3 +23,5 @@ D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\DM.infrastructure.Efcore.dll
 D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\DM.Application.Contract.pdb
 D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\DM.Domain.pdb
 D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\DM.infrastructure.Efcore.pdb
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\Frameworks.dll
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\Frameworks.pdb

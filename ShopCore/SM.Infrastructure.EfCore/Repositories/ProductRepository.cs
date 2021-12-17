@@ -43,12 +43,14 @@ namespace SM.Infrastructure.EfCore.Repositories
                 IsDeleted = x.IsDeleted
                 
             });
-            if (!string.IsNullOrWhiteSpace(commend.Name))            
-                query = query.Where(x => x.ProductName.Contains(commend.Name));
-            if (!string.IsNullOrWhiteSpace(commend.Code))
+            if (commend!=null)
             {
-                query = query.Where(x => x.ProductCode.Contains(commend.Code));
+                if (!string.IsNullOrWhiteSpace(commend.Name))
+                    query = query.Where(x => x.ProductName.Contains(commend.Name));
+                if (!string.IsNullOrWhiteSpace(commend.Code) && commend != null)
+                    query = query.Where(x => x.ProductCode.Contains(commend.Code));
             }
+
             return query.ToList();
 
             

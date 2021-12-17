@@ -1073,6 +1073,7 @@
       "DM.infrastructure.Efcore/1.0.0": {
         "dependencies": {
           "DM.Domain": "1.0.0",
+          "Frameworks": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
@@ -1080,6 +1081,11 @@
         },
         "runtime": {
           "DM.infrastructure.Efcore.dll": {}
+        }
+      },
+      "Frameworks/1.0.0": {
+        "runtime": {
+          "Frameworks.dll": {}
         }
       },
       "Query/1.0.0": {
@@ -1118,6 +1124,7 @@
       "SM.Infrastructure.EfCore/1.0.0": {
         "dependencies": {
           "DM.infrastructure.Efcore": "1.0.0",
+          "Frameworks": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
@@ -1818,6 +1825,11 @@
       "sha512": ""
     },
     "DM.infrastructure.Efcore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Frameworks/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

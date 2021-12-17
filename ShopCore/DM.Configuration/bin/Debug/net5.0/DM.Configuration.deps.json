@@ -1058,7 +1058,10 @@
       "DM.Application/1.0.0": {
         "dependencies": {
           "DM.Application.Contract": "1.0.0",
-          "DM.Domain": "1.0.0"
+          "DM.Domain": "1.0.0",
+          "Frameworks": "1.0.0",
+          "SM.Application.Contracts": "1.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
         },
         "runtime": {
           "DM.Application.dll": {}
@@ -1080,6 +1083,7 @@
       "DM.infrastructure.Efcore/1.0.0": {
         "dependencies": {
           "DM.Domain": "1.0.0",
+          "Frameworks": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
@@ -1089,12 +1093,38 @@
           "DM.infrastructure.Efcore.dll": {}
         }
       },
+      "Frameworks/1.0.0": {
+        "runtime": {
+          "Frameworks.dll": {}
+        }
+      },
       "SM.Application.Contracts/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.12"
         },
         "runtime": {
           "SM.Application.Contracts.dll": {}
+        }
+      },
+      "SM.Domain/1.0.0": {
+        "dependencies": {
+          "SM.Application.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "SM.Domain.dll": {}
+        }
+      },
+      "SM.Infrastructure.EfCore/1.0.0": {
+        "dependencies": {
+          "DM.infrastructure.Efcore": "1.0.0",
+          "Frameworks": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "SM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SM.Infrastructure.EfCore.dll": {}
         }
       }
     }
@@ -1797,7 +1827,22 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Frameworks/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "SM.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SM.Infrastructure.EfCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

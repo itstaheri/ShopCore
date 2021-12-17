@@ -20,3 +20,5 @@ D:\ShopCore\ShopCore\DM.infrastructure.Efcore\obj\Debug\net5.0\DM.infrastructure
 D:\ShopCore\ShopCore\DM.infrastructure.Efcore\obj\Debug\net5.0\DM.infrastructure.Efcore.genruntimeconfig.cache
 D:\ShopCore\ShopCore\DM.infrastructure.Efcore\bin\Debug\net5.0\SM.Application.Contracts.dll
 D:\ShopCore\ShopCore\DM.infrastructure.Efcore\bin\Debug\net5.0\SM.Application.Contracts.pdb
+D:\ShopCore\ShopCore\DM.infrastructure.Efcore\bin\Debug\net5.0\Frameworks.dll
+D:\ShopCore\ShopCore\DM.infrastructure.Efcore\bin\Debug\net5.0\Frameworks.pdb
