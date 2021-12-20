@@ -33,7 +33,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              },
+              "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -248,6 +255,9 @@
             "projectReferences": {
               "D:\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj"
+              },
+              "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
               }
             }
           }
@@ -318,6 +328,9 @@
               },
               "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              },
+              "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
               }
             }
           }
@@ -898,9 +911,6 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj"
-              },
               "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               },

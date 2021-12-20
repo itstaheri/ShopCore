@@ -19,6 +19,30 @@ namespace DM.infrastructure.Efcore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.12");
 
+            modelBuilder.Entity("DM.Domain.ColleagueDiscount.ColleagueDiscountModel", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("DiscountRate")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("colleagueDiscounts");
+                });
+
             modelBuilder.Entity("DM.Domain.CustomerDiscount.CustomerDiscountModel", b =>
                 {
                     b.Property<long>("Id")

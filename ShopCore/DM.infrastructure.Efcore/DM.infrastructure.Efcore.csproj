@@ -22,6 +22,7 @@
     <ProjectReference Include="..\DM.Domain\DM.Domain.csproj" />
     <ProjectReference Include="..\Frameworks\Frameworks.csproj" />
     <ProjectReference Include="..\SM.Application.Contracts\SM.Application.Contracts.csproj" />
+    <ProjectReference Include="..\SM.Infrastructure.EfCore\SM.Infrastructure.EfCore.csproj" />
   </ItemGroup>
 
 </Project>

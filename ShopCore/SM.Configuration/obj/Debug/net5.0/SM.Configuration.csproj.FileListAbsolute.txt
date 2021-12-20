@@ -21,11 +21,5 @@ D:\ShopCore\ShopCore\SM.Configuration\obj\Debug\net5.0\ref\SM.Configuration.dll
 D:\ShopCore\ShopCore\SM.Configuration\obj\Debug\net5.0\SM.Configuration.pdb
 D:\ShopCore\ShopCore\SM.Configuration\bin\Debug\net5.0\Query.dll
 D:\ShopCore\ShopCore\SM.Configuration\bin\Debug\net5.0\Query.pdb
-D:\ShopCore\ShopCore\SM.Configuration\bin\Debug\net5.0\DM.Application.Contract.dll
-D:\ShopCore\ShopCore\SM.Configuration\bin\Debug\net5.0\DM.Domain.dll
-D:\ShopCore\ShopCore\SM.Configuration\bin\Debug\net5.0\DM.infrastructure.Efcore.dll
-D:\ShopCore\ShopCore\SM.Configuration\bin\Debug\net5.0\DM.Application.Contract.pdb
-D:\ShopCore\ShopCore\SM.Configuration\bin\Debug\net5.0\DM.Domain.pdb
-D:\ShopCore\ShopCore\SM.Configuration\bin\Debug\net5.0\DM.infrastructure.Efcore.pdb
 D:\ShopCore\ShopCore\SM.Configuration\bin\Debug\net5.0\Frameworks.dll
 D:\ShopCore\ShopCore\SM.Configuration\bin\Debug\net5.0\Frameworks.pdb

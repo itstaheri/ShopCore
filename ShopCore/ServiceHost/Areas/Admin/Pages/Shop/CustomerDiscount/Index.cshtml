@@ -33,11 +33,11 @@
                     </div>
                     <div class="form-group">
                         <label class="sr-only"></label>
-                        <input name="Start" id="Start" class="form-control" placeholder="تاریخ شروع">
+                        <input name="Start" id="Start" class="form-control PersianDateInput" placeholder="تاریخ شروع">
                     </div>
                     <div class="form-group">
                         <label class="sr-only"></label>
-                        <input name="End" id="End" class="form-control" placeholder="تاریخ پایان">
+                        <input name="End" id="End" class="form-control PersianDateInput" placeholder="تاریخ پایان">
                     </div>
                     <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">جستجو</button>
                     <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">مشاهده همه</a>
@@ -62,6 +62,7 @@
                                 <tr>
 
                                     <th>موضوع</th>
+                                    <th>درصد تخفیف</th>
                                     <th>نام محصول</th>
                                     <th>تاریخ شروع</th>
                                     <th>تاریخ پایان</th>
@@ -74,6 +75,7 @@
                                 {
                                     <tr>
                                         <td>@item.reason</td>
+                                        <td>@item.DiscountRate %</td>
                                         <td>@item.ProductName</td>
                                         <td>@item.StartGr</td>
                                         <td>@item.EndGr</td>

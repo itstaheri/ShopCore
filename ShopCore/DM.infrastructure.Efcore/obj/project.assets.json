@@ -1545,6 +1545,10 @@
       "DM.Application.Contract/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "SM.Application.Contracts": "1.0.0",
+          "SM.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/DM.Application.Contract.dll": {}
         },
@@ -1556,7 +1560,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "DM.Application.Contract": "1.0.0"
+          "DM.Application.Contract": "1.0.0",
+          "SM.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DM.Domain.dll": {}
@@ -1586,6 +1591,36 @@
         },
         "runtime": {
           "bin/placeholder/SM.Application.Contracts.dll": {}
+        }
+      },
+      "SM.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "SM.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SM.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SM.Domain.dll": {}
+        }
+      },
+      "SM.Infrastructure.EfCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Frameworks": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "SM.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SM.Infrastructure.EfCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SM.Infrastructure.EfCore.dll": {}
         }
       }
     }
@@ -5920,6 +5955,16 @@
       "type": "project",
       "path": "../SM.Application.Contracts/SM.Application.Contracts.csproj",
       "msbuildProject": "../SM.Application.Contracts/SM.Application.Contracts.csproj"
+    },
+    "SM.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SM.Domain/SM.Domain.csproj",
+      "msbuildProject": "../SM.Domain/SM.Domain.csproj"
+    },
+    "SM.Infrastructure.EfCore/1.0.0": {
+      "type": "project",
+      "path": "../SM.Infrastructure.EfCore/SM.Infrastructure.EfCore.csproj",
+      "msbuildProject": "../SM.Infrastructure.EfCore/SM.Infrastructure.EfCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5931,7 +5976,8 @@
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
-      "SM.Application.Contracts >= 1.0.0"
+      "SM.Application.Contracts >= 1.0.0",
+      "SM.Infrastructure.EfCore >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5977,6 +6023,9 @@
             },
             "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
               "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+            },
+            "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
+              "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
             }
           }
         }

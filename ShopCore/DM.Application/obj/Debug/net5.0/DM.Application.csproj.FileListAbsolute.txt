@@ -15,7 +15,6 @@ D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\DM.Application.csprojAssemb
 D:\ShopCore\ShopCore\DM.Application\obj\Debug\net5.0\DM.Application.csproj.CopyComplete
 D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.Domain.dll
 D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.Domain.pdb
-D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.infrastructure.Efcore.dll
 D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\Frameworks.dll
 D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\SM.Application.Contracts.dll
 D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\SM.Domain.dll
@@ -23,5 +22,4 @@ D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\SM.Infrastructure.EfCore.dl
 D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\Frameworks.pdb
 D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\SM.Application.Contracts.pdb
 D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\SM.Infrastructure.EfCore.pdb
-D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\DM.infrastructure.Efcore.pdb
 D:\ShopCore\ShopCore\DM.Application\bin\Debug\net5.0\SM.Domain.pdb

@@ -2041,6 +2041,10 @@
       "DM.Application.Contract/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "SM.Application.Contracts": "1.0.0",
+          "SM.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/DM.Application.Contract.dll": {}
         },
@@ -2068,7 +2072,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "DM.Application.Contract": "1.0.0"
+          "DM.Application.Contract": "1.0.0",
+          "SM.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DM.Domain.dll": {}
@@ -2086,7 +2091,8 @@
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
-          "SM.Application.Contracts": "1.0.0"
+          "SM.Application.Contracts": "1.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DM.infrastructure.Efcore.dll": {}
@@ -2180,7 +2186,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "DM.infrastructure.Efcore": "1.0.0",
           "Frameworks": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.0",

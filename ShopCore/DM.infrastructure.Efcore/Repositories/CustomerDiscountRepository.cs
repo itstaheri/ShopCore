@@ -56,6 +56,7 @@ namespace DM.infrastructure.Efcore.Repositories
             {
                 query = query.Where(x => x.ProductId == commend.ProductId);
             }
+
             var discount = query.OrderByDescending(x => x.Id).ToList();
             discount.ForEach(discount => discount.ProductName = product
             .FirstOrDefault(x => x.ProductId==discount.ProductId)?.ProductName);

@@ -190,3 +190,7 @@ D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\Frameworks.dll
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\Frameworks.pdb
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\CustomerDiscount\Create.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\CustomerDiscount\Index.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\CustomerDiscount\Edit.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\ColleagueDiscount\Create.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\ColleagueDiscount\Index.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\ColleagueDiscount\Edit.cshtml.g.cs

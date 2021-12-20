@@ -1,8 +1,4 @@
-﻿using DM.Application;
-using DM.Application.Contract.CustomerDiscount;
-using DM.Domain.CustomerDiscount;
-using DM.infrastructure.Efcore.Repositories;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Query.Contract.Productcategory;
 using Query.Contract.Slider;
@@ -38,8 +34,7 @@ namespace SM.Configuration
             service.AddTransient<IProductcategoryQuery, ProductCategoryQuery>();
             service.AddTransient<ISliderQuary, SliderQuary>();
 
-            //service.AddTransient<ICustomerDiscountRepository, CustomerDiscountRepository>();
-            //service.AddTransient<ICustomerDiscountApplication, CustomerDiscountApplication>();
+          
 
 
         }

@@ -1504,47 +1504,6 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "DM.Application.Contract/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/DM.Application.Contract.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DM.Application.Contract.dll": {}
-        }
-      },
-      "DM.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "DM.Application.Contract": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/DM.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DM.Domain.dll": {}
-        }
-      },
-      "DM.infrastructure.Efcore/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "DM.Domain": "1.0.0",
-          "Frameworks": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.0",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
-          "SM.Application.Contracts": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/DM.infrastructure.Efcore.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DM.infrastructure.Efcore.dll": {}
-        }
-      },
       "Frameworks/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1612,7 +1571,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "DM.infrastructure.Efcore": "1.0.0",
           "Frameworks": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
@@ -5882,21 +5840,6 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
-    },
-    "DM.Application.Contract/1.0.0": {
-      "type": "project",
-      "path": "../DM.Application.Contract/DM.Application.Contract.csproj",
-      "msbuildProject": "../DM.Application.Contract/DM.Application.Contract.csproj"
-    },
-    "DM.Domain/1.0.0": {
-      "type": "project",
-      "path": "../DM.Domain/DM.Domain.csproj",
-      "msbuildProject": "../DM.Domain/DM.Domain.csproj"
-    },
-    "DM.infrastructure.Efcore/1.0.0": {
-      "type": "project",
-      "path": "../DM.infrastructure.Efcore/DM.infrastructure.Efcore.csproj",
-      "msbuildProject": "../DM.infrastructure.Efcore/DM.infrastructure.Efcore.csproj"
     },
     "Frameworks/1.0.0": {
       "type": "project",

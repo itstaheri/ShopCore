@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v5.0": {
       "SM.Infrastructure.EfCore/1.0.0": {
         "dependencies": {
-          "DM.infrastructure.Efcore": "1.0.0",
           "Frameworks": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
@@ -1085,32 +1084,6 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "DM.Application.Contract/1.0.0": {
-        "runtime": {
-          "DM.Application.Contract.dll": {}
-        }
-      },
-      "DM.Domain/1.0.0": {
-        "dependencies": {
-          "DM.Application.Contract": "1.0.0"
-        },
-        "runtime": {
-          "DM.Domain.dll": {}
-        }
-      },
-      "DM.infrastructure.Efcore/1.0.0": {
-        "dependencies": {
-          "DM.Domain": "1.0.0",
-          "Frameworks": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.0",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
-          "SM.Application.Contracts": "1.0.0"
-        },
-        "runtime": {
-          "DM.infrastructure.Efcore.dll": {}
-        }
-      },
       "Frameworks/1.0.0": {
         "runtime": {
           "Frameworks.dll": {}
@@ -1832,21 +1805,6 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
-    },
-    "DM.Application.Contract/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DM.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DM.infrastructure.Efcore/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "Frameworks/1.0.0": {
       "type": "project",
