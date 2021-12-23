@@ -194,3 +194,13 @@ D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\C
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\ColleagueDiscount\Create.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\ColleagueDiscount\Index.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\ColleagueDiscount\Edit.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Application.Contract.dll
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Application.dll
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Configuration.dll
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Domain.dll
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Infrastracture.Efcore.dll
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Configuration.pdb
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Application.pdb
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Application.Contract.pdb
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Domain.pdb
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Infrastracture.Efcore.pdb

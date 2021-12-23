@@ -1,5 +1,6 @@
 using DM.Configuration;
 using DM.infrastructure.Efcore;
+using IM.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,6 +31,7 @@ namespace ServiceHost
             services.AddRazorPages();
             ShopBootestrapper.Configuration(services, ConnectionString);
             DiscountBootestrapper.Configuration(services, ConnectionString);
+            InventoryBootestrapper.Configoration(services, ConnectionString);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

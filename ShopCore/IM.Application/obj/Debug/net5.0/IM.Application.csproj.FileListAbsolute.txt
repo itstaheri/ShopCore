@@ -1,0 +1,15 @@
+D:\ShopCore\ShopCore\IM.Application\bin\Debug\net5.0\IM.Application.deps.json
+D:\ShopCore\ShopCore\IM.Application\bin\Debug\net5.0\IM.Application.dll
+D:\ShopCore\ShopCore\IM.Application\bin\Debug\net5.0\ref\IM.Application.dll
+D:\ShopCore\ShopCore\IM.Application\bin\Debug\net5.0\IM.Application.pdb
+D:\ShopCore\ShopCore\IM.Application\bin\Debug\net5.0\IM.Application.Contract.dll
+D:\ShopCore\ShopCore\IM.Application\bin\Debug\net5.0\IM.Application.Contract.pdb
+D:\ShopCore\ShopCore\IM.Application\obj\Debug\net5.0\IM.Application.csprojAssemblyReference.cache
+D:\ShopCore\ShopCore\IM.Application\obj\Debug\net5.0\IM.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\ShopCore\ShopCore\IM.Application\obj\Debug\net5.0\IM.Application.AssemblyInfoInputs.cache
+D:\ShopCore\ShopCore\IM.Application\obj\Debug\net5.0\IM.Application.AssemblyInfo.cs
+D:\ShopCore\ShopCore\IM.Application\obj\Debug\net5.0\IM.Application.csproj.CoreCompileInputs.cache
+D:\ShopCore\ShopCore\IM.Application\obj\Debug\net5.0\IM.Application.csproj.CopyComplete
+D:\ShopCore\ShopCore\IM.Application\obj\Debug\net5.0\IM.Application.dll
+D:\ShopCore\ShopCore\IM.Application\obj\Debug\net5.0\ref\IM.Application.dll
+D:\ShopCore\ShopCore\IM.Application\obj\Debug\net5.0\IM.Application.pdb

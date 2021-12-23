@@ -1,0 +1,98 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "IM.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/IM.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IM.Application.Contract.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IM.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../IM.Application.Contract/IM.Application.Contract.csproj",
+      "msbuildProject": "../IM.Application.Contract/IM.Application.Contract.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "IM.Application.Contract >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\alith\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj",
+      "projectName": "IM.Domain",
+      "projectPath": "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj",
+      "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
+      "outputPath": "D:\\ShopCore\\ShopCore\\IM.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://www.nuget.org/api/v2/": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj": {
+              "projectPath": "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
