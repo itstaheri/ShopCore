@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Query.Contract.Product;
 using Query.Contract.Productcategory;
 using Query.Contract.Slider;
-using Query.Quary;
+using Query.ProductQuery;
 using SM.Application;
 using SM.Application.Contracts.Product;
 using SM.Application.Contracts.ProductCategory;
@@ -33,6 +34,7 @@ namespace SM.Configuration
 
             service.AddTransient<IProductcategoryQuery, ProductCategoryQuery>();
             service.AddTransient<ISliderQuary, SliderQuary>();
+            service.AddTransient<IProductQueryRepository, ProductQueryRepository>();
 
           
 

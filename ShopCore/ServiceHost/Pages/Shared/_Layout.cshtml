@@ -12,6 +12,8 @@
 
     <meta name="theme-color" content="#c40316">
 
+
+
     <!-- CSS
     ========================= -->
     <!-- Plugins CSS -->
@@ -114,16 +116,12 @@
                             </div>
                         </div>
                         <div class="search_container">
-                            <form action="#">
+                            <form method="get" asp-page="./Search">
                                 <div class="hover_category">
-                                    <select class="select_option" name="select" id="categori1">
-                                        <option selected value="1">همه دسته ها</option>
-                                        <option value="2">لوازم جانبی</option>
 
-                                    </select>
                                 </div>
                                 <div class="search_box">
-                                    <input placeholder="جستجوی محصول ..." type="text">
+                                    <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend">
                                     <button type="submit">جستجو</button>
                                 </div>
                             </form>
@@ -383,17 +381,17 @@
                         </div>
                         <div class="column2 col-lg-6 ">
                             <div class="search_container">
-                                <form action="#">
+                                <form method="get" asp-page="./search">
                                     <div class="hover_category">
                                         <select class="select_option" name="select" id="categori2">
                                             <option selected value="1">همه دسته ها</option>
-                                            <option value="2">لوازم جانبی</option>
-                                            <option value="3">سایر لوازم جانبی</option>
 
                                         </select>
                                     </div>
+
+
                                     <div class="search_box">
-                                        <input placeholder="جستجوی محصول ..." type="text">
+                                        <input placeholder="جستجوی محصول ..." type="text" name="Commend" id="Commend">
                                         <button type="submit">جستجو</button>
                                     </div>
                                 </form>
@@ -428,8 +426,168 @@
         </div>
     </div>
     <!--breadcrumbs area end-->
+    <!--shop  area start-->
+    <div class="shop_area shop_reverse">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <!--sidebar widget start-->
+                    <aside class="sidebar_widget">
+                        <div class="widget_list widget_categories">
+                            <h3>دسته های محصولات</h3>
+                            <ul>
+                                <li><a href="#">دوربین عکاسی و فیلمبرداری</a></li>
+                                <li class="widget_sub_categories">
+                                    <a href="javascript:void(0)">کامپیوتر و شبکه</a>
+                                    <ul class="widget_dropdown_categories" style="display:none;">
+                                        <li><a href="#">کامپیوتر</a></li>
+                                        <li><a href="#">ابزار شبکه</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">بازی و کنسول</a></li>
+                                <li><a href="#">هدفون و اسپیکر</a></li>
+                                <li><a href="#">فیلم و بازی ویدئویی</a></li>
+                                <li><a href="#">گوشی هوشمند</a> </li>
+                                <li><a href="#">بدون دسته</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget_list widget_filter">
+                            <h3>فیلتر با قیمت</h3>
+                            <form action="#">
+                                <div id="slider-range"></div>
+                                <input type="text" id="amount">
+                                <button type="submit">فیلتر</button>
+                                <input type="hidden" id="price-min" name="price_min">
+                                <input type="hidden" id="price-max" name="price_max">
+                            </form>
+                        </div>
+                        <div class="widget_list">
+                            <h3>مقایسه محصولات</h3>
+                            <div class="recent_product_container">
+                                <article class="recent_product_list">
+                                    <figure>
+                                        <div class="product_thumb">
+                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product9.jpg" alt=""></a>
+                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product10.jpg" alt=""></a>
+                                        </div>
+                                        <div class="product_content">
+                                            <h4><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید</a></h4>
+                                            <div class="product_rating">
+                                                <ul>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="price_box">
+                                                <span class="old_price">70,000 تومان</span>
+                                                <span class="current_price">65,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </article>
+                                <article class="recent_product_list">
+                                    <figure>
+                                        <div class="product_thumb">
+                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product11.jpg" alt=""></a>
+                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product12.jpg" alt=""></a>
+                                        </div>
+                                        <div class="product_content">
+                                            <h4><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی</a></h4>
+                                            <div class="product_rating">
+                                                <ul>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="price_box">
+                                                <span class="old_price">70,000 تومان</span>
+                                                <span class="current_price">65,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </article>
+                                <article class="recent_product_list">
+                                    <figure>
+                                        <div class="product_thumb">
+                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product14.jpg" alt=""></a>
+                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product13.jpg" alt=""></a>
+                                        </div>
+                                        <div class="product_content">
+                                            <h4><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید</a></h4>
+                                            <div class="product_rating">
+                                                <ul>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="price_box">
+                                                <span class="old_price">70,000 تومان</span>
+                                                <span class="current_price">65,000 تومان</span>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="widget_list tags_widget">
+                            <h3>برچسب های محصولات</h3>
+                            <div class="tag_cloud">
+                                <a href="#">بلوز</a>
+                                <a href="#">لباس ها</a>
+                                <a href="#">مد و زیبایی</a>
+                                <a href="#">کیف دستی</a>
+                                <a href="#">لپ تاپ</a>
+                            </div>
+                        </div>
+                    </aside>
+                    <!--sidebar widget end-->
+                </div>
+                <div class="col-lg-9 col-md-12">
 
-    @RenderBody()
+                    <!--shop banner area start-->
+                    <!--shop banner area end-->
+                    <!--shop toolbar start-->
+                    <div class="shop_toolbar_wrapper">
+                        <div class="shop_toolbar_btn">
+                            <button data-role="grid_4" type="button" class=" active btn-grid-4" data-toggle="tooltip" title="4"></button>
+                            <button data-role="grid_list" type="button" class="btn-list" data-toggle="tooltip" title="List"></button>
+                        </div>
+                        <div class="niceselect_container">
+                            <form action="#">
+                                <label>ترتیب:</label>
+                                <select class="select_option" name="orderby" id="short">
+                                    <option selected value="1">امتیاز متوسط</option>
+                                    <option value="2">محبوبیت</option>
+                                    <option value="3">تاریخ ارسال</option>
+                                    <option value="4">قیمت صعودی</option>
+                                    <option value="5">قیمت نزولی</option>
+                                    <option value="6">نام محصول</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="page_amount">
+                            <p>نمایش 1-9 از 21 محصول</p>
+                        </div>
+                    </div>
+                    <!--shop toolbar end-->
+
+
+                    @RenderBody()
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!--footer area start-->

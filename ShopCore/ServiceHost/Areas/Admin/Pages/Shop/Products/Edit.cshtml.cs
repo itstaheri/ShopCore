@@ -16,15 +16,14 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
     {
         private readonly IProductApplication _repository;
         private readonly IProductCategoryApplication _ProductCategories;
-        string pathh;
         [BindProperty] public EditProduct Products { get; set; }
         public List<SelectListItem> Categories { get; set; }
 
         public List<CatalogeModel> cataloges { get; set; }
 
-        public EditModel(IProductApplication repository, IProductCategoryApplication ProductCategories, [FromServices] IWebHostEnvironment env)
+        public EditModel(IProductApplication repository, IProductCategoryApplication ProductCategories)
         {
-            pathh = Path.Combine(env.WebRootPath,"Img","ProductImages");
+         
             _repository = repository;
             _ProductCategories = ProductCategories;
         }
@@ -37,54 +36,14 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
                 .Select(x => new SelectListItem(x.CategoryName, x.id.ToString())).ToList();
 
         
-            var GetCatelogeImages = Directory.GetFiles(pathh);
-            cataloges = new List<CatalogeModel>();
-            foreach (var item in GetCatelogeImages)
-            {
-                
-                if (Path.GetFileName(item).Contains(Products.ProductCode))
-                {
-                    cataloges.Add(new CatalogeModel { Name = Path.GetFileName(item) });
-                }
-            }
+            
         }
         
-        public void OnGetDeletePhoto(string Name)
-        {
-            System.IO.File.Delete(pathh + Name);
-           // return RedirectToPage();
-        }
-
+      
         public RedirectToPageResult OnPost(EditProduct commend, [FromServices] IWebHostEnvironment env)
         {
 
-            #region Upload Photo(S)
-            int v = 0;
-            if (commend.CatalogeImages !=null)
-                foreach (var item in commend.CatalogeImages)
-                {
-                    v++;
-                    var path = Path.Combine(env.WebRootPath, "Img", "ProductImages", commend.ProductCode + v.ToString() + ".jpg");
-                    using (var stream = System.IO.File.Create(path))
-                    {
-                        item.CopyTo(stream);
-                    }
-                }
-
-
-            if (commend.OriginalImage !=null)
-            {
-                var path = Path.Combine(env.WebRootPath, "Img", "ProductImages", commend.ProductCode + ".jpg");
-                using (var stream = System.IO.File.Create(path))
-                {
-                    Products.OriginalImage.CopyTo(stream);
-                }
-            }
-
-
-
-
-            #endregion
+           
             _repository.Edit(commend);
             return RedirectToPage("./Index");
 
@@ -95,6 +54,5 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
     }
     public class CatalogeModel
     {
-        public string Name { get; set; }
     }
 }

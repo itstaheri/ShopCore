@@ -14,5 +14,6 @@ namespace IM.Domain.Inventory
         List<InventoryViewModel> search(SearchInventory commend);
         void Create(InventoryModel commend);
         void Save();
+        List<InventoryOperationViewModel> GetForLoggs(long InventoryId);
     }
 }

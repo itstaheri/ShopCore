@@ -204,3 +204,11 @@ D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Application.pdb
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Application.Contract.pdb
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Domain.pdb
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\IM.Infrastracture.Efcore.pdb
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Inventory\Create.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Inventory\Edit.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Inventory\Index.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Inventory\Increase.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Inventory\Reduce.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Inventory\OperationLoggs.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Category.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Search.cshtml.g.cs

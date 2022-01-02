@@ -19,3 +19,15 @@ D:\ShopCore\ShopCore\Query\obj\Debug\net5.0\ref\Query.dll
 D:\ShopCore\ShopCore\Query\obj\Debug\net5.0\Query.pdb
 D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\Frameworks.dll
 D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\Frameworks.pdb
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\IM.Application.Contract.dll
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\IM.Domain.dll
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\IM.Infrastracture.Efcore.dll
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\IM.Infrastracture.Efcore.pdb
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\IM.Application.Contract.pdb
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\IM.Domain.pdb
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\DM.Application.Contract.dll
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\DM.Domain.dll
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\DM.infrastructure.Efcore.dll
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\DM.infrastructure.Efcore.pdb
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\DM.Application.Contract.pdb
+D:\ShopCore\ShopCore\Query\bin\Debug\net5.0\DM.Domain.pdb

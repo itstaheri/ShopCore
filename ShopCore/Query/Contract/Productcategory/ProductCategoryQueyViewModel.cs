@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Query.Contract.Product;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,6 @@ namespace Query.Contract.Productcategory
         public long Id { get; set; }
         public string CategoryName { get;  set; }
         public string Slug { get;  set; }
+        public List<ProductQueryModel> products { get; set; }
     }
 }

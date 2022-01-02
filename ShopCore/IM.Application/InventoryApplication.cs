@@ -8,9 +8,16 @@ namespace IM.Application
     public class InventoryApplication : IInventoryApplication
     {
         private readonly IInventoryRepository _repository;
+
+        public InventoryApplication(IInventoryRepository repository)
+        {
+            _repository = repository;
+        }
+
         public void Create(CreateInventory commend)
         {
-            var inventory = new InventoryModel(commend.Productid,commend.Price);
+
+            var inventory = new InventoryModel(commend.Productid, commend.Price);
             _repository.Create(inventory);
 
         }
@@ -18,13 +25,18 @@ namespace IM.Application
         public void Edit(EditInventory commend)
         {
             var inventory = _repository.GetDetails(commend.Id);
-            inventory.Edit(commend.Productid, commend.Price);
+            inventory.Edit(commend.Productid, commend.Price,inventory.InStock);
             _repository.Save();
         }
 
         public List<InventoryViewModel> GetAll(SearchInventory commend)
         {
             return _repository.search(commend);
+        }
+
+        public List<InventoryOperationViewModel> GetforLogss(long InventoryId)
+        {
+            return _repository.GetForLoggs(InventoryId);
         }
 
         public EditInventory GetValueForEdit(long Id)

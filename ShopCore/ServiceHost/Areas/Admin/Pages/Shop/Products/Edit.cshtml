@@ -33,10 +33,10 @@
                     <label>QuantityInStock</label>
                     <input type="number" class="form-control" id="QuantityInStock" name="QuantityInStock" value="@Model.Products.QuantityInStock" />
                 </div>
-                <div class="form-group">
+                @*<div class="form-group">
                     <label>Price</label>
                     <input type="text" class="form-control" id="Price" name="Price" value="@Model.Products.Price" />
-                </div>
+                </div>*@
 
 
                 <div class="row">
@@ -160,11 +160,7 @@
 
                                     </form>*@
 
-                                @foreach (var item in Model.cataloges)
-                                {
-                                    <img src="~/Img/ProductImages/@(item.Name)" height="80px" width="80px">
-                                    <a asp-page-handler="Deletephoto" asp-route-name="@item.Name">حذف</a>
-                                }
+                             
 
 
                             </div>

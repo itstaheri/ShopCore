@@ -1504,14 +1504,104 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "DM.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "SM.Application.Contracts": "1.0.0",
+          "SM.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DM.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DM.Application.Contract.dll": {}
+        }
+      },
+      "DM.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "DM.Application.Contract": "1.0.0",
+          "SM.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DM.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DM.Domain.dll": {}
+        }
+      },
+      "DM.infrastructure.Efcore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "DM.Domain": "1.0.0",
+          "Frameworks": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "SM.Application.Contracts": "1.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DM.infrastructure.Efcore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DM.infrastructure.Efcore.dll": {}
+        }
+      },
       "Frameworks/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+        },
         "compile": {
           "bin/placeholder/Frameworks.dll": {}
         },
         "runtime": {
           "bin/placeholder/Frameworks.dll": {}
+        }
+      },
+      "IM.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/IM.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IM.Application.Contract.dll": {}
+        }
+      },
+      "IM.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IM.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IM.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IM.Domain.dll": {}
+        }
+      },
+      "IM.Infrastracture.Efcore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "IM.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IM.Infrastracture.Efcore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IM.Infrastracture.Efcore.dll": {}
         }
       },
       "SM.Application.Contracts/1.0.0": {
@@ -5814,10 +5904,40 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "DM.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../DM.Application.Contract/DM.Application.Contract.csproj",
+      "msbuildProject": "../DM.Application.Contract/DM.Application.Contract.csproj"
+    },
+    "DM.Domain/1.0.0": {
+      "type": "project",
+      "path": "../DM.Domain/DM.Domain.csproj",
+      "msbuildProject": "../DM.Domain/DM.Domain.csproj"
+    },
+    "DM.infrastructure.Efcore/1.0.0": {
+      "type": "project",
+      "path": "../DM.infrastructure.Efcore/DM.infrastructure.Efcore.csproj",
+      "msbuildProject": "../DM.infrastructure.Efcore/DM.infrastructure.Efcore.csproj"
+    },
     "Frameworks/1.0.0": {
       "type": "project",
       "path": "../Frameworks/Frameworks.csproj",
       "msbuildProject": "../Frameworks/Frameworks.csproj"
+    },
+    "IM.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../IM.Application.Contract/IM.Application.Contract.csproj",
+      "msbuildProject": "../IM.Application.Contract/IM.Application.Contract.csproj"
+    },
+    "IM.Domain/1.0.0": {
+      "type": "project",
+      "path": "../IM.Domain/IM.Domain.csproj",
+      "msbuildProject": "../IM.Domain/IM.Domain.csproj"
+    },
+    "IM.Infrastracture.Efcore/1.0.0": {
+      "type": "project",
+      "path": "../IM.Infrastracture.Efcore/IM.Infrastracture.Efcore.csproj",
+      "msbuildProject": "../IM.Infrastracture.Efcore/IM.Infrastracture.Efcore.csproj"
     },
     "SM.Application.Contracts/1.0.0": {
       "type": "project",
@@ -5837,6 +5957,8 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "DM.infrastructure.Efcore >= 1.0.0",
+      "IM.Infrastracture.Efcore >= 1.0.0",
       "SM.Infrastructure.EfCore >= 1.0.0"
     ]
   },
@@ -5875,6 +5997,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
+              "projectPath": "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj"
+            },
+            "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj": {
+              "projectPath": "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj"
+            },
             "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
               "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
             }

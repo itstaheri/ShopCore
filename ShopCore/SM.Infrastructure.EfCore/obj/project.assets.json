@@ -1545,6 +1545,9 @@
       "Frameworks/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+        },
         "compile": {
           "bin/placeholder/Frameworks.dll": {}
         },

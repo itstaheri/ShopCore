@@ -33,6 +33,19 @@
           "lib/netcoreapp3.0/System.IO.Pipelines.dll": {}
         }
       },
+      "Frameworks/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+        },
+        "compile": {
+          "bin/placeholder/Frameworks.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Frameworks.dll": {}
+        }
+      },
       "SM.Application.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -129,6 +142,11 @@
         "version.txt"
       ]
     },
+    "Frameworks/1.0.0": {
+      "type": "project",
+      "path": "../Frameworks/Frameworks.csproj",
+      "msbuildProject": "../Frameworks/Frameworks.csproj"
+    },
     "SM.Application.Contracts/1.0.0": {
       "type": "project",
       "path": "../SM.Application.Contracts/SM.Application.Contracts.csproj",
@@ -142,6 +160,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Frameworks >= 1.0.0",
       "SM.Application.Contracts >= 1.0.0",
       "SM.Domain >= 1.0.0"
     ]
@@ -181,6 +200,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+              "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+            },
             "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
               "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
             },

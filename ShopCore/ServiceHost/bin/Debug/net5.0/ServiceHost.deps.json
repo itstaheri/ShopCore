@@ -1915,6 +1915,9 @@
         }
       },
       "Frameworks/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+        },
         "runtime": {
           "Frameworks.dll": {}
         },
@@ -1924,7 +1927,8 @@
       },
       "IM.Application/1.0.0": {
         "dependencies": {
-          "IM.Application.Contract": "1.0.0"
+          "IM.Application.Contract": "1.0.0",
+          "IM.Domain": "1.0.0"
         },
         "runtime": {
           "IM.Application.dll": {}
@@ -1983,6 +1987,8 @@
       },
       "Query/1.0.0": {
         "dependencies": {
+          "DM.infrastructure.Efcore": "1.0.0",
+          "IM.Infrastracture.Efcore": "1.0.0",
           "SM.Infrastructure.EfCore": "1.0.0"
         },
         "runtime": {
@@ -1994,6 +2000,7 @@
       },
       "SM.Application/1.0.0": {
         "dependencies": {
+          "Frameworks": "1.0.0",
           "SM.Application.Contracts": "1.0.0",
           "SM.Domain": "1.0.0"
         },

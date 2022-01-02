@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "SM.Application/1.0.0": {
         "dependencies": {
+          "Frameworks": "1.0.0",
           "SM.Application.Contracts": "1.0.0",
           "SM.Domain": "1.0.0"
         },
@@ -41,6 +42,14 @@
             "assemblyVersion": "5.0.0.1",
             "fileVersion": "5.0.120.57516"
           }
+        }
+      },
+      "Frameworks/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+        },
+        "runtime": {
+          "Frameworks.dll": {}
         }
       },
       "SM.Application.Contracts/1.0.0": {
@@ -87,6 +96,11 @@
       "sha512": "sha512-qEePWsaq9LoEEIqhbGe6D5J8c9IqQOUuTzzV6wn1POlfdLkJliZY3OlB0j0f17uMWlqZYjH7txj+2YbyrIA8Yg==",
       "path": "system.io.pipelines/5.0.1",
       "hashPath": "system.io.pipelines.5.0.1.nupkg.sha512"
+    },
+    "Frameworks/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "SM.Application.Contracts/1.0.0": {
       "type": "project",

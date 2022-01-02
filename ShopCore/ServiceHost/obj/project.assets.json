@@ -2104,6 +2104,9 @@
       "Frameworks/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+        },
         "compile": {
           "bin/placeholder/Frameworks.dll": {}
         },
@@ -2185,6 +2188,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "DM.infrastructure.Efcore": "1.0.0",
+          "IM.Infrastracture.Efcore": "1.0.0",
           "SM.Infrastructure.EfCore": "1.0.0"
         },
         "compile": {
@@ -2198,6 +2203,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Frameworks": "1.0.0",
           "SM.Application.Contracts": "1.0.0",
           "SM.Domain": "1.0.0"
         },

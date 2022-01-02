@@ -28,9 +28,10 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.CustomerDiscount
             discount = _repository.GetValueForEdit(Id);
             products = _products.GetAll(x).Select(x => new SelectListItem(x.ProductName, x.ProductId.ToString())).ToList();
         }
-        public void OnPost(EditCustomerDiscount commend)
+        public RedirectToPageResult OnPost(EditCustomerDiscount commend)
         {
             _repository.Edit(commend);
+            return RedirectToPage("./Index");
             
         }
     }

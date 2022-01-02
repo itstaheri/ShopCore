@@ -15,12 +15,13 @@ namespace IM.Domain.Inventory
         {
             Productid = productid;
             Price = price;
-            InStock = false;
+            InStock = true;
         }
-        public void Edit(long productid, double price)
+        public void Edit(long productid, double price,bool inStock)
         {
             Productid = productid;
             Price = price;
+            InStock = InStock;
         }
         //mohasebe tedad mojood
         public long CurrentInventory()

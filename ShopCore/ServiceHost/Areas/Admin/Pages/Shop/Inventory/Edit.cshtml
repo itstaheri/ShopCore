@@ -1,0 +1,28 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Shop.Inventory.EditModel
+@{
+}
+
+
+<div class="panel-heading"><h3 class="panel-title">  ویرایش انبار  </h3></div>
+<div class="panel-body">
+    <div class=" form">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Price</label>
+                <input type="tel" class="form-control" id="Price" name="Price" value="@Model.Inventory.Price"/>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    انتخاب محصول
+                </label>
+                <select asp-items="Model.products" name="ProductId" id="ProductId" class="form-control">
+                    <option value="@Model.Inventory.Productid">انتخاب محصول</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-success">ویرایش</button>
+        </form>
+    </div>
+</div>

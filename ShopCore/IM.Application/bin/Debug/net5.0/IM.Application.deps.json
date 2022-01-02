@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "IM.Application/1.0.0": {
         "dependencies": {
-          "IM.Application.Contract": "1.0.0"
+          "IM.Application.Contract": "1.0.0",
+          "IM.Domain": "1.0.0"
         },
         "runtime": {
           "IM.Application.dll": {}
@@ -17,6 +18,14 @@
       "IM.Application.Contract/1.0.0": {
         "runtime": {
           "IM.Application.Contract.dll": {}
+        }
+      },
+      "IM.Domain/1.0.0": {
+        "dependencies": {
+          "IM.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "IM.Domain.dll": {}
         }
       }
     }
@@ -28,6 +37,11 @@
       "sha512": ""
     },
     "IM.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IM.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

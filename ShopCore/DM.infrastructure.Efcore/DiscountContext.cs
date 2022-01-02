@@ -8,7 +8,7 @@ namespace DM.infrastructure.Efcore
 {
     public class DiscountContext : DbContext
     {
-        public DiscountContext(DbContextOptions options) : base(options)
+        public DiscountContext(DbContextOptions<DiscountContext> options) : base(options)
         {
 
         }

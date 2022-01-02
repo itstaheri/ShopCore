@@ -29,18 +29,19 @@ namespace SM.Infrastructure.EfCore.Repositories
             return _context.products.SingleOrDefault(x => x.Id == Id);
         }
 
-        public List<ProductViewModel> GetProductsBy(SearchProduct commend)
+        public  List<ProductViewModel> GetProductsBy(SearchProduct commend)
         {
             var query = _context.products.Select(x => new ProductViewModel
             {
                 CategoryName = x.productcategory.CategoryName,
                 ProductCode= x.ProductCode,
-                Price = x.Price,
                 ProductId = x.Id,
                 ProductName = x.ProductName,
                 QuantityInStock = x.QuantityInStock,
                 CreationDate = x.CreationDate.ToFarsi(),
-                IsDeleted = x.IsDeleted
+                IsDeleted = x.IsDeleted,
+                Picture = x.Picture
+
                 
             });
             if (commend!=null)

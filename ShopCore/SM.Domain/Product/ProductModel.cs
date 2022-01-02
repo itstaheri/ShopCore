@@ -9,17 +9,18 @@ namespace SM.Domain.Product
 {
     public class ProductModel
     {
-        public ProductModel(string productName, string productCode, string description, string shortDescription, 
-            long quantityInStock, double price, string pictureAlt, string pictureTitle, string slug, 
+        public ProductModel(string productName, string productCode,string picture, string description, string shortDescription, 
+            long quantityInStock,string pictureAlt, string pictureTitle, string slug, 
             string keywoard, string metaDescription, long categoryId,string storage,float screensize,string networkSupport
             ,string operatingSystem,int resolution,int ram,string touchID)
         {
             ProductName = productName;
             ProductCode = productCode;
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
             Description = description;
             ShortDescription = shortDescription;
             QuantityInStock = quantityInStock;
-            Price = price;
             IsDeleted = false;
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
@@ -37,17 +38,19 @@ namespace SM.Domain.Product
             TouchId = touchID;
 
         }
-        public void Edit(string productName, string productCode, string description, string shortDescription,
-          long quantityInStock, double price, string pictureAlt, string pictureTitle, string slug,
+        public void Edit(string productName, string productCode,string picture, string description, string shortDescription,
+          long quantityInStock, string pictureAlt, string pictureTitle, string slug,
           string keywoard, string metaDescription, long categoryId, string storage, float screensize, string networkSupport
             , string operatingSystem, int resolution, int ram, string touchID)
         {
             ProductName = productName;
             ProductCode = productCode;
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
+            
             Description = description;
             ShortDescription = shortDescription;
             QuantityInStock = quantityInStock;
-            Price = price;           
             PictureAlt = pictureAlt;
             PictureTitle = pictureTitle;
             Slug = slug;
@@ -67,8 +70,8 @@ namespace SM.Domain.Product
 
         }
 
-        public void InStock() => IsInStock = true;
-        public void NotInStock() => IsInStock = false;
+        //public void InStock() => IsInStock = true;
+        //public void NotInStock() => IsInStock = false;
 
         public void Actived() => IsDeleted = false;
         public void Deleted() => IsDeleted = true;
@@ -77,11 +80,10 @@ namespace SM.Domain.Product
         public int Id { get;private set; }
         public string ProductName { get; private set; }
         public string ProductCode { get; private set; }
+        public string Picture { get; set; }
         public string Description { get; private set; }
         public string ShortDescription { get; private set; }
-        public bool IsInStock { get; private set; }
         public long QuantityInStock { get; private set; }
-        public double Price { get; private set; }
         public bool IsDeleted { get; private set; }
         public DateTime CreationDate { get; private set; }
 

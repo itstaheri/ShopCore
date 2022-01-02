@@ -38,9 +38,6 @@ namespace SM.Infrastructure.EfCore.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsInStock")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Keywoard")
                         .HasColumnType("nvarchar(max)");
 
@@ -53,14 +50,14 @@ namespace SM.Infrastructure.EfCore.Migrations
                     b.Property<string>("OperatingSystem")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PictureAlt")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PictureTitle")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
 
                     b.Property<string>("ProductCode")
                         .HasColumnType("nvarchar(max)");

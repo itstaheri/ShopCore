@@ -1,5 +1,6 @@
 using DM.Configuration;
 using DM.infrastructure.Efcore;
+using Frameworks;
 using IM.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,8 @@ namespace ServiceHost
             ShopBootestrapper.Configuration(services, ConnectionString);
             DiscountBootestrapper.Configuration(services, ConnectionString);
             InventoryBootestrapper.Configoration(services, ConnectionString);
+
+            services.AddTransient<IFileUploader, FileUploader>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

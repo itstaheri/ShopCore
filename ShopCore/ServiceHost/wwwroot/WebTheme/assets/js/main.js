@@ -760,7 +760,7 @@
 
 			// Serialize the form data.
 			var formData = $(form).serialize();
-
+			
 			// Show sending message
 			$(formMessages).text('در حال ارسال ...');
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Query.Contract.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +11,18 @@ namespace ServiceHost.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
 
-        public IndexModel(ILogger<IndexModel> logger)
+
+        private readonly IProductQueryRepository _repository;
+        public List<ProductQueryModel> products;
+        public IndexModel(IProductQueryRepository repository)
         {
-            _logger = logger;
+            _repository = repository;
         }
 
         public void OnGet()
         {
-
+            products = _repository.list();
         }
     }
 }

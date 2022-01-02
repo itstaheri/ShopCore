@@ -18,6 +18,7 @@ namespace IM.Domain.Inventory
             Description = description;
             OrderId = orderId;
             InventoryId = inventoryId;
+            OperationDate = DateTime.Now;
         }
 
         public long Id { get; private set; }

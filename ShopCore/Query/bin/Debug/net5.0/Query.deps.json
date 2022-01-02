@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "Query/1.0.0": {
         "dependencies": {
+          "DM.infrastructure.Efcore": "1.0.0",
+          "IM.Infrastracture.Efcore": "1.0.0",
           "SM.Infrastructure.EfCore": "1.0.0"
         },
         "runtime": {
@@ -1052,9 +1054,69 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "DM.Application.Contract/1.0.0": {
+        "dependencies": {
+          "SM.Application.Contracts": "1.0.0",
+          "SM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DM.Application.Contract.dll": {}
+        }
+      },
+      "DM.Domain/1.0.0": {
+        "dependencies": {
+          "DM.Application.Contract": "1.0.0",
+          "SM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DM.Domain.dll": {}
+        }
+      },
+      "DM.infrastructure.Efcore/1.0.0": {
+        "dependencies": {
+          "DM.Domain": "1.0.0",
+          "Frameworks": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "SM.Application.Contracts": "1.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
+        },
+        "runtime": {
+          "DM.infrastructure.Efcore.dll": {}
+        }
+      },
       "Frameworks/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+        },
         "runtime": {
           "Frameworks.dll": {}
+        }
+      },
+      "IM.Application.Contract/1.0.0": {
+        "runtime": {
+          "IM.Application.Contract.dll": {}
+        }
+      },
+      "IM.Domain/1.0.0": {
+        "dependencies": {
+          "IM.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "IM.Domain.dll": {}
+        }
+      },
+      "IM.Infrastracture.Efcore/1.0.0": {
+        "dependencies": {
+          "IM.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
+        },
+        "runtime": {
+          "IM.Infrastracture.Efcore.dll": {}
         }
       },
       "SM.Application.Contracts/1.0.0": {
@@ -1765,7 +1827,37 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
+    "DM.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DM.infrastructure.Efcore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Frameworks/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IM.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IM.Infrastracture.Efcore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

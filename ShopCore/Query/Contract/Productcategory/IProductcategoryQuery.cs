@@ -10,5 +10,6 @@ namespace Query.Contract.Productcategory
     {
 
         List<ProductCategoryQueyViewModel> GetAll();
+        List<ProductCategoryQueyViewModel> GetCategoriesWithProduct(long CategoryId);
     }
 }

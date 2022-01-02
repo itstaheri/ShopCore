@@ -27,29 +27,9 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
 
             ProductCategories = _productCategory.SearchByNames(commend).Select(x => new SelectListItem(x.CategoryName, x.id.ToString())).ToList();
         }
-        public RedirectToPageResult OnPost(CreateProduct commend, [FromServices] IWebHostEnvironment env)
+        public RedirectToPageResult OnPost(CreateProduct commend)
         {
-            int v = 0;
-
-            if (commend.CatalogeImages.Count > 0)
-                foreach (var item in commend.CatalogeImages)
-                {
-                    v++;
-                    var path = Path.Combine(env.WebRootPath, "Img", "ProductImages", commend.ProductCode + v.ToString() + ".jpg");
-                    using (var stream = System.IO.File.Create(path))
-                    {
-                        item.CopyTo(stream);
-                    }
-                }
-            if (commend.OriginalImage.Length > 0)
-            {
-                var path = Path.Combine(env.WebRootPath, "Img", "ProductImages", commend.ProductCode + ".jpg");
-                using (var stream = System.IO.File.Create(path))
-                {
-                    commend.OriginalImage.CopyTo(stream);
-                }
-            }
-
+            
             _repository.Create(commend);
             return RedirectToPage("./Index");
         }

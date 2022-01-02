@@ -12,10 +12,10 @@ namespace SM.Application.Contracts.Product
      
         public string ProductName { get; set; }
         public string ProductCode { get;  set; }
+        public string Picture { get; set; }
         public string Description { get;  set; }
         public string ShortDescription { get;  set; }
         public long QuantityInStock { get;  set; }
-        public double Price { get;  set; }       
         public string PictureAlt { get;  set; }
         public string PictureTitle { get;  set; }
         public string Slug { get;  set; }

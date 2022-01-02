@@ -1,0 +1,27 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Shop.Inventory.ReduceModel
+@{
+}
+
+
+<div class="panel-heading"><h3 class="panel-title"> افزایش موجودی </h3></div>
+<div class="panel-body">
+    <div class=" form">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>تعداد</label>
+                <input type="number" class="form-control" id="Count" name="Count" />
+            </div>
+            <div class="form-group">
+                <label>توضیحات</label>
+                <textarea class="form-control" id="Description" name="Description"></textarea>
+            </div>
+            <div class="form-group">
+               
+                <input type="hidden" class="form-control" id="InventoryId" name="InventoryId" value="@Model.InventoryId" />
+            </div>
+
+            <button type="submit" class="btn-success">اعمال</button>
+        </form>
+    </div>
+</div>

@@ -430,6 +430,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -839,6 +845,12 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj"
+              },
+              "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj"
+              },
               "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
               }
@@ -1061,6 +1073,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              },
               "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
               },

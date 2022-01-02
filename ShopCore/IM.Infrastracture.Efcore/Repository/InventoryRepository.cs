@@ -1,4 +1,5 @@
-﻿using IM.Application.Contract.Inventory;
+﻿using Frameworks;
+using IM.Application.Contract.Inventory;
 using IM.Domain.Inventory;
 using SM.Infrastructure.EfCore;
 using System;
@@ -22,24 +23,44 @@ namespace IM.Infrastracture.Efcore.Repository
 
         public void Create(InventoryModel commend)
         {
-            _context.inventory.Add(commend);
-            _context.SaveChanges();
+            var check = _context.inventory.Any(x => x.Productid == commend.Productid);
+            if (check !=true)
+            {
+                _context.inventory.Add(commend);
+                _context.SaveChanges();
+            }
+            
+           
         }
 
         public InventoryModel GetBy(long ProductId)
         {
-            throw new NotImplementedException();
+           return _context.inventory.SingleOrDefault(x => x.Productid == ProductId);
         }
 
         public InventoryModel GetDetails(long Id)
         {
             return  _context.inventory.SingleOrDefault(x => x.Id == Id);
-            //return new EditInventory
-            //{
-            //    Id = value.Id,
-            //    Price = value.Price,
-            //    Productid = value.Productid
-            //};
+          
+        }
+
+        public List<InventoryOperationViewModel> GetForLoggs(long InventoryId)
+        {
+            var inventory = _context.inventory.FirstOrDefault(x => x.Id == InventoryId);
+            return inventory.inventoryOperations.Select(x => new InventoryOperationViewModel
+            {
+                Id = x.Id,
+                Description = x.Description,
+                OperationDate = x.OperationDate.ToFarsi(),
+                Count = x.Count,
+                CurrentCount = x.CurrentCount,
+                Operation = x.Operation,
+                OperatorId = x.OperatorId,
+                OrderId = x.OrderId,
+                OperatorName = "Admin",
+                
+                
+            }).ToList();
         }
 
         public void Save()
@@ -56,12 +77,13 @@ namespace IM.Infrastracture.Efcore.Repository
                 InStock = x.InStock,
                 Price = x.Price,
                 ProductId = x.Productid,
-                CurrentCount = x.CurrentInventory()
+                CurrentCount = x.CurrentInventory(),
+                
             });
             if (commend.ProductId>0)
                 query = query.Where(x => x.ProductId == commend.ProductId);
             if (commend.InStock ==false)
-                query = query.Where(x => !x.InStock);
+                query = query.Where(x => x.InStock);
 
             var inventory = query.OrderByDescending(x => x.Id).ToList();
             inventory.ForEach(item =>

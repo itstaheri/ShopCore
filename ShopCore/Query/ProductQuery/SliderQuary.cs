@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Query.Quary
+namespace Query.ProductQuery
 {
     public class SliderQuary : ISliderQuary
     {
