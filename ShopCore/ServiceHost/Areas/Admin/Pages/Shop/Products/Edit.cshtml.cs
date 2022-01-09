@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Query.Contract.Product;
 using SM.Application.Contracts.Product;
 using SM.Application.Contracts.ProductCategory;
 
@@ -18,24 +19,28 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
         private readonly IProductCategoryApplication _ProductCategories;
         [BindProperty] public EditProduct Products { get; set; }
         public List<SelectListItem> Categories { get; set; }
+        private readonly IProductQueryRepository _Productcatalog;
+        public List<string> Catalog;
+        private readonly IWebHostEnvironment _env;
 
-        public List<CatalogeModel> cataloges { get; set; }
-
-        public EditModel(IProductApplication repository, IProductCategoryApplication ProductCategories)
+        public EditModel(IProductApplication repository, IProductCategoryApplication ProductCategories ,IProductQueryRepository Productcatalog, IWebHostEnvironment env)
         {
          
             _repository = repository;
             _ProductCategories = ProductCategories;
+            _Productcatalog = Productcatalog;
+            _env = env;
         }
 
         public void OnGet(long id, SearchProductCategoryByName commend)
         {
 
+            Catalog = _Productcatalog.GetCatalog(id,_env.WebRootPath);
+
             Products = _repository.GetValueForEdit(id);
             Categories = _ProductCategories.SearchByNames(commend)
                 .Select(x => new SelectListItem(x.CategoryName, x.id.ToString())).ToList();
 
-        
             
         }
         
@@ -52,7 +57,5 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
      
 
     }
-    public class CatalogeModel
-    {
-    }
+  
 }

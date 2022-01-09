@@ -120,6 +120,38 @@ namespace SM.Infrastructure.EfCore.Migrations
                     b.ToTable("productcategories");
                 });
 
+            modelBuilder.Entity("SM.Domain.ProductComment.ProductCommentModel", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("productComments");
+                });
+
             modelBuilder.Entity("SM.Domain.Sliders.ShopSliderModel", b =>
                 {
                     b.Property<long>("Id")
@@ -156,6 +188,22 @@ namespace SM.Infrastructure.EfCore.Migrations
                         .IsRequired();
 
                     b.Navigation("productcategory");
+                });
+
+            modelBuilder.Entity("SM.Domain.ProductComment.ProductCommentModel", b =>
+                {
+                    b.HasOne("SM.Domain.Product.ProductModel", "product")
+                        .WithMany("Comments")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("product");
+                });
+
+            modelBuilder.Entity("SM.Domain.Product.ProductModel", b =>
+                {
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("SM.Domain.ProductCategory.ProductCategoryModel", b =>

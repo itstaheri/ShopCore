@@ -1,15 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Query.Contract.Product;
+using Query.Contract.Product.ProductComment;
 using Query.Contract.Productcategory;
 using Query.Contract.Slider;
 using Query.ProductQuery;
 using SM.Application;
 using SM.Application.Contracts.Product;
 using SM.Application.Contracts.ProductCategory;
+using SM.Application.Contracts.ProductComment;
 using SM.Application.Contracts.Slider;
 using SM.Domain.Product;
 using SM.Domain.ProductCategory;
+using SM.Domain.ProductComment;
 using SM.Domain.Sliders;
 using SM.Infrastructure.EfCore;
 using SM.Infrastructure.EfCore.Repositories;
@@ -26,7 +29,7 @@ namespace SM.Configuration
 
             service.AddDbContext<ShopContext>(x => { x.UseSqlServer(ConnectionString); });
 
-            service.AddTransient<IProductApplication, ProductAppication>();
+            service.AddTransient<IProductApplication, ProductApplication>();
             service.AddTransient<IProductRepository, ProductRepository>();
 
             service.AddTransient<IShopSliderRepository, ShopSliderRepository>();
@@ -36,6 +39,9 @@ namespace SM.Configuration
             service.AddTransient<ISliderQuary, SliderQuary>();
             service.AddTransient<IProductQueryRepository, ProductQueryRepository>();
 
+            service.AddTransient<IProductCommentRepository, ProductCommentRepository>();
+            service.AddTransient<IProductcommentapplication, ProductCommentapplication>();
+            service.AddTransient<IProductCommentQueryRepository, ProductCommentQueryRepository>();
           
 
 

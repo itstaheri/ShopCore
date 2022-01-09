@@ -17,6 +17,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
         public List<SelectListItem> ProductCategories { get; set; }
         private readonly IProductCategoryApplication _productCategory;
         private readonly IProductApplication _repository;
+        public CreateProduct product;
         public CreateModel(IProductApplication repository, IProductCategoryApplication productCategory)
         {
             _repository = repository;
@@ -24,7 +25,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
         }
         public void OnGet(SearchProductCategoryByName commend)
         {
-
+            
             ProductCategories = _productCategory.SearchByNames(commend).Select(x => new SelectListItem(x.CategoryName, x.id.ToString())).ToList();
         }
         public RedirectToPageResult OnPost(CreateProduct commend)

@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Frameworks;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +33,8 @@ namespace SM.Application.Contracts.Product
         public int Ram { get;  set; }
         public string TouchId { get;  set; }
 
+        [MaxFileSize(2048 * 1024, ErrorMessage ="حجم فایل نباید بیشتر از 2مگابایت باشد.")]
+        [FileExtentionLimited(new string[] {".jpg",".jpeg",".png"},ErrorMessage ="فرمت فایل باید یکی از موارد jpg,png,jpeg باشد.")]
         public IFormFile OriginalImage { get; set; }
         public List<IFormFile> CatalogeImages { get; set; }
              

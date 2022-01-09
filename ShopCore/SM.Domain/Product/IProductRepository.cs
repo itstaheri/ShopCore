@@ -13,6 +13,7 @@ namespace SM.Domain.Product
         List<ProductViewModel> GetProductsBy(SearchProduct commend);
         ProductModel GetBy(long Id);
         void Save();
+
        
 
     }

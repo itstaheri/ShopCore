@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SM.Domain.Product;
 using SM.Domain.ProductCategory;
+using SM.Domain.ProductComment;
 using SM.Domain.Sliders;
 using SM.Infrastructure.EfCore.Mappings;
 using System;
@@ -17,6 +18,8 @@ namespace SM.Infrastructure.EfCore
         public DbSet<ProductCategoryModel> productcategories { get; set; }
         public DbSet<ProductModel> products { get; set; }
         public DbSet<ShopSliderModel> shopSliders { get; set; }
+        public DbSet<ProductCommentModel> productComments { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             

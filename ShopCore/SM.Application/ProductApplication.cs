@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace SM.Application
 {
-    public class ProductAppication : IProductApplication
+    public class ProductApplication : IProductApplication
     {
         private readonly IProductRepository _repository;
         private readonly IFileUploader _Uploader;
-        public ProductAppication(IProductRepository repository, IFileUploader uploader)
+        public ProductApplication(IProductRepository repository, IFileUploader uploader)
         {
             _repository = repository;
             _Uploader = uploader;
@@ -29,8 +29,13 @@ namespace SM.Application
 
         public void Create(CreateProduct commend)
         {
+        
             var path = $"{commend.ProductName}";
             var picture = _Uploader.Upload(commend.OriginalImage,path);
+
+            if (commend.CatalogeImages.Count>0)
+                _Uploader.MultipleUpload(commend.CatalogeImages, path);
+
             var Product = new ProductModel(commend.ProductName, commend.ProductCode, picture, commend.Description
                 , commend.ShortDescription, commend.QuantityInStock, commend.PictureAlt
                 , commend.PictureTitle, commend.Slug, commend.Keywoard, commend.MetaDescription, commend.CategoryId
@@ -41,8 +46,13 @@ namespace SM.Application
 
         public void Edit(EditProduct commend)
         {
+
             var path = $"{commend.ProductName}";
             var picture = _Uploader.Upload(commend.OriginalImage,path);
+
+            if (commend.CatalogeImages != null)
+                _Uploader.MultipleUpload(commend.CatalogeImages, path);
+
             var GetProduct = _repository.GetBy(commend.Id);
             GetProduct.Edit(commend.ProductName, commend.ProductCode, picture, commend.Description
                 , commend.ShortDescription, commend.QuantityInStock, commend.PictureAlt
@@ -73,7 +83,17 @@ namespace SM.Application
                 PictureTitle = value.PictureTitle,
                 Slug = value.PictureTitle,
                 ProductCode = value.ProductCode,
-                QuantityInStock = value.QuantityInStock
+                QuantityInStock = value.QuantityInStock,
+                Storage = value.Storage,
+                OperatingSystem = value.OperatingSystem,
+                ScreenSize = value.ScreenSize,
+                NetworkSupport =value.NetworkSupport,
+                Ram =value.Ram,
+                Resolution = value.Ram,
+                TouchId = value.TouchId,
+                
+                
+                
             };
         }
 

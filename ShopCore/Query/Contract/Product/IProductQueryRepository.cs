@@ -10,5 +10,8 @@ namespace Query.Contract.Product
     {
         List<ProductQueryModel> list();
         List<ProductQueryModel> Search(string commend);
+        ProductDetailQueryModel GetDetail(long id);
+        List<string> GetCatalog(long id,string root);
+
     }
 }

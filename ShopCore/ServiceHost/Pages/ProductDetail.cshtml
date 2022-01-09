@@ -1,0 +1,230 @@
+﻿@page "{id:long}"
+@model ServiceHost.Pages.ProductDetailModel
+@{
+    ViewData["Title"] = "صفحه ی محصول";
+}
+
+
+<div class="product_page_bg">
+
+    <div class="container">
+
+        <div class="product_details_wrapper mb-55">
+            <!--product details start-->
+            <div class="product_details">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="product-details-tab">
+                            <div id="img-1" class="zoomWrapper single-zoom">
+                                <a href="#">
+                                    <img id="zoom1" title="@Model.Product.PictureTitle" src="~/Img/ProductImages/@Model.Product.ProductName/@Model.Product.Picture"  data-zoom-image="~/Img/ProductImages/@Model.Product.ProductName/@Model.Product.Picture" alt="@Model.Product.PictureAlt">
+                                </a>
+                            </div>
+                            <div class="single-zoom-thumb">
+                                <ul class="s-tab-zoom owl-carousel single-product-active" id="gallery_01">
+
+                                    @foreach (var pic in Model.catalogNames)
+                                    {
+                                        <li>
+                                            <a class="elevatezoom-gallery active" data-update="" data-image="~/Img/ProductImages/@Model.Product.ProductName/@pic" data-zoom-image="~/Img/ProductImages/@Model.Product.ProductName/@pic">
+                                                <img src="~/Img/ProductImages/@Model.Product.ProductName/@pic" title="@Model.Product.PictureTitle" alt="@Model.Product.PictureAlt" height="50" width="60">
+                                            </a>
+
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="product_d_right">
+                            <form method="post">
+
+                                <h3><a href="#">@Model.Product.ProductName</a></h3>
+
+                                <div class="product_rating">
+                                    <ul>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                        <li class="review"><a href="#">( 1 نقد و بررسی )</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="price_box">
+                                    <span class="old_price">@Model.Product.Price تومان</span>
+                                    @if (Model.Product.PriceAfterDiscount != null)
+                                    {
+                                        <span class="current_price">@Model.Product.PriceAfterDiscount تومان</span>
+                                    }
+                                </div>
+                                <div class="product_desc">
+                                    <p>@Model.Product.ShortDescription</p>
+                                </div>
+                               
+                                <div class="product_variant quantity">
+                                    <label>تعداد</label>
+                                    <input min="1" max="100" value="1" type="number">
+                                    <button class="button" type="submit">افزودن به سبد</button>
+
+                                </div>
+                                @*<div class=" product_d_action">
+                                    <ul>
+                                        <li><a href="#" title="افزودن به علاقه‌مندی‌ها">+ افزودن به علاقه‌مندی‌ها</a></li>
+                                        <li><a href="#" title="افزودن به علاقه‌مندی‌ها">+ مقایسه</a></li>
+                                    </ul>
+                                </div>*@
+                                <div class="product_meta">
+                                    <span>دسته: <a asp-page="Category" asp-route-CategoryId="@Model.Product.CategoryId">@Model.Product.CategoryName</a></span>
+                                </div>
+
+                            </form>
+                            <div class="priduct_social">
+                                <ul>
+                                    <li><a class="facebook" href="~/ProductDetail/@Model.Product.Id" title="facebook"><i class="fa fa-facebook"></i> لایک</a></li>
+                                    <li><a class="twitter" href="~/ProductDetail/@Model.Product.Id" title="twitter"><i class="fa fa-twitter"></i> توییت</a></li>
+                                    <li><a class="pinterest" href="~/ProductDetail/@Model.Product.Id" title="pinterest"><i class="fa fa-pinterest"></i> ذخیره</a></li>
+                                    <li><a class="google-plus" href="~/ProductDetail/@Model.Product.Id" title="google +"><i class="fa fa-google-plus"></i> اشتراک گذاری</a></li>
+                                    <li><a class="linkedin" href="#~/ProductDetail/@Model.Product.Id title="linkedin"><i class="fa fa-linkedin"></i> لینکدین</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--product details end-->
+            <!--product info start-->
+            <div class="product_d_info">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product_d_inner">
+                            <div class="product_info_button">
+                                <ul class="nav" role="tablist">
+                                    <li>
+                                        <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">توضیحات</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#sheet" role="tab" aria-controls="sheet" aria-selected="false">مشخصات فنی</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">نقد و برررسی (1)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="info" role="tabpanel">
+
+                                    <div class="product_info_content">
+                                        <p>@Model.Product.ShortDescription</p>
+                                        <p>@Model.Product.Description</p>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade" id="sheet" role="tabpanel">
+                                    <div class="product_d_table">
+                                        <form action="#">
+                                            <table>
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td class="first_child">سیستم عامل</td>
+                                                        <td>@Model.Product.OperatingSystem</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">رم</td>
+                                                        <td>@Model.Product.Ram گیگابایت</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">کیفیت دوربین</td>
+                                                        <td>@Model.Product.Resolution مگاپیکسل</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">سایز صفحه نمایش</td>
+                                                        <td>@Model.Product.ScreenSize اینچ</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">حافظه</td>
+                                                        <td>@Model.Product.Storage</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">حسگر اثر انگشت</td>
+                                                        <td>@Model.Product.TouchId</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">شبکه</td>
+                                                        <td>@Model.Product.NetworkSupport</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                    </div>
+                                    <div class="product_info_content">
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و</p>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                                    <div class="reviews_wrapper">
+                                        <h2>@Model.Comments.Count نقد و بررسی برای این محصول</h2>
+                                        @foreach (var item in Model.Comments)
+                                        {
+                                            <div class="reviews_comment_box">
+                                                <div class="comment_thmb">
+                                                    <img src="assets/img/blog/comment2.jpg" alt="">
+                                                </div>
+                                                <div class="comment_text">
+                                                    <div class="reviews_meta">
+
+                                                        <p><strong>@item.Username نام کاربری :</strong>@item.CreationDate تاریخ :</p>
+                                                    </div>
+                                                    <p>@item.Text</p>
+                                                </div>
+
+                                            </div>
+                                        }
+                                        <div class="comment_title">
+                                            <h2>یک نقد و بررسی بنویسید </h2>
+                                            <p>ایمیل شما منتشر نخواهد شد. فیلد های الزامی مشخص شده اند</p>
+                                        </div>
+                                        <div class="product_rating mb-10">
+                                           
+                                        </div>
+                                        <div class="product_review_form">
+
+                                            <form asp-page-handler="Comment" method="post">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="review_comment">موضوع </label>
+                                                        <input name="title" id="title" />
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <label for="review_comment">متن دیدگاه </label>
+                                                        <textarea name="Text" id="Text"></textarea>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <input type="hidden" name="ProductId" id="ProductId" value="@Model.Product.Id"/>
+                                                    </div>
+                                                </div>
+                                                <button type="submit">ثبت</button>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--product info end-->
+        </div>
+
+    </div>
+
+</div>

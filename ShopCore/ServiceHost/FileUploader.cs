@@ -18,23 +18,46 @@ namespace ServiceHost
             _env = env;
         }
 
+        public void MultipleUpload(List<IFormFile> files, string path)
+        {
+            int numb = 0;
+            var Picpath = $"{_env.WebRootPath}//Img//ProductImages//{path}";
+            if (!Directory.Exists(Picpath))
+                Directory.CreateDirectory(Picpath);
+            foreach (var item in files)
+            {
+               
+                var filename = DateTime.Now.ToFileName() + "-" + item.FileName;
+                var pathfile = $"{Picpath}//{filename}";
+
+                using (var stream = File.Create(pathfile))
+                {
+                    item.CopyTo(stream);
+                }
+                
+            }
+        }
+
         public string Upload(IFormFile file,string path)
         {
+         
             if (file == null) return "";
 
-
+           
             var Picpath = $"{_env.WebRootPath}//Img//ProductImages//{path}";
             if (!Directory.Exists(Picpath))
                 Directory.CreateDirectory(Picpath);
 
-            var pathfile = $"{Picpath}//{file.FileName}";
+            var filename = DateTime.Now.ToFileName() +"-"+ file.FileName;
+            var pathfile = $"{Picpath}//{filename}";
            
             using (var stream = File.Create(pathfile))
             {
                 file.CopyTo(stream);
             }
-            return file.FileName;
+            return filename;
             
         }
+        
     }
 }

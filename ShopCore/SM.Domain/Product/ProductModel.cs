@@ -1,4 +1,5 @@
 ﻿using SM.Domain.ProductCategory;
+using SM.Domain.ProductComment;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,8 +47,7 @@ namespace SM.Domain.Product
             ProductName = productName;
             ProductCode = productCode;
             if (!string.IsNullOrWhiteSpace(picture))
-                Picture = picture;
-            
+                Picture = picture;            
             Description = description;
             ShortDescription = shortDescription;
             QuantityInStock = quantityInStock;
@@ -80,7 +80,7 @@ namespace SM.Domain.Product
         public int Id { get;private set; }
         public string ProductName { get; private set; }
         public string ProductCode { get; private set; }
-        public string Picture { get; set; }
+        public string Picture { get; private set; }
         public string Description { get; private set; }
         public string ShortDescription { get; private set; }
         public long QuantityInStock { get; private set; }
@@ -107,6 +107,7 @@ namespace SM.Domain.Product
         public long CategoryId { get; private set; }
         public ProductCategoryModel productcategory { get; private set; }
 
+        public List<ProductCommentModel> Comments { get;private set; }
 
     }
 }

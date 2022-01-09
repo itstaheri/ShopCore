@@ -15,3 +15,5 @@ D:\ShopCore\ShopCore\DM.Application.Contract\bin\Debug\net5.0\SM.Application.Con
 D:\ShopCore\ShopCore\DM.Application.Contract\obj\Debug\net5.0\DM.Application.Contract.csproj.CopyComplete
 D:\ShopCore\ShopCore\DM.Application.Contract\bin\Debug\net5.0\SM.Domain.dll
 D:\ShopCore\ShopCore\DM.Application.Contract\bin\Debug\net5.0\SM.Domain.pdb
+D:\ShopCore\ShopCore\DM.Application.Contract\bin\Debug\net5.0\Frameworks.dll
+D:\ShopCore\ShopCore\DM.Application.Contract\bin\Debug\net5.0\Frameworks.pdb

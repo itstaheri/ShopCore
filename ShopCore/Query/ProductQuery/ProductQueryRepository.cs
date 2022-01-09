@@ -6,6 +6,7 @@ using Query.Contract.Product;
 using SM.Infrastructure.EfCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +18,67 @@ namespace Query.ProductQuery
         private readonly ShopContext _shop;
         private readonly DiscountContext _discount;
         private readonly InventoryContext _inventory;
-
         public ProductQueryRepository(ShopContext shop, DiscountContext discount, InventoryContext inventory)
         {
             _shop = shop;
             _discount = discount;
             _inventory = inventory;
+        }
+
+        public List<string> GetCatalog(long id,string root)
+        {
+            var filename = _shop.products.SingleOrDefault(x => x.Id == id).ProductName;
+            List<string> names = new List<string>();
+            DirectoryInfo di = new DirectoryInfo($"{root}//Img//ProductImages//{filename}");
+            FileInfo[] files = di.GetFiles();
+            foreach (FileInfo file in files)
+            {
+                names.Add(file.Name);
+            }
+            return names;
+        }
+
+        public ProductDetailQueryModel GetDetail(long id)
+        {
+            var Price = _inventory.inventory.Select(x => new { x.Productid, x.Price }).FirstOrDefault(x=>x.Productid == id).Price;
+            var discountRate = _discount.customerDiscounts.Select(x => new { x.DiscountRate, x.ProductId }).FirstOrDefault(x=>x.ProductId == id).DiscountRate;
+            var product = _shop.products.Include(x=>x.productcategory).SingleOrDefault(x => x.Id == id);
+            var query =new ProductDetailQueryModel
+            {
+                Id = product.Id,
+                Description = product.Description,
+                CreationDate = product.CreationDate,
+                MetaDescription = product.MetaDescription,
+                ShortDescription = product.ShortDescription,
+                CategoryId = product.CategoryId,
+                Keywoard = product.Keywoard,
+                NetworkSupport = product.NetworkSupport,
+                OperatingSystem = product.OperatingSystem,
+                PictureAlt =product.PictureAlt,
+                PictureTitle =product.PictureTitle,
+                ProductCode = product.ProductCode,
+                ProductName = product.ProductName,
+                Ram =product.Ram,
+                Resolution = product.Resolution,
+                Slug = product.Slug,
+                ScreenSize =product.ScreenSize,
+                TouchId =product.TouchId,
+                Storage =product.Storage,
+                Picture = product.Picture,
+                CategoryName = product.productcategory.CategoryName
+            };
+            if (Price != null)
+            {
+                query.Price = Price.ToMoney();
+                if (discountRate != null)
+                {
+                    var discountValue = Math.Round((Price * discountRate) / 100);
+                    query.PriceAfterDiscount = (Price - discountValue).ToMoney();
+                }
+            }
+
+            return query;
+
         }
 
         public List<ProductQueryModel> list()
