@@ -38,13 +38,13 @@ namespace ServiceHost
             }
         }
 
-        public string Upload(IFormFile file,string path)
+        public string Upload(IFormFile file, string folder, string path)
         {
          
             if (file == null) return "";
 
            
-            var Picpath = $"{_env.WebRootPath}//Img//ProductImages//{path}";
+            var Picpath = $"{_env.WebRootPath}//Img//{folder}//{path}";
             if (!Directory.Exists(Picpath))
                 Directory.CreateDirectory(Picpath);
 

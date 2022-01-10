@@ -9,7 +9,7 @@ namespace Frameworks
 {
     public interface IFileUploader
     {
-        string Upload(IFormFile file, string path);
+        string Upload(IFormFile file, string folder, string path);
         void MultipleUpload(List<IFormFile> files,string path);
     }
 }

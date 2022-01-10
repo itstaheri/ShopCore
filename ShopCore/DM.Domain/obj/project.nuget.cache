@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "t79xwHzp6AqrV8LgqNvQBDpohPSfV85XfIfTg8DUhqk8LP8c2iAV+uyIpzIGhZuF367SLujhfp+FonT9WzEC7A==",
+  "dgSpecHash": "ioj7do/RzFYk50qp5qDtYTl6GdR77uZ2VpHwbyL+U00SjTTN0OlaFbr1lvD4Ids9hQ52QZRp31doLFMXpyVdKA==",
   "success": true,
   "projectFilePath": "D:\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\alith\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.12\\microsoft.aspnetcore.http.features.5.0.12.nupkg.sha512",
     "C:\\Users\\alith\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\alith\\.nuget\\packages\\microsoft.aspnetcore.routing.abstractions\\2.2.0\\microsoft.aspnetcore.routing.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\alith\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\alith\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\alith\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
     "C:\\Users\\alith\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\alith\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",

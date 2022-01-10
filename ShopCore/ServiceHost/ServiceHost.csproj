@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AM.Bootestrapper\AM.Configuration.csproj" />
     <ProjectReference Include="..\DM.Configuration\DM.Configuration.csproj" />
     <ProjectReference Include="..\IM.Configuration\IM.Configuration.csproj" />
     <ProjectReference Include="..\Query\Query.csproj" />
@@ -21,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\Img\ProfileImages\" />
     <Folder Include="wwwroot\Img\ProductImages\" />
     <Folder Include="wwwroot\Img\ShopSliders\" />
   </ItemGroup>

@@ -2081,6 +2081,81 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "AM.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AM.Application.Contract": "1.0.0",
+          "AM.Domain": "1.0.0",
+          "Frameworks": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AM.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AM.Application.dll": {}
+        }
+      },
+      "AM.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AM.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AM.Application.Contract.dll": {}
+        }
+      },
+      "AM.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AM.Application": "1.0.0",
+          "AM.Domain": "1.0.0",
+          "AM.Infrastracture.Efcore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AM.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AM.Configuration.dll": {}
+        }
+      },
+      "AM.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AM.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AM.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AM.Domain.dll": {}
+        }
+      },
+      "AM.Infrastracture.Efcore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AM.Domain": "1.0.0",
+          "Frameworks": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AM.Infrastracture.Efcore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AM.Infrastracture.Efcore.dll": {}
+        }
+      },
       "DM.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2166,7 +2241,8 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.12",
-          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0"
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Options": "5.0.0"
         },
         "compile": {
           "bin/placeholder/Frameworks.dll": {}
@@ -7567,6 +7643,31 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "AM.Application/1.0.0": {
+      "type": "project",
+      "path": "../AM.Application/AM.Application.csproj",
+      "msbuildProject": "../AM.Application/AM.Application.csproj"
+    },
+    "AM.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../AM.Application.Contract/AM.Application.Contract.csproj",
+      "msbuildProject": "../AM.Application.Contract/AM.Application.Contract.csproj"
+    },
+    "AM.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../AM.Bootestrapper/AM.Configuration.csproj",
+      "msbuildProject": "../AM.Bootestrapper/AM.Configuration.csproj"
+    },
+    "AM.Domain/1.0.0": {
+      "type": "project",
+      "path": "../AM.Domain/AM.Domain.csproj",
+      "msbuildProject": "../AM.Domain/AM.Domain.csproj"
+    },
+    "AM.Infrastracture.Efcore/1.0.0": {
+      "type": "project",
+      "path": "../AM.Infrastracture.Efcore/AM.Infrastracture.Efcore.csproj",
+      "msbuildProject": "../AM.Infrastracture.Efcore/AM.Infrastracture.Efcore.csproj"
+    },
     "DM.Application/1.0.0": {
       "type": "project",
       "path": "../DM.Application/DM.Application.csproj",
@@ -7655,6 +7756,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AM.Configuration >= 1.0.0",
       "DM.Configuration >= 1.0.0",
       "IM.Configuration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
@@ -7699,6 +7801,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj": {
+              "projectPath": "D:\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj"
+            },
             "D:\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj": {
               "projectPath": "D:\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj"
             },

@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ServiceHost/1.0.0": {
         "dependencies": {
+          "AM.Configuration": "1.0.0",
           "DM.Configuration": "1.0.0",
           "IM.Configuration": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
@@ -1868,6 +1869,71 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "AM.Application/1.0.0": {
+        "dependencies": {
+          "AM.Application.Contract": "1.0.0",
+          "AM.Domain": "1.0.0",
+          "Frameworks": "1.0.0"
+        },
+        "runtime": {
+          "AM.Application.dll": {}
+        },
+        "compile": {
+          "AM.Application.dll": {}
+        }
+      },
+      "AM.Application.Contract/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.12",
+          "Microsoft.EntityFrameworkCore": "5.0.12"
+        },
+        "runtime": {
+          "AM.Application.Contract.dll": {}
+        },
+        "compile": {
+          "AM.Application.Contract.dll": {}
+        }
+      },
+      "AM.Configuration/1.0.0": {
+        "dependencies": {
+          "AM.Application": "1.0.0",
+          "AM.Domain": "1.0.0",
+          "AM.Infrastracture.Efcore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "AM.Configuration.dll": {}
+        },
+        "compile": {
+          "AM.Configuration.dll": {}
+        }
+      },
+      "AM.Domain/1.0.0": {
+        "dependencies": {
+          "AM.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "AM.Domain.dll": {}
+        },
+        "compile": {
+          "AM.Domain.dll": {}
+        }
+      },
+      "AM.Infrastracture.Efcore/1.0.0": {
+        "dependencies": {
+          "AM.Domain": "1.0.0",
+          "Frameworks": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.12",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.12"
+        },
+        "runtime": {
+          "AM.Infrastracture.Efcore.dll": {}
+        },
+        "compile": {
+          "AM.Infrastracture.Efcore.dll": {}
+        }
+      },
       "DM.Application/1.0.0": {
         "dependencies": {
           "DM.Application.Contract": "1.0.0",
@@ -1941,7 +2007,8 @@
       "Frameworks/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.12",
-          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0"
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Options": "5.0.0"
         },
         "runtime": {
           "Frameworks.dll": {}
@@ -4675,6 +4742,31 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "AM.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AM.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AM.Configuration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AM.Infrastracture.Efcore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "DM.Application/1.0.0": {
       "type": "project",

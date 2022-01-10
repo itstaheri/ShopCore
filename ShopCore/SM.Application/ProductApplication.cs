@@ -31,7 +31,7 @@ namespace SM.Application
         {
         
             var path = $"{commend.ProductName}";
-            var picture = _Uploader.Upload(commend.OriginalImage,path);
+            var picture = _Uploader.Upload(commend.OriginalImage,"ProductImages",path);
 
             if (commend.CatalogeImages.Count>0)
                 _Uploader.MultipleUpload(commend.CatalogeImages, path);
@@ -48,7 +48,7 @@ namespace SM.Application
         {
 
             var path = $"{commend.ProductName}";
-            var picture = _Uploader.Upload(commend.OriginalImage,path);
+            var picture = _Uploader.Upload(commend.OriginalImage,"ProductImages", path);
 
             if (commend.CatalogeImages != null)
                 _Uploader.MultipleUpload(commend.CatalogeImages, path);

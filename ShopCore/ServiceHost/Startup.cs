@@ -1,3 +1,5 @@
+using _0_Framework.Application;
+using AM.Configuration;
 using DM.Configuration;
 using DM.infrastructure.Efcore;
 using Frameworks;
@@ -33,8 +35,11 @@ namespace ServiceHost
             ShopBootestrapper.Configuration(services, ConnectionString);
             DiscountBootestrapper.Configuration(services, ConnectionString);
             InventoryBootestrapper.Configoration(services, ConnectionString);
+            AccountBootestrapper.Configure(services, ConnectionString);
 
             services.AddTransient<IFileUploader, FileUploader>();
+            services.AddSingleton<IPasswordHasher, PasswordHasher>();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
