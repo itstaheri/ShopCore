@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AM.Application.Contract.Account
 {
-    public class CreateAccount
+    public class Register
     {
        
         public string FullName { get; set; }

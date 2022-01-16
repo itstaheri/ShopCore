@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AM.Infrastracture.Efcore\AM.Infrastracture.Efcore.csproj" />
     <ProjectReference Include="..\Frameworks\Frameworks.csproj" />
     <ProjectReference Include="..\SM.Domain\SM.Domain.csproj" />
   </ItemGroup>

@@ -26,3 +26,9 @@ D:\ShopCore\ShopCore\IM.Infrastracture.Efcore\obj\Debug\net5.0\IM.Infrastracture
 D:\ShopCore\ShopCore\IM.Infrastracture.Efcore\obj\Debug\net5.0\ref\IM.Infrastracture.Efcore.dll
 D:\ShopCore\ShopCore\IM.Infrastracture.Efcore\obj\Debug\net5.0\IM.Infrastracture.Efcore.pdb
 D:\ShopCore\ShopCore\IM.Infrastracture.Efcore\obj\Debug\net5.0\IM.Infrastracture.Efcore.genruntimeconfig.cache
+D:\ShopCore\ShopCore\IM.Infrastracture.Efcore\bin\Debug\net5.0\AM.Application.Contract.dll
+D:\ShopCore\ShopCore\IM.Infrastracture.Efcore\bin\Debug\net5.0\AM.Domain.dll
+D:\ShopCore\ShopCore\IM.Infrastracture.Efcore\bin\Debug\net5.0\AM.Infrastracture.Efcore.dll
+D:\ShopCore\ShopCore\IM.Infrastracture.Efcore\bin\Debug\net5.0\AM.Application.Contract.pdb
+D:\ShopCore\ShopCore\IM.Infrastracture.Efcore\bin\Debug\net5.0\AM.Domain.pdb
+D:\ShopCore\ShopCore\IM.Infrastracture.Efcore\bin\Debug\net5.0\AM.Infrastracture.Efcore.pdb

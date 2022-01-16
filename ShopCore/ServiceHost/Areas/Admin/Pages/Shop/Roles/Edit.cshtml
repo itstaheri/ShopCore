@@ -9,21 +9,29 @@
     <div class="panel-heading"><h3 class="panel-title">ویرایش نقش</h3></div>
     <div class="panel-body">
         <div class=" form">
-            <form action="" method="post">
+            <form  method="post">
 
 
                 <div class="form-group">
                     <label>نام نقش</label>
-                    <input type="text" class="form-control" id="Name" name="Name" value="@Model.Roles.Name"/>
+                    <input type="text" class="form-control" id="Name" name="Name" value="@Model.Roles.Name" />
                 </div>
 
+                <div class="col-md-6">
+                    <label class="control-label col-md-3">انتخاب دسترسی ها</label>
+                    <div class="col-md-12">
+                        <select asp-for="Roles.permisions" asp-items="@Model.permissions" name="permisions" class="multi-select" multiple="multiple" id="my_multi_select3">
+                        </select>
+                    </div>
+                    <input type="hidden" asp-for="Roles.Id" value="@Model.Roles.Id" />
+                </div>
 
-
-                <button type="submit">ایجاد</button>
+                <button type="submit">ویرایش</button>
             </form>
         </div>
     </div>
 </div>
+
 
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Frameworks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Query.Contract.Product;
 using SM.Application.Contracts.Product;
 using SM.Application.Contracts.ProductCategory;
+using SM.Infrastructure.EfCore.Permisions;
 
 namespace ServiceHost.Areas.Admin.Pages.Shop.Products
 {
@@ -31,7 +33,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
             _Productcatalog = Productcatalog;
             _env = env;
         }
-
+        [NeedsPermission(ShopPermission.EditProduct)]
         public void OnGet(long id, SearchProductCategoryByName commend)
         {
 

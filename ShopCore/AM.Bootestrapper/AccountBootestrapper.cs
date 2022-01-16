@@ -5,6 +5,7 @@ using AM.Domain.AccountAgg;
 using AM.Domain.Role;
 using AM.Infrastracture.Efcore;
 using AM.Infrastracture.Efcore.Repositories;
+using Frameworks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -22,6 +23,8 @@ namespace AM.Configuration
 
             service.AddTransient<IRoleRepository, RoleRepository>();
             service.AddTransient<IRoleApplication, RoleApplication>();
+
+         
         }
     }
 }

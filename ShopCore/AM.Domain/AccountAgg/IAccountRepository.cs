@@ -14,5 +14,6 @@ namespace AM.Domain.AccountAgg
         AccountModel GetBy(long Id);
         void Save();
         bool Exist(string Username,string Email,string Number);
+        AccountModel GetByUsername(string Username);
     }
 }

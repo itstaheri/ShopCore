@@ -13,3 +13,5 @@ D:\ShopCore\ShopCore\AM.Domain\obj\Debug\net5.0\AM.Domain.csproj.CopyComplete
 D:\ShopCore\ShopCore\AM.Domain\obj\Debug\net5.0\AM.Domain.dll
 D:\ShopCore\ShopCore\AM.Domain\obj\Debug\net5.0\ref\AM.Domain.dll
 D:\ShopCore\ShopCore\AM.Domain\obj\Debug\net5.0\AM.Domain.pdb
+D:\ShopCore\ShopCore\AM.Domain\bin\Debug\net5.0\Frameworks.dll
+D:\ShopCore\ShopCore\AM.Domain\bin\Debug\net5.0\Frameworks.pdb

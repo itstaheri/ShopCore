@@ -30,10 +30,10 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Accounts
             Roles = _roles.List().Select(x => new SelectListItem(x.Name, x.Id.ToString())).ToList();
             
         }
-        public RedirectToPageResult OnPost(CreateAccount commend)
+        public RedirectToPageResult OnPost(Register commend)
         {
             
-            _repository.Create(commend);
+            _repository.Register(commend);
             return RedirectToPage("./Index");
         }
     }

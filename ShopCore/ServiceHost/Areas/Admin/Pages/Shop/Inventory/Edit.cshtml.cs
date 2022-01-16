@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Frameworks;
 using IM.Application.Contract.Inventory;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SM.Application.Contracts.Product;
+using SM.Infrastructure.EfCore.Permisions;
 
 namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
 {
@@ -23,6 +25,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
         }
 
         [BindProperty] public EditInventory Inventory { get; set; }
+        [NeedsPermission(InventoryPermission.EditInventory)]
         public void OnGet(long Id,SearchProduct x)
         {
             Inventory = _repository.GetValueForEdit(Id);

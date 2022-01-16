@@ -1,10 +1,12 @@
-﻿<!DOCTYPE html>
+﻿@inject Frameworks.IAuthHelper authHelper;
+
+<!DOCTYPE html>
 <html class="no-js" lang="fa" dir="rtl">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>قالب Antomi | قالب فروشگاهی آنتومی</title>
+    <title>@(ViewData["Title"]) | موبایل شاپ</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -44,7 +46,10 @@
                         </div>
                         <div class="header_top_settings text-right">
                             <ul>
-                                <li><a href="#">آدرس‌های فروشگاه</a></li>
+                                @if (authHelper.CurrentAccountRole() == "1")
+                                {
+                                    <li><a asp-page="./Admin">ورود به پنل ادمین</a></li>
+                                }
                                 <li><a href="#">پیگیری سفارش</a></li>
                                 <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)800456789">(+98) 800 456 789 </a></li>
                                 <li>ضمانت کیفیت محصولات</li>
@@ -61,58 +66,10 @@
                                 <a href="javascript:void(0)">
                                     <i class="fa fa-shopping-bag"></i>
                                     <span class="cart_price"><i class="ion-ios-arrow-down"></i></span>
-                                    <span class="cart_count">2</span>
+                                    <span class="cart_count" id="cart_item_count">0</span>
 
                                 </a>
-                                <!--mini cart-->
-                                <div class="mini_cart">
-                                    <div class="mini_cart_inner">
-                                        <div class="cart_item">
-                                            <div class="cart_img">
-                                                <a href="#"><img src="assets/img/s-product/product.jpg" alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a href="#">گوشی هوشمند سامسونگ A50</a>
-                                                <p>تعداد: 1 × <span> 60,000 تومان </span></p>
-                                            </div>
-                                            <div class="cart_remove">
-                                                <a href="#"><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="cart_item">
-                                            <div class="cart_img">
-                                                <a href="#"><img src="assets/img/s-product/product2.jpg" alt=""></a>
-                                            </div>
-                                            <div class="cart_info">
-                                                <a href="#">صندلی آشپزخانه پلاستیکی Nilper</a>
-                                                <p>تعداد: 1 × <span> 60,000 تومان </span></p>
-                                            </div>
-                                            <div class="cart_remove">
-                                                <a href="#"><i class="ion-android-close"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mini_cart_table">
-                                        <div class="cart_total">
-                                            <span>جمع اجزا:</span>
-                                            <span class="price">138,000 تومان</span>
-                                        </div>
-                                        <div class="cart_total mt-10">
-                                            <span>جمع کل:</span>
-                                            <span class="price">138,000 تومان</span>
-                                        </div>
-                                    </div>
-                                    <div class="mini_cart_footer">
-                                        <div class="cart_button">
-                                            <a href="cart.html">مشاهده سبد</a>
-                                        </div>
-                                        <div class="cart_button">
-                                            <a href="checkout.html">پرداخت</a>
-                                        </div>
 
-                                    </div>
-                                </div>
-                                <!--mini cart end-->
                             </div>
                         </div>
                         <!--Search-->
@@ -131,41 +88,12 @@
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
                                 <li class="menu-item-has-children active">
-                                    <a href="#">خانه</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">خانه 1</a></li>
-                                        <li><a href="index-2.html">خانه 2</a></li>
+                                    <a asp-page="./Index">خانه</a>
 
-                                    </ul>
                                 </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">فروشگاه</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item-has-children">
-                                            <a href="#">طرح های فروشگاه</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="shop.html">فروشگاه</a></li>
-                                                <li><a href="shop-fullwidth.html">تمام عرض</a></li>
+                                <li class="main_menu">
+                                    <a asp-page="./Index">فروشگاه</a>
 
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">سایر صفحات</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="cart.html">سبد خرید</a></li>
-                                                <li><a href="wishlist.html">لیست علاقه‌مندی‌ها</a></li>
-
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children">
-                                            <a href="#">انواع محصول</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="product-details.html">جزئیات محصول</a></li>
-                                                <li><a href="product-sidebar.html">محصول با نوار کناری</a></li>
-
-                                            </ul>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li class="menu-item-has-children">
                                     <a href="#">بلاگ</a>
@@ -176,14 +104,7 @@
                                     </ul>
 
                                 </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">صفحات </a>
-                                    <ul class="sub-menu">
-                                        <li><a href="about.html">درباره ما</a></li>
-                                        <li><a href="faq.html">سوالات متداول</a></li>
 
-                                    </ul>
-                                </li>
                                 <li class="menu-item-has-children">
                                     <a href="my-account.html">حساب کاربری</a>
                                 </li>
@@ -223,7 +144,10 @@
                         <div class="col-lg-8 col-md-7">
                             <div class="header_top_settings text-right">
                                 <ul>
-                                    <li><a href="#">آدرس‌های فروشگاه</a></li>
+                                    @if (authHelper.CurrentAccountRole() == "1")
+                                    {
+                                        <li><a asp-page="/Admin/index">ورود به پنل ادمین</a></li>
+                                    }
                                     <li><a href="#">پیگیری سفارش</a></li>
                                     <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)800456789">(+98) 800 456 789 </a></li>
                                     <li>ضمانت کیفیت محصولات</li>
@@ -246,42 +170,12 @@
                                 <nav>
                                     <ul>
                                         <li>
-                                            <a href="index.html">خانه<i class="fa fa-angle-down"></i></a>
-                                            <ul class="sub_menu">
-                                                <li><a href="index.html">خانه فروشگاه 1</a></li>
-                                                <li><a href="index-2.html">خانه فروشگاه 2</a></li>
+                                            <a asp-page="./Index">خانه<i class=""></i></a>
 
-                                            </ul>
                                         </li>
                                         <li class="mega_items">
-                                            <a class="active" href="shop.html">فروشگاه<i class="fa fa-angle-down"></i></a>
-                                            <div class="mega_menu">
-                                                <ul class="mega_menu_inner">
-                                                    <li>
-                                                        <a href="#">طرح های فروشگاه</a>
-                                                        <ul>
-                                                            <li><a href="shop-fullwidth.html">تمام عرض</a></li>
-                                                            <li><a href="shop-fullwidth-list.html">تمام عرض لیست</a></li>
+                                            <a class="active" asp-page="./Index">فروشگاه<i class=""></i></a>
 
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">سایر صفحات</a>
-                                                        <ul>
-                                                            <li><a href="cart.html">سبد خرید</a></li>
-
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">انواع محصول</a>
-                                                        <ul>
-                                                            <li><a href="product-details.html">جزئیات محصول</a></li>
-
-
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
                                         </li>
                                         <li>
                                             <a href="blog.html">بلاگ<i class="fa fa-angle-down"></i></a>
@@ -290,17 +184,23 @@
 
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="#">صفحات <i class="fa fa-angle-down"></i></a>
-                                            <ul class="sub_menu pages">
-                                                <li><a href="about.html">درباره ما</a></li>
-                                                <li><a href="faq.html">سوالات متداول</a></li>
 
-                                            </ul>
-                                        </li>
+                                        <li><a asp-page="./aboutUs">درباره ما</a></li>
+                                        <li><a asp-page="./ContectUs"> تماس با ما</a></li>
+                                        @if (!authHelper.IsAuthenticated())
+                                        {
+                                            <li><a asp-page="./Account"> ورود/ثبت نام</a></li>
 
-                                        <li><a href="about.html">درباره ما</a></li>
-                                        <li><a href="contact.html"> تماس با ما</a></li>
+                                        }
+
+                                        else
+                                        {
+                                            <li><a class="glyphicon glyphicon-user" asp-page="./Profile"> حساب من</a></li>
+                                            <li><a class="glyphicon glyphicon-user" asp-page="./Account" asp-page-handler="Logout"> خروج</a></li>
+
+
+                                        }
+
                                     </ul>
                                 </nav>
                             </div>
@@ -317,38 +217,16 @@
                                     <a href="javascript:void(0)">
                                         <i class="fa fa-shopping-bag"></i>
                                         <span class="cart_price"><span>152,000 تومان</span> <i class="ion-ios-arrow-down"></i></span>
-                                        <span class="cart_count">2</span>
+                                        <span class="cart_count" id="cart_items_count">0</span>
 
                                     </a>
                                     <!--mini cart-->
                                     <div class="mini_cart">
-                                        <div class="mini_cart_inner">
-                                            <div class="cart_item">
-                                                <div class="cart_img">
-                                                    <a href="#"><img src="assets/img/s-product/product.jpg" alt=""></a>
-                                                </div>
-                                                <div class="cart_info">
-                                                    <a href="#">گوشی هوشمند سامسونگ A50</a>
-                                                    <p>تعداد: 1 × <span> 60,000 تومان </span></p>
-                                                </div>
-                                                <div class="cart_remove">
-                                                    <a href="#"><i class="ion-android-close"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="cart_item">
-                                                <div class="cart_img">
-                                                    <a href="#"><img src="assets/img/s-product/product2.jpg" alt=""></a>
-                                                </div>
-                                                <div class="cart_info">
-                                                    <a href="#">صندلی آشپزخانه پلاستیکی Nilper</a>
-                                                    <p>تعداد: 1 × <span> 60,000 تومان </span></p>
-                                                </div>
-                                                <div class="cart_remove">
-                                                    <a href="#"><i class="ion-android-close"></i></a>
-                                                </div>
-                                            </div>
+                                        <div class="mini_cart_inner" id="cart_items_wrapper">
+
+
                                         </div>
-                                        <div class="mini_cart_table">
+                                        @*<div class="mini_cart_table">
                                             <div class="cart_total">
                                                 <span>جمع اجزا:</span>
                                                 <span class="price">138,000 تومان</span>
@@ -357,10 +235,10 @@
                                                 <span>جمع کل:</span>
                                                 <span class="price">138,000 تومان</span>
                                             </div>
-                                        </div>
+                                        </div>*@
                                         <div class="mini_cart_footer">
                                             <div class="cart_button">
-                                                <a href="cart.html">مشاهده سبد</a>
+                                                <a asp-page="Cart">مشاهده سبد</a>
                                             </div>
                                             <div class="cart_button">
                                                 <a href="checkout.html">پرداخت</a>
@@ -727,7 +605,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div class="copyright_area">
-                            <p>ارائه شده در وب‌سایت <a href="https://www.rtl-theme.com" target="_blank">راست‌چین</a></p>
+                            <p>By Ali taheri</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -839,10 +717,18 @@
 
     <!-- Main JS -->
     <script src="~/WebTheme/assets/js/main.js"></script>
-
-
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <!--Custom.js-->
+    <script src="~/WebTheme/assets/js/plugins.js"></script>
+    <script src="~/WebTheme/assets/js/Custom.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            updateCart();
+        });
+    </script>
 
 </body>
 </html>

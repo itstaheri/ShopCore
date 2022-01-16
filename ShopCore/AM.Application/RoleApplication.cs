@@ -1,5 +1,6 @@
 ﻿using AM.Application.Contract.Role;
 using AM.Domain.Role;
+using Frameworks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,14 +20,17 @@ namespace AM.Application
 
         public void Create(CreateRole commend)
         {
-            var role = new RoleModel(commend.Name);
+            var role = new RoleModel(commend.Name,new List<Permission>());
             _repository.Create(role);
         }
 
         public void Edit(EditRole commend)
         {
             var role = _repository.GetBy(commend.Id);
-            role.Edit(commend.Name);
+
+            var permission = new List<Permission>();
+            commend.permisions.ForEach(code => permission.Add(new Permission(code)));
+            role.Edit(commend.Name, permission);
             _repository.Save();
         }
 
@@ -37,12 +41,10 @@ namespace AM.Application
 
         public EditRole ValueForEdit(long Id)
         {
-            var role = _repository.GetBy(Id);
-            return new EditRole
-            {
-                Id = role.Id,
-                Name = role.Name,
-            };
+            return _repository.Edit(Id);
         }
+
+     
+    
     }
 }

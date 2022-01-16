@@ -1,4 +1,5 @@
-﻿using SM.Domain.ProductCategory;
+﻿using SM.Domain.OrderAgg;
+using SM.Domain.ProductCategory;
 using SM.Domain.ProductComment;
 using System;
 using System.Collections.Generic;
@@ -108,6 +109,7 @@ namespace SM.Domain.Product
         public ProductCategoryModel productcategory { get; private set; }
 
         public List<ProductCommentModel> Comments { get;private set; }
+        public OrderDetailModel orderDetail { get; private set; }
 
     }
 }

@@ -40,15 +40,23 @@
                             <h4 class="product_name"><a href="product-details.html">@product.ProductName</a></h4>
 
                             <div class="price_box">
-                                <span class="old_price">@product.Price تومان</span>
-                                <span class="current_price">@product.PriceAfterDiscount تومان</span>
+                                @if (product.HasDiscount == true)
+                                {
+                                    <span class="old_price">@product.Price تومان</span>
+                                    <span class="current_price">@product.PriceAfterDiscount تومان</span>
+                                }
+                                else
+                                {
+                                    <span class="current_price">قیمت : @product.Price تومان </span>
+                                }
                             </div>
                             <div class="text">
-                                <a asp-page="Category" asp-route-CategoryId="@product.Id">@product.CategoryName</a>
+                                <a asp-page="Category" asp-route-CategoryId="@product.Id">دسته : @product.CategoryName</a>
                             </div>
                         </div>
                         <div class="add_to_cart">
-                            <a href="cart.html" title="افزودن به سبد">افزودن به سبد</a>
+                            
+                            <a asp-page="./ProductDetail" asp-route-Id="@product.Id" title="مشاهده محصول">مشاهده محصول</a>
                         </div>
                     </div>
                     @*<div class="product_content list_content">

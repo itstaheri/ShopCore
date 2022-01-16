@@ -15,3 +15,7 @@ D:\ShopCore\ShopCore\SM.Domain\obj\Debug\net5.0\ref\SM.Domain.dll
 D:\ShopCore\ShopCore\SM.Domain\obj\Debug\net5.0\SM.Domain.pdb
 D:\ShopCore\ShopCore\SM.Domain\bin\Debug\net5.0\Frameworks.dll
 D:\ShopCore\ShopCore\SM.Domain\bin\Debug\net5.0\Frameworks.pdb
+D:\ShopCore\ShopCore\SM.Domain\bin\Debug\net5.0\IM.Application.Contract.dll
+D:\ShopCore\ShopCore\SM.Domain\bin\Debug\net5.0\IM.Domain.dll
+D:\ShopCore\ShopCore\SM.Domain\bin\Debug\net5.0\IM.Domain.pdb
+D:\ShopCore\ShopCore\SM.Domain\bin\Debug\net5.0\IM.Application.Contract.pdb

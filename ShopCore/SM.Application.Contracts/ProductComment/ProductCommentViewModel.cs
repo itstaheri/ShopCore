@@ -10,6 +10,7 @@ namespace SM.Application.Contracts.ProductComment
     {
         public long Id { get;  set; }
         public string Title { get;  set; }
+        public long UserId { get; set; }
         public string Username { get;  set; }
         public int Status { get;  set; }
         public string CreationDate { get;  set; }

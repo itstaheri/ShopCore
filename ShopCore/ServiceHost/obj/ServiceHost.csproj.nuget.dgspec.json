@@ -33,7 +33,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -48,7 +52,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.12, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -112,6 +116,9 @@
               },
               "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              },
+              "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
               }
             }
           }
@@ -798,6 +805,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.12, )"
@@ -809,6 +820,18 @@
             "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[105.0.0, )"
+            },
+            "System.IO.FileSystem": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -1331,6 +1354,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [
@@ -1525,6 +1552,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "D:\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj"
+              },
               "D:\\ShopCore\\ShopCore\\Query\\Query.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\Query\\Query.csproj"
               },
@@ -1607,6 +1637,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj"
+              },
               "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
               }
@@ -1671,6 +1704,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj"
+              },
               "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               },

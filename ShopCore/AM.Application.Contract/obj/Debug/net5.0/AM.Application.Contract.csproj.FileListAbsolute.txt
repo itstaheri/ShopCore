@@ -10,3 +10,6 @@ D:\ShopCore\ShopCore\AM.Application.Contract\obj\Debug\net5.0\AM.Application.Con
 D:\ShopCore\ShopCore\AM.Application.Contract\obj\Debug\net5.0\AM.Application.Contract.dll
 D:\ShopCore\ShopCore\AM.Application.Contract\obj\Debug\net5.0\ref\AM.Application.Contract.dll
 D:\ShopCore\ShopCore\AM.Application.Contract\obj\Debug\net5.0\AM.Application.Contract.pdb
+D:\ShopCore\ShopCore\AM.Application.Contract\bin\Debug\net5.0\Frameworks.dll
+D:\ShopCore\ShopCore\AM.Application.Contract\bin\Debug\net5.0\Frameworks.pdb
+D:\ShopCore\ShopCore\AM.Application.Contract\obj\Debug\net5.0\AM.Application.Contract.csproj.CopyComplete

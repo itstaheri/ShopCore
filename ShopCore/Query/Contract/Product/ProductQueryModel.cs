@@ -17,6 +17,7 @@ namespace Query.Contract.Product
         public string PictureTitle { get; set; }
         public string PictureAlt { get; set; }
         public string Price { get; set; }
+        public double DoublePrice { get; set; }
         public string PriceAfterDiscount { get; set; }
         public int DiscountRate { get; set; }
         public string CategoryName { get; set; }

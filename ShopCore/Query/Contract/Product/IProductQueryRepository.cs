@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SM.Application.Contracts.Order;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Query.Contract.Product
         List<ProductQueryModel> Search(string commend);
         ProductDetailQueryModel GetDetail(long id);
         List<string> GetCatalog(long id,string root);
+        List<CartItem> CheckInventory(List<CartItem> cartItems);
 
     }
 }

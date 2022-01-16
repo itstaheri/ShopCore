@@ -15,7 +15,14 @@ namespace AM.Infrastracture.Efcore.Mappings
         {
             builder.HasKey(x => x.Id);
             builder.HasMany(x => x.accounts).WithOne(x => x.role).HasForeignKey(x => x.RoleId);
+            builder.OwnsMany<Permission>(x => x.Permissions, navigationBuilder =>
+            {
+                navigationBuilder.HasKey(x => x.Id);
+                navigationBuilder.Ignore(x => x.Name);
+                navigationBuilder.WithOwner(x => x.role).HasForeignKey(x=>x.RoleId);
 
+            
+            });
         }
     }
 }

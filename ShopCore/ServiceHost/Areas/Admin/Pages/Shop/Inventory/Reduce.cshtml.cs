@@ -1,9 +1,11 @@
 
+using Frameworks;
 using IM.Application.Contract.Inventory;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 using SM.Application.Contracts.Product;
+using SM.Infrastructure.EfCore.Permisions;
 
 namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
 {
@@ -17,6 +19,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
             _repository = repository;
         }
         public long InventoryId;
+        [NeedsPermission(InventoryPermission.ReduceInventory)]
         public void OnGet(long Id)
         {
             InventoryId = Id;

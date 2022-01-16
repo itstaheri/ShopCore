@@ -43,7 +43,7 @@ namespace DM.Application
                 DiscountRate = value.DiscountRate,
                 Id = value.Id,
                 ProductId = value.ProductId,
-                Username = "",
+                Username = value.Username,
                
 
             };

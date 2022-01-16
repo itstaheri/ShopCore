@@ -10,6 +10,7 @@ namespace AM.Domain.Role
     public interface IRoleRepository
     {
         void Create(RoleModel commend);
+        EditRole Edit(long Id);
         RoleModel GetBy(long Id);
         List<RoleViewModel> GetAll();
         void Save();

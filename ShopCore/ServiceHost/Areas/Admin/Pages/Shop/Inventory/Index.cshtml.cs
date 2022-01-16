@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DM.Application.Contract.ColloeagueDiscount;
+using Frameworks;
 using IM.Application.Contract.Inventory;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SM.Application.Contracts.Product;
+using SM.Infrastructure.EfCore.Permisions;
 
 namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
 {
@@ -24,7 +26,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
             _repository = repository;
             _product = product;
         }
-
+        [NeedsPermission(InventoryPermission.ListInventory)]
         public void OnGet(SearchInventory x,SearchProduct p)
         {
             Inventory = _repository.GetAll(x);
@@ -35,6 +37,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
         {
             Inventory = _repository.GetAll(x);
         }
+        [NeedsPermission(InventoryPermission.IncreaseInventory)]
         public RedirectToPageResult OnPostIncrease(long Id)
         {
             var commend = new IncreaseInventory
@@ -44,6 +47,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
             _repository.Increase(commend);
             return RedirectToPage("./Index");
         }
+        [NeedsPermission(InventoryPermission.ReduceInventory)]
         public RedirectToPageResult OnPostReduce(long Id)
         {
             var commend = new ReduceInventory

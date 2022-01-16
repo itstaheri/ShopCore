@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Frameworks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SM.Application.Contracts.Product;
+using SM.Infrastructure.EfCore.Permisions;
 
 namespace ServiceHost.Areas.Admin.Pages.Shop.Products
 {
@@ -22,6 +24,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
         {
             Products = _repository.GetAll(commend);
         }
+        [NeedsPermission(ShopPermission.SearchProduct)]
         public void OnPost(SearchProduct commend)
         {
             Products = _repository.GetAll(commend);

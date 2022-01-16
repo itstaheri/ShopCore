@@ -17,3 +17,5 @@ D:\ShopCore\ShopCore\AM.Application\obj\Debug\net5.0\AM.Application.csproj.CopyC
 D:\ShopCore\ShopCore\AM.Application\obj\Debug\net5.0\AM.Application.dll
 D:\ShopCore\ShopCore\AM.Application\obj\Debug\net5.0\ref\AM.Application.dll
 D:\ShopCore\ShopCore\AM.Application\obj\Debug\net5.0\AM.Application.pdb
+D:\ShopCore\ShopCore\AM.Application\bin\Debug\net5.0\SM.Application.Contracts.dll
+D:\ShopCore\ShopCore\AM.Application\bin\Debug\net5.0\SM.Application.Contracts.pdb

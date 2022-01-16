@@ -1,6 +1,7 @@
 ﻿using AM.Application.Contract.Role;
 using AM.Domain.Role;
 using Frameworks;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,19 +31,35 @@ namespace AM.Infrastracture.Efcore.Repositories
             {
                 Id = x.Id,
                 CreationDate = x.CreationDate.ToFarsi(),
-                Name = x.Name
+                Name = x.Name,
+                
             }).ToList();
         }
 
-        public RoleModel GetBy(long Id)
+        public EditRole Edit(long Id)
         {
-            return _context.roles.SingleOrDefault(x => x.Id == Id);
+            return _context.roles.Select(x => new EditRole
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Mappedpermisions = Mappermisions(x.Permissions)
+            }).AsNoTracking().FirstOrDefault(x=>x.Id == Id);
            
+        }
+
+        private static List<PermisionDto> Mappermisions(IEnumerable<Permission> permissions)
+        {
+            return permissions.Select(x => new PermisionDto(x.Code, x.Name)).ToList();
         }
 
         public void Save()
         {
             _context.SaveChanges();
+        }
+
+        public RoleModel GetBy(long Id)
+        {
+            return _context.roles.SingleOrDefault(x => x.Id == Id);
         }
     }
 }

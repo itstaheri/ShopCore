@@ -73,5 +73,10 @@ namespace AM.Infrastracture.Efcore.Repositories
                 .Any(x => x.Username == Username || x.Email == Email || x.Number == Number);
             return account == true;
         }
+
+        public AccountModel GetByUsername(string Username)
+        {
+            return _context.accounts.SingleOrDefault(x => x.Username == Username);
+        }
     }
 }

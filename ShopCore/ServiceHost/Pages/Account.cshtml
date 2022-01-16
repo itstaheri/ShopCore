@@ -1,0 +1,88 @@
+﻿@page
+@model ServiceHost.Pages.AccountModel
+@{
+    ViewData["Title"] = "ورود و ثبت نام";
+}
+
+
+<div class="login_page_bg">
+    <div class="container">
+        <div class="customer_login">
+            <div class="row">
+                <!--login area start-->
+                <div class="col-lg-6 col-md-6">
+                    <div class="account_form login">
+                        <h2>ورود</h2>
+                        @if (Model.LoginMessage != null)  
+                        {
+                            <div class="alert alert-danger">@Model.LoginMessage</div>
+
+                        }
+                        <form asp-page-handler="Login">
+                            <p>
+                                <label>نام کاربری <span>*</span></label>
+                                <input type="text" id="Username" name="Username" dir="ltr">
+                            </p>
+                            <p>
+                                <label>رمز عبور <span>*</span></label>
+                                <input type="password" id="Password" name="Password" dir="ltr">
+                            </p>
+                            <div class="login_submit">
+                                <a href="#">رمز عبور خود را فراموش کرده اید؟</a>
+                                <label for="remember">
+                                    <input id="Remember" name="Remember" type="checkbox">
+                                    به خاطر سپاری
+                                </label>
+                                <button type="submit">ورود</button>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <!--login area start-->
+                <!--register area start-->
+                <div class="col-lg-6 col-md-6">
+                    <div class="account_form register">
+                        <h2>ثبت نام</h2>
+                        @if (Model.RegisterMessage != null)
+                        {
+                            <div class="alert alert-danger">@Model.RegisterMessage</div>
+
+                        }
+                        <form method="post" asp-page-handler="Register">
+                            <p>
+                                <label>نام و نام خانوداگی <span>*</span></label>
+                                <input type="text" id="FullName" name="Fullname" dir="ltr">
+                            </p>
+                            <p>
+                                <label>نام کاربری<span>*</span></label>
+                                <input type="text" id="Username" name="Username" dir="ltr">
+                            </p>
+                            <p>
+                                <label>آدرس ایمیل<span>*</span></label>
+                                <input type="email" id="Email" name="Email" dir="ltr">
+                            </p>
+                            <p>
+                                <label>شماره تلفن<span>*</span></label>
+                                <input type="number" id="Number" name="Number" dir="ltr">
+                            </p>
+                            <p>
+                                <label>رمز عبور <span>*</span></label>
+                                <input type="password" id="Password" name="Password" dir="ltr">
+                            </p>
+                            <p>
+                                <label>تکرار رمز عبور <span>*</span></label>
+                                <input type="password" id="RePassword" name="RePassword" dir="ltr">
+                            </p>
+                            <div class="login_submit">
+                                <button type="submit">ثبت نام</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--register area end-->
+            </div>
+        </div>
+    </div>
+</div>

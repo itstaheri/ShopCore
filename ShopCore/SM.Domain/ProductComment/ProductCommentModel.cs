@@ -31,6 +31,7 @@ namespace SM.Domain.ProductComment
         public string Text { get; private set; }
         public int ProductId { get; private set; }
         public ProductModel product { get; private set; }
+       
         public int Status { get; private set; }
         public DateTime CreationDate { get; private set; }
 

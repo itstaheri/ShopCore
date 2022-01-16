@@ -17,6 +17,7 @@ namespace SM.Infrastructure.EfCore.Mappings
             builder.HasOne(x => x.productcategory).WithMany(x => x.products)
                 .HasForeignKey(x => x.CategoryId);
             builder.HasMany(x => x.Comments).WithOne(x => x.product).HasForeignKey(x => x.ProductId);
+            builder.HasOne(x => x.orderDetail).WithOne(x => x.product);
         }
     }
 }

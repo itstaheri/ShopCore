@@ -27,3 +27,9 @@ D:\ShopCore\ShopCore\DM.Configuration\bin\Debug\net5.0\SM.Infrastructure.EfCore.
 D:\ShopCore\ShopCore\DM.Configuration\bin\Debug\net5.0\Frameworks.pdb
 D:\ShopCore\ShopCore\DM.Configuration\bin\Debug\net5.0\SM.Domain.pdb
 D:\ShopCore\ShopCore\DM.Configuration\bin\Debug\net5.0\SM.Infrastructure.EfCore.pdb
+D:\ShopCore\ShopCore\DM.Configuration\bin\Debug\net5.0\AM.Application.Contract.dll
+D:\ShopCore\ShopCore\DM.Configuration\bin\Debug\net5.0\AM.Domain.dll
+D:\ShopCore\ShopCore\DM.Configuration\bin\Debug\net5.0\AM.Infrastracture.Efcore.dll
+D:\ShopCore\ShopCore\DM.Configuration\bin\Debug\net5.0\AM.Application.Contract.pdb
+D:\ShopCore\ShopCore\DM.Configuration\bin\Debug\net5.0\AM.Domain.pdb
+D:\ShopCore\ShopCore\DM.Configuration\bin\Debug\net5.0\AM.Infrastracture.Efcore.pdb

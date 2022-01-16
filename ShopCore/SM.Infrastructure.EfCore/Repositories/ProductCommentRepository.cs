@@ -1,4 +1,7 @@
-﻿using Frameworks;
+﻿
+using AM.Application.Contract.Account;
+using AM.Domain.AccountAgg;
+using Frameworks;
 using Microsoft.AspNetCore.Http;
 using SM.Application.Contracts.ProductComment;
 using SM.Domain.ProductComment;
@@ -13,12 +16,13 @@ namespace SM.Infrastructure.EfCore.Repositories
 {
     public class ProductCommentRepository : IProductCommentRepository
     {
-
+        private readonly IAccountRepository _account;
         private readonly ShopContext _context;
 
-        public ProductCommentRepository(ShopContext context)
+        public ProductCommentRepository(ShopContext context, IAccountRepository account)
         {
             _context = context;
+            _account = account;
         }
 
         public void Create(ProductCommentModel commend)
@@ -26,9 +30,11 @@ namespace SM.Infrastructure.EfCore.Repositories
             _context.productComments.Add(commend);
             _context.SaveChanges();
         }
-
+        AccountSearchModel acnull;
         public List<ProductCommentViewModel> GetAll(ProductCommentSearchModel commend)
         {
+
+            var account = _account.GetAll(acnull);
 
             var query = _context.productComments.Select(x => new ProductCommentViewModel
             {
@@ -36,20 +42,25 @@ namespace SM.Infrastructure.EfCore.Repositories
                 CreationDate = x.CreationDate.ToFarsi(),
                 Status = x.Status,
                 Title = x.Title,
-                Username = "",
+                UserId = x.UserId,
                 ProductName = x.product.ProductName,
                 Text = x.Text
 
             }).ToList();
 
-            if (commend!=null)
+            foreach (var item in query)
+            {
+               item.Username =  account.FirstOrDefault(x => x.Id == item.UserId).Username;
+            }
+
+            if (commend != null)
             {
                 if (!string.IsNullOrWhiteSpace(commend.ProductName))
                     query = query.Where(x => x.ProductName == commend.ProductName).ToList();
 
                 if (!string.IsNullOrWhiteSpace(commend.ProductName))
                     query = query.Where(x => x.ProductName == commend.ProductName).ToList();
-                
+
             }
             return query;
         }

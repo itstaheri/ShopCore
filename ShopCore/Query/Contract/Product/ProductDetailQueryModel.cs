@@ -37,6 +37,7 @@ namespace Query.Contract.Product
 
         public string CategoryName { get; set; }
         public string Price { get; set; }
+        public double DoublePrice { get; set; }
         public long discountRate { get; set; }
         public string PriceAfterDiscount { get; set; }
 

@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
+using SM.Domain.OrderAgg;
 using SM.Domain.Product;
 using SM.Domain.ProductCategory;
 using SM.Domain.ProductComment;
@@ -19,10 +20,11 @@ namespace SM.Infrastructure.EfCore
         public DbSet<ProductModel> products { get; set; }
         public DbSet<ShopSliderModel> shopSliders { get; set; }
         public DbSet<ProductCommentModel> productComments { get; set; }
+        public DbSet<OrderModel> orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            
+            builder.ApplyConfiguration(new OrderMapping());
             builder.ApplyConfiguration(new ProductCategoryMapping());
             builder.ApplyConfiguration(new ProductMapping());
             base.OnModelCreating(builder);

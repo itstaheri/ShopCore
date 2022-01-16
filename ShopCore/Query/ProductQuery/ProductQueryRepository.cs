@@ -3,6 +3,7 @@ using Frameworks;
 using IM.Infrastracture.Efcore;
 using Microsoft.EntityFrameworkCore;
 using Query.Contract.Product;
+using SM.Application.Contracts.Order;
 using SM.Infrastructure.EfCore;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,24 @@ namespace Query.ProductQuery
             _shop = shop;
             _discount = discount;
             _inventory = inventory;
+        }
+
+        public List<CartItem> CheckInventory(List<CartItem> cartItems)
+        {
+            var inventory = _inventory.inventory.Include(x=>x.inventoryOperations)
+                .Select(x=>new { x.InStock,x.Productid,x.inventoryOperations,x.Id}).AsNoTracking().ToList();
+            if (cartItems==null || cartItems.Count <= 0)
+                return null;
+
+            foreach (var item in cartItems)
+            {
+                var itemInventory = inventory.Any(q => q.Productid == item.Id &&
+                q.inventoryOperations.FirstOrDefault(x=>x.InventoryId == q.Id).Count >= item.Count);
+                if (itemInventory == true)
+                    item.IsInStock = true;
+               
+            }
+            return cartItems;
         }
 
         public List<string> GetCatalog(long id,string root)
@@ -65,11 +84,13 @@ namespace Query.ProductQuery
                 TouchId =product.TouchId,
                 Storage =product.Storage,
                 Picture = product.Picture,
-                CategoryName = product.productcategory.CategoryName
+                CategoryName = product.productcategory.CategoryName,
+                
             };
             if (Price != null)
             {
                 query.Price = Price.ToMoney();
+                query.DoublePrice = Price;
                 if (discountRate != null)
                 {
                     var discountValue = Math.Round((Price * discountRate) / 100);
@@ -84,7 +105,7 @@ namespace Query.ProductQuery
         public List<ProductQueryModel> list()
         {
             var inventory = _inventory.inventory.Select(x => new { x.Productid, x.Price }).ToList();
-            var discount = _discount.customerDiscounts.Select(x => new { x.DiscountRate, x.ProductId }).ToList();
+            var discount = _discount.customerDiscounts.Where(x => x.Start < DateTime.Now && x.End > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).ToList();
 
             var query = _shop.products.Where(x => x.IsDeleted == false).Select(x => new ProductQueryModel
             {
@@ -105,6 +126,7 @@ namespace Query.ProductQuery
                 if (Inventoryproduct != null)
                 {
                     products.Price = Inventoryproduct.Price.ToMoney();
+                    products.DoublePrice = Inventoryproduct.Price;
                     var discountproduct = discount.FirstOrDefault(x => x.ProductId == products.Id);
                     if (discountproduct != null)
                     {

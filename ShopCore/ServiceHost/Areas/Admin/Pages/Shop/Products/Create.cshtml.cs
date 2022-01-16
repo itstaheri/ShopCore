@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Frameworks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SM.Application.Contracts.Product;
 using SM.Application.Contracts.ProductCategory;
+using SM.Infrastructure.EfCore.Permisions;
 
 namespace ServiceHost.Areas.Admin.Pages.Shop.Products
 {
@@ -18,16 +20,19 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Products
         private readonly IProductCategoryApplication _productCategory;
         private readonly IProductApplication _repository;
         public CreateProduct product;
+       
         public CreateModel(IProductApplication repository, IProductCategoryApplication productCategory)
         {
             _repository = repository;
             _productCategory = productCategory;
         }
+        [NeedsPermission(ShopPermission.ActiveOrDeactiveProductComment)]
         public void OnGet(SearchProductCategoryByName commend)
         {
             
             ProductCategories = _productCategory.SearchByNames(commend).Select(x => new SelectListItem(x.CategoryName, x.id.ToString())).ToList();
         }
+        [NeedsPermission(ShopPermission.CreateProduct)]
         public RedirectToPageResult OnPost(CreateProduct commend)
         {
             
