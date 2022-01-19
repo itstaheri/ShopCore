@@ -16,5 +16,6 @@ namespace IM.Application.Contract.Inventory
         void Reduce(ReduceInventory commend);
         void ReduceList(List<ReduceInventory> commend);
         List<InventoryOperationViewModel> GetforLogss(long InventoryId);
+        void Save();
     }
 }

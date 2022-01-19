@@ -58,8 +58,11 @@ namespace SM.Infrastructure.EfCore.Repositories
 
                 
             });
-            if (!string.IsNullOrEmpty(commend.Name))            
-                query = query.Where(x => x.CategoryName.Contains(commend.Name));
+            if (commend!=null)
+            {
+                if (!string.IsNullOrEmpty(commend.Name))
+                    query = query.Where(x => x.CategoryName.Contains(commend.Name));
+            }
             
           
             

@@ -20,7 +20,10 @@ namespace IM.Domain.Inventory
             InventoryId = inventoryId;
             OperationDate = DateTime.Now;
         }
-
+        public void ReduceAfterPay(int count)
+        {
+            CurrentCount =CurrentCount - count;
+        }
         public long Id { get; private set; }
         //vared ya kharej shode
         public bool Operation { get; private set; }

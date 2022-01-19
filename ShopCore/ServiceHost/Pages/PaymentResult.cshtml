@@ -1,0 +1,26 @@
+﻿@page
+@model ServiceHost.Pages.PaymentResultModel
+@{
+    ViewData["Title"] = "نتیجه پرداخت";
+}
+
+<div class="checkout_page_bg">
+    <div class="container">
+        <div class="col-lg-12">
+            @if (Model.Payment.IsSuccessful == true)
+            {
+            <div class="alert alert-success">
+                <p>@Model.Payment.Message</p>
+                @if (Model.Payment.Code != null)
+                {
+                    <p>@Model.Payment.Code کد پیگیری :</p>
+                }
+            </div>
+            }
+            else
+            {
+                <div class="alert alert-danger">@Model.Payment.Message</div>
+            } 
+        </div>
+    </div>
+</div>

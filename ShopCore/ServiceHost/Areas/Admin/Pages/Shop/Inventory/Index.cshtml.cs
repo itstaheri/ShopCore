@@ -30,7 +30,6 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
         public void OnGet(SearchInventory x,SearchProduct p)
         {
             Inventory = _repository.GetAll(x);
-           
 
         }
         public void OnPost(SearchInventory x)

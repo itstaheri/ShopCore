@@ -37,7 +37,9 @@ namespace SM.Infrastructure.EfCore.Repositories
         {
             return _context.shopSliders.Select(x=> new ShopSliderViewModel{
                 Id = x.Id,
-                Title = x.Title
+                Title = x.Title,
+                Picture = x.Picture
+                
             }).ToList();
         }
 

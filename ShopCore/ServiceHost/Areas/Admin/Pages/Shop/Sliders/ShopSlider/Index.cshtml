@@ -42,7 +42,7 @@
                                 @foreach (var item in Model.sliders)
                                 {
                                     <tr>
-                                        <td><img src="~/Img/ShopSliders/@(item.Id).jpg" height="60" width="90" /></td>
+                                        <td><img src="~/Img/ShopSliders/@(item.Id)/@item.Picture" height="60" width="90" /></td>
                                         <td>@item.Title</td>
 
                                         <td>
@@ -54,6 +54,7 @@
                                         <td>
                                             <form action="" method="post">
                                                 <input type="hidden" name="Id" id="Id" value=" @item.Id"/>
+                                                <input type="hidden" name="Title" id="Title" value=" @item.Title"/>
                                                 <button type="submit" class="btn-danger">حذف</button>
                                             </form>
                                         </td>

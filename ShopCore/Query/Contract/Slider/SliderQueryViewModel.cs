@@ -11,6 +11,7 @@ namespace Query.Contract.Slider
         public long Id { get; set; }
         public string Title { get;  set; }
         public string Description { get; set; }
+        public string Picture { get; set; }
         public string ButtonText { get;  set; }
         public string Url { get;  set; }
         public string PictureAlt { get;  set; }

@@ -19,6 +19,51 @@ namespace SM.Infrastructure.EfCore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.12");
 
+            modelBuilder.Entity("SM.Domain.OrderAgg.OrderModel", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("DiscountAmount")
+                        .HasColumnType("float");
+
+                    b.Property<bool>("IsFinaly")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("PayAmount")
+                        .HasColumnType("float");
+
+                    b.Property<int>("PaymentMethod")
+                        .HasColumnType("int");
+
+                    b.Property<long>("RefId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("float");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("orders");
+                });
+
             modelBuilder.Entity("SM.Domain.Product.ProductModel", b =>
                 {
                     b.Property<int>("Id")
@@ -112,6 +157,9 @@ namespace SM.Infrastructure.EfCore.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Slug")
                         .HasColumnType("nvarchar(max)");
 
@@ -165,6 +213,9 @@ namespace SM.Infrastructure.EfCore.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PictureAlt")
                         .HasColumnType("nvarchar(max)");
 
@@ -177,6 +228,48 @@ namespace SM.Infrastructure.EfCore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("shopSliders");
+                });
+
+            modelBuilder.Entity("SM.Domain.OrderAgg.OrderModel", b =>
+                {
+                    b.OwnsMany("SM.Domain.OrderAgg.OrderDetailModel", "orderDetails", b1 =>
+                        {
+                            b1.Property<long>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("bigint")
+                                .UseIdentityColumn();
+
+                            b1.Property<int>("Count")
+                                .HasColumnType("int");
+
+                            b1.Property<int>("DiscountRate")
+                                .HasColumnType("int");
+
+                            b1.Property<long>("OrderId")
+                                .HasColumnType("bigint");
+
+                            b1.Property<int>("ProductId")
+                                .HasColumnType("int");
+
+                            b1.Property<double>("TotalPrice")
+                                .HasColumnType("float");
+
+                            b1.Property<double>("UnitPrice")
+                                .HasColumnType("float");
+
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("OrderId");
+
+                            b1.ToTable("OrderDetailModel");
+
+                            b1.WithOwner("order")
+                                .HasForeignKey("OrderId");
+
+                            b1.Navigation("order");
+                        });
+
+                    b.Navigation("orderDetails");
                 });
 
             modelBuilder.Entity("SM.Domain.Product.ProductModel", b =>

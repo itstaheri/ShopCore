@@ -45,6 +45,10 @@ namespace IM.Domain.Inventory
             InStock = currentcount > 0;
 
         }
+        public void MinAfterSell(int count)
+        {
+            
+        }
         public long Id { get;private set; }
         public long Productid { get; private set; }
         public double Price { get; private set; }

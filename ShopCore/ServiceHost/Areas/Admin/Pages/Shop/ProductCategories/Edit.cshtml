@@ -5,14 +5,21 @@
 
 <h1>ویرایش گروه</h1>
 
-<form action="" method="post">
+<form method="post">
 
     <div class="form-group">
-        <label for="exampleInputEmail1">نام گروه</label>
-        <input value="@Model.productCategory.CategoryName" type="text" class="form-control" id="CategoryName" name="CategoryName" placeholder="نام گروه را وارد کنید ...">
-        <label for="exampleInputEmail1">Slug </label>
-        <input type="text" class="form-control" id="Slug" name="Slug" />
-
+        <label>نام</label>
+        <input type="text" class="form-control" id="CategoryName" name="CategoryName" value="@Model.productCategory.CategoryName" />
     </div>
+    <div class="form-group">
+        <label>اسلاگ</label>
+        <input type="text" class="form-control" id="Slug" name="Slug" value="@Model.productCategory.Slug" />
+    </div>
+    <div class="form-group">
+        <label>اپلود عکس</label>
+        <input type="file" class="form-control" id="CategoryPicture" name="CategoryPicture" />
+    </div>
+    <input type="hidden" id="Id" name="Id" value="@Model.productCategory.Id"/>
+
     <button type="submit" class="success">ویرایش</button>
 </form>

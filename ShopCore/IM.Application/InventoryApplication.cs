@@ -1,4 +1,5 @@
-﻿using IM.Application.Contract.Inventory;
+﻿using Frameworks;
+using IM.Application.Contract.Inventory;
 using IM.Domain.Inventory;
 using System;
 using System.Collections.Generic;
@@ -8,10 +9,11 @@ namespace IM.Application
     public class InventoryApplication : IInventoryApplication
     {
         private readonly IInventoryRepository _repository;
-
-        public InventoryApplication(IInventoryRepository repository)
+        private readonly IAuthHelper _authHelper;
+        public InventoryApplication(IInventoryRepository repository, IAuthHelper authHelper)
         {
             _repository = repository;
+            _authHelper = authHelper;
         }
 
         public void Create(CreateInventory commend)
@@ -52,28 +54,35 @@ namespace IM.Application
 
         public void Increase(IncreaseInventory commend)
         {
-
+            var operatorId = _authHelper.CurrentAccountId();
             var inventory = _repository.GetDetails(commend.InventoryId);
-            inventory.Increase(commend.Count, 1, commend.Description);
+            inventory.Increase(commend.Count, operatorId, commend.Description);
             _repository.Save();
         }
 
         public void Reduce(ReduceInventory commend)
         {
+            var operatorId = _authHelper.CurrentAccountId();
             var inventory = _repository.GetDetails(commend.InventoryId);
-            inventory.Reduce(commend.Count, 1, commend.Description, 0);
+            inventory.Reduce(commend.Count, operatorId, commend.Description, 0);
             _repository.Save();
 
         }
 
         public void ReduceList(List<ReduceInventory> commend)
         {
+            var operatorId = _authHelper.CurrentAccountId();
             foreach (var item in commend)
             {
                 var inventory = _repository.GetBy(item.ProductId);
-                inventory.Reduce(item.Count, 1, item.Description, item.OrderId);
+                inventory.Reduce(item.Count, operatorId, item.Description, item.OrderId);
                 
             }
+            _repository.Save();
+        }
+
+        public void Save()
+        {
             _repository.Save();
         }
     }

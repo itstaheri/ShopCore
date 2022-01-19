@@ -60,7 +60,7 @@ namespace Query.ProductQuery
         public ProductDetailQueryModel GetDetail(long id)
         {
             var Price = _inventory.inventory.Select(x => new { x.Productid, x.Price }).FirstOrDefault(x=>x.Productid == id).Price;
-            var discountRate = _discount.customerDiscounts.Select(x => new { x.DiscountRate, x.ProductId }).FirstOrDefault(x=>x.ProductId == id).DiscountRate;
+            var discountRate = _discount.customerDiscounts.Where(x => x.Start < DateTime.Now && x.End > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).FirstOrDefault(x=>x.ProductId == id).DiscountRate;
             var product = _shop.products.Include(x=>x.productcategory).SingleOrDefault(x => x.Id == id);
             var query =new ProductDetailQueryModel
             {
@@ -85,6 +85,7 @@ namespace Query.ProductQuery
                 Storage =product.Storage,
                 Picture = product.Picture,
                 CategoryName = product.productcategory.CategoryName,
+                discountRate = discountRate
                 
             };
             if (Price != null)
@@ -106,7 +107,7 @@ namespace Query.ProductQuery
         {
             var inventory = _inventory.inventory.Select(x => new { x.Productid, x.Price }).ToList();
             var discount = _discount.customerDiscounts.Where(x => x.Start < DateTime.Now && x.End > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).ToList();
-
+            
             var query = _shop.products.Where(x => x.IsDeleted == false).Select(x => new ProductQueryModel
             {
                 Id = x.Id,
@@ -117,6 +118,7 @@ namespace Query.ProductQuery
                 PictureTitle = x.PictureTitle,
                 ProductName = x.ProductName,
                 ProductCode = x.ProductCode,
+                
 
 
             }).AsNoTracking().ToList();
@@ -132,7 +134,9 @@ namespace Query.ProductQuery
                     {
                         var discountrate = discountproduct.DiscountRate;
                         products.DiscountRate = discountrate;
-                        products.HasDiscount = discountrate > 0;
+                        if (discountrate > 0)
+                            products.HasDiscount = true;
+
 
                         var discountValue = Math.Round((Inventoryproduct.Price * discountrate) / 100);
                         products.PriceAfterDiscount = (Inventoryproduct.Price - discountValue).ToMoney();

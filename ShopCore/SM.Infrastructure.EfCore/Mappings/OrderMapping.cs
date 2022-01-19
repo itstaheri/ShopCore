@@ -14,11 +14,14 @@ namespace SM.Infrastructure.EfCore.Mappings
         public void Configure(EntityTypeBuilder<OrderModel> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.OwnsMany(x => x.orderDetails, q =>
+            builder.Property(x => x.CustomerDescription);
+            builder.Property(x => x.OrderDate);
+            builder.OwnsMany(x =>x.orderDetails, q =>
             {
                 q.HasKey(x => x.Id);
                 q.WithOwner(x => x.order).HasForeignKey(x => x.OrderId);
-                q.HasOne(x => x.product).WithOne(x => x.orderDetail);
+               // q.HasOne(x => x.product).WithOne(x => x.orderDetail);
+              
             });
         }
     }

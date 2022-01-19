@@ -1,4 +1,5 @@
-﻿using SM.Application.Contracts.ProductCategory;
+﻿using Frameworks;
+using SM.Application.Contracts.ProductCategory;
 using SM.Domain.ProductCategory;
 using System;
 using System.Collections.Generic;
@@ -8,12 +9,13 @@ namespace SM.Application
 {
     public class ProductCategoryApplication : IProductCategoryApplication
     {
-
+        private readonly IFileUploader _Uploader;
         private readonly IProductCategoryRepository _repository;
 
-        public ProductCategoryApplication(IProductCategoryRepository repository)
+        public ProductCategoryApplication(IProductCategoryRepository repository, IFileUploader Uploader)
         {
             _repository = repository;
+            _Uploader = Uploader;
         }
 
         public void Active(long id)
@@ -31,7 +33,9 @@ namespace SM.Application
             }
             else
             {
-                var ProductCategory = new ProductCategoryModel(commend.CategoryName, commend.Slug);
+                var path = $"{commend.CategoryName}";
+                var picture = _Uploader.Upload(commend.CategoryPicture, "CategoryImages", path);
+                var ProductCategory = new ProductCategoryModel(commend.CategoryName, commend.Slug, picture);
                 _repository.Create(ProductCategory);
             }
         }
@@ -45,8 +49,10 @@ namespace SM.Application
 
         public void Edit(EditProductCategory commend)
         {
+            var path = $"{commend.CategoryName}";
+            var picture = _Uploader.Upload(commend.CategoryPicture, "CategoryImages", path);
             var productcategory = _repository.Get(commend.Id);
-            productcategory.Edit(commend.CategoryName, commend.Slug);
+            productcategory.Edit(commend.CategoryName, commend.Slug, picture);
             _repository.Save();
         }
 

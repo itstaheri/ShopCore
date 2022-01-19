@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
 using RestSharp;
+using RestSharp.Serialization.Json;
 
 namespace Frameworks.ZarinPal
 {
@@ -40,7 +40,7 @@ namespace Frameworks.ZarinPal
             request.AddJsonBody(body);
             var response = client.Execute(request);
             var jsonSerializer = new JsonSerializer();
-            return jsonSerializer.Deserialize<PaymentResponse>((JsonReader)response);
+            return jsonSerializer.Deserialize<PaymentResponse>(response);
         }
 
         public VerificationResponse CreateVerificationRequest(string authority, string amount)
@@ -60,7 +60,7 @@ namespace Frameworks.ZarinPal
             });
             var response = client.Execute(request);
             var jsonSerializer = new JsonSerializer();
-            return jsonSerializer.Deserialize<VerificationResponse>((JsonReader)response);
+            return jsonSerializer.Deserialize<VerificationResponse>(response);
         }
     }
 }

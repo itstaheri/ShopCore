@@ -1,0 +1,22 @@
+﻿@model List<SM.Application.Contracts.ProductCategory.ProductCategoryViewModel>
+
+
+    <div class="categories_product_area mb-55">
+        <div class="container">
+            <div class="categories_product_inner">
+                @foreach (var item in Model)
+                {
+                    <div class="single_categories_product">
+                        <div class="categories_product_content">
+                            <h4><a href="shop.html">@item.CategoryName</a></h4>
+                            <p>@item.ProductCount محصول</p>
+                        </div>
+                        <div class="categories_product_thumb">
+                            <a href="shop.html"><img src="~/Img/CategoryImages/@item.CategoryName/@item.Picture" alt=""></a>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>

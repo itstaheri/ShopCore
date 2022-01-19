@@ -21,3 +21,5 @@ D:\ShopCore\ShopCore\AM.Bootestrapper\obj\Debug\net5.0\AM.Configuration.csproj.C
 D:\ShopCore\ShopCore\AM.Bootestrapper\obj\Debug\net5.0\AM.Configuration.dll
 D:\ShopCore\ShopCore\AM.Bootestrapper\obj\Debug\net5.0\ref\AM.Configuration.dll
 D:\ShopCore\ShopCore\AM.Bootestrapper\obj\Debug\net5.0\AM.Configuration.pdb
+D:\ShopCore\ShopCore\AM.Bootestrapper\bin\Debug\net5.0\SM.Application.Contracts.dll
+D:\ShopCore\ShopCore\AM.Bootestrapper\bin\Debug\net5.0\SM.Application.Contracts.pdb

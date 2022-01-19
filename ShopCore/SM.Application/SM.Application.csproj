@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -8,6 +8,7 @@
     <ProjectReference Include="..\Frameworks\Frameworks.csproj" />
     <ProjectReference Include="..\SM.Application.Contracts\SM.Application.Contracts.csproj" />
     <ProjectReference Include="..\SM.Domain\SM.Domain.csproj" />
+    <ProjectReference Include="..\SM.Infrastructure.EfCore\SM.Infrastructure.EfCore.csproj" />
   </ItemGroup>
 
 </Project>

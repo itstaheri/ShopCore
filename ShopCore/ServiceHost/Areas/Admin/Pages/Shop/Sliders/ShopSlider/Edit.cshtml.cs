@@ -23,17 +23,9 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Sliders.ShopSlider
         {
             Slider = _repository.GetValueForEdit(id);
         }
-        public RedirectToPageResult OnPost(EditShopSlider commend,[FromServices] IWebHostEnvironment env)
+        public RedirectToPageResult OnPost(EditShopSlider commend)
         {
-            if (commend.Picture.Length>0)
-            {
-                var path = Path.Combine(env.WebRootPath, "Img", "ShopSliders");
-                using (var stream = System.IO.File.Create(path + $"/{Slider.Id}.jpg"))
-                {
-                    commend.Picture.CopyTo(stream);
-                }
-
-            }
+          
 
             _repository.Edit(commend);
             return RedirectToPage("./Index");

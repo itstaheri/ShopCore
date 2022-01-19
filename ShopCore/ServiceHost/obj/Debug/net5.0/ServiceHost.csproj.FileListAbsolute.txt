@@ -240,3 +240,9 @@ D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.PlatformA
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\Nancy.dll
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Cart.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Checkout.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\RestSharp.dll
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\PaymentResult.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Orders\Index.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Orders\OrderDetail.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\CartCategory\default.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\SmsIrRestful.dll

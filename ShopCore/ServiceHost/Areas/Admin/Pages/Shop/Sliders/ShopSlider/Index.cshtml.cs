@@ -22,9 +22,9 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Sliders.ShopSlider
         {
           sliders =  _repository.List();
         }
-        public RedirectToPageResult OnPost(long Id,[FromServices] IWebHostEnvironment env)
+        public RedirectToPageResult OnPost(long Id,string Title,[FromServices] IWebHostEnvironment env)
         {
-            System.IO.File.Delete(Path.Combine(env.WebRootPath,"Img","Shopsliders", Id.ToString() + ".jpg"));
+            System.IO.File.Delete(Path.Combine(env.WebRootPath,"Img","Shopsliders",Title));
             _repository.Delete(Id);
            
             return RedirectToPage();

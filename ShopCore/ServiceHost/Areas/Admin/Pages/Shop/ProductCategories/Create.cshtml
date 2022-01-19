@@ -14,7 +14,8 @@
         <span asp-validation-for="@Model.Pcategory.CategoryName" class="text-danger"></span>
         <input type="text" class="form-control" id="Slug" name="Slug">
         <span asp-validation-for="@Model.Pcategory" class="text-danger"></span>
-
+        <label>اپلود عکس</label>
+        <input type="file" name="Picture" id="Picture" />
     </div>
     <button type="submit" class="success">ایجاد</button>
 </form>

@@ -23,6 +23,7 @@ using SM.Infrastructure.EfCore;
 using SM.Infrastructure.EfCore.Repositories;
 using System;
 using AM.Application;
+using Frameworks.ZarinPal;
 
 namespace SM.Configuration
 {
@@ -55,6 +56,7 @@ namespace SM.Configuration
             service.AddTransient<IOrderRepository, OrderRepository>();
 
             service.AddSingleton<ICartService, CartService>();
+
 
         }
     }

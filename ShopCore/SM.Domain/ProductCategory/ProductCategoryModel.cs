@@ -11,6 +11,7 @@ namespace SM.Domain.ProductCategory
     {
         public long Id { get; private set; }
         public string CategoryName { get; private set; }
+        public string Picture { get; private set; }
         public DateTime CreationDate { get; private set; }
         public string Slug { get; private set; }
         public bool IsDeleted { get; private set; }
@@ -21,16 +22,21 @@ namespace SM.Domain.ProductCategory
         {
 
         }
-        public ProductCategoryModel(string categoryname, string slug)
+        public ProductCategoryModel(string categoryname, string slug, string picture)
         {
             CategoryName = categoryname;
             CreationDate = DateTime.Now;
+            if (!string.IsNullOrWhiteSpace(Picture))
+                Picture = picture;
+
             Slug = slug;
             IsDeleted = false;
 
         }
-        public void Edit(string categoryName, string slug)
+        public void Edit(string categoryName, string slug, string picture)
         {
+            if (!string.IsNullOrWhiteSpace(Picture))
+                Picture = picture;
             CategoryName = categoryName;
             Slug = slug;
         }

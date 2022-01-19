@@ -18,31 +18,16 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Sliders.ShopSlider
         {
             _repository = repository;
         }
-        public long PicId { get; set; }
         public void OnGet()
         {
-            Random random = new Random();
-            var numb = random.Next(6543643, 954614930);
-            if (_repository.Exist(PicId) == false)
-            {
-                PicId = long.Parse(numb.ToString());
-            }
            
 
 
         }
       
-        public RedirectToPageResult OnPost(CreateShopSlider commend, [FromServices] IWebHostEnvironment env)
+        public RedirectToPageResult OnPost(CreateShopSlider commend)
         {
-            var path = Path.Combine(env.WebRootPath, "Img", "ShopSliders");
-           
-
-            using (var stream = System.IO.File.Create(path + $"/{commend.Id}.jpg"))
-            {
-                commend.Picture.CopyTo(stream);
-            }
-
-
+            
 
             _repository.Create(commend);
             return RedirectToPage("./Index");

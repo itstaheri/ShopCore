@@ -9,6 +9,12 @@ namespace SM.Application.Contracts.Order
     public interface IOrderApplication
     {
         long PlaceOrder(Cart cart);
-        void PaymentSucceeded(long OrderId,long RefId);
+        string PaymentSucceeded(long OrderId,long RefId);
+        double GetAmountBy(long Id);
+        List<OrderViewmodel> GetOrders(OrderSearchModel commend);
+        OrderDetailViewModel GetOrderdetail(long orderId);
+        void ChangeStatusToPending(long OrderId);
+        void ChangeStatusToSended(long OrderId);
+        void ChangeStatusToCanceled(long OrderId);
     }
 }

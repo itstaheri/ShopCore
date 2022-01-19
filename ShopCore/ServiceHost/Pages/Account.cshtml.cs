@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AM.Application.Contract.Account;
+using Frameworks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -18,14 +19,20 @@ namespace ServiceHost.Pages
         [TempData]
         public string RegisterMessage { get; set; }
         private readonly IAccountApplication _repository;
+        private readonly IAuthHelper _auth;
 
-        public AccountModel(IAccountApplication repository)
+        public AccountModel(IAccountApplication repository, IAuthHelper auth)
         {
             _repository = repository;
+            _auth = auth;
         }
 
         public void OnGet()
         {
+            if (_auth.IsAuthenticated())
+            {
+                RedirectToPage("./Profile");
+            }
         }
         public IActionResult OnPostLogin(Login Commend)
         {

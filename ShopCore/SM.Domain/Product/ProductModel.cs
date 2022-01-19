@@ -109,7 +109,7 @@ namespace SM.Domain.Product
         public ProductCategoryModel productcategory { get; private set; }
 
         public List<ProductCommentModel> Comments { get;private set; }
-        public OrderDetailModel orderDetail { get; private set; }
+       // public OrderDetailModel orderDetail { get; private set; }
 
     }
 }

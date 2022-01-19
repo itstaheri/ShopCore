@@ -27,6 +27,7 @@ namespace Query.ProductQuery
                 Title = x.Title,
                 Url = x.Url,
                 Description = x.Description,
+                Picture = x.Picture
                 
 
             }).ToList();

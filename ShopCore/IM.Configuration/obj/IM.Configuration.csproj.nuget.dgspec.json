@@ -293,7 +293,11 @@
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[105.0.0, )"
+              "version": "[106.11.4, )"
+            },
+            "SmsIrRestful": {
+              "target": "Package",
+              "version": "[1.1.3, )"
             },
             "System.IO.FileSystem": {
               "target": "Package",
@@ -409,6 +413,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              },
               "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj"
               },
@@ -891,6 +898,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "SmsIrRestful": {
+              "target": "Package",
+              "version": "[1.1.3, )"
             }
           },
           "imports": [

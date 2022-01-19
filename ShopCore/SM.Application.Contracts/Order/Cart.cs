@@ -8,6 +8,8 @@ namespace SM.Application.Contracts.Order
         public double TotalAmount { get; set; }
         public double DiscountAmount { get; set; }
         public double PayAmount { get; set; }
+        public int PaymentMethod { get;  set; }
+        public string CustomerDescription { get; set; }
 
         public Cart()
         {
@@ -19,6 +21,10 @@ namespace SM.Application.Contracts.Order
             TotalAmount += cartitem.TotalPrice;
             DiscountAmount += cartitem.DiscountAmount;
             PayAmount += cartitem.ItemPayAmount;
+        }
+        public void SetPaymentMethod(int methodId)
+        {
+            PaymentMethod = methodId;
         }
     }
 }

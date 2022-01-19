@@ -2,6 +2,8 @@ using AM.Configuration;
 using DM.Configuration;
 using DM.infrastructure.Efcore;
 using Frameworks;
+using Frameworks.Sms;
+using Frameworks.ZarinPal;
 using IM.Configuration;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -48,6 +50,8 @@ namespace ServiceHost
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<ICartCalculator, CartCalculator>();
+            services.AddTransient<IZarinPalFactory, ZarinPalFactory>();
+            services.AddTransient<ISmsService, SmsService>();
 
             // 
             services.AddHttpContextAccessor();
@@ -55,7 +59,7 @@ namespace ServiceHost
             services.Configure<CookiePolicyOptions>(option =>
             {
                 option.CheckConsentNeeded = context => true;
-                option.MinimumSameSitePolicy = SameSiteMode.Strict;
+                option.MinimumSameSitePolicy = SameSiteMode.Lax;
 
 
             });
