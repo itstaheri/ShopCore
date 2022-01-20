@@ -395,6 +395,7 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
     <link href="~/AdminTheme/assets/css/popupStyle.css" rel="stylesheet" />
+    <script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
 
     @RenderSection("Scripts", false)
 
@@ -494,6 +495,12 @@
             $('.popupCloseButton').click(function () {
                 $('.hover_bkgr_fricc').hide();
             });
+        });
+    </script>
+    <script>
+        CKEDITOR.replace('ckeditor', {
+            customConfig: ' ~/AdminTheme/assets/js/Config.js'
+              
         });
     </script>
 </body>

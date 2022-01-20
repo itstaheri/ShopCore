@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AM.Application;
 using Frameworks;
 using Frameworks.ZarinPal;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Nancy.Json;
@@ -15,7 +16,7 @@ using SM.Application.Contracts.Order;
 
 namespace ServiceHost.Pages
 {
-    //[authorize]
+    [Authorize]
     public class CheckoutModel : PageModel
     {
         PaymentResultMassage Result = new PaymentResultMassage();

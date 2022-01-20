@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "etQdMJ1roxPhTm/G+3GSl/Js34qKm6GuWVLs7lPzTCehznjZZNXzSYtOaqvMW7r/GDaEVgEXbjuf+eSQKyTkrQ==",
+  "success": true,
+  "projectFilePath": "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alith\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.12\\microsoft.aspnetcore.http.features.5.0.12.nupkg.sha512",
+    "C:\\Users\\alith\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\alith\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

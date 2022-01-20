@@ -1,4 +1,5 @@
 using AM.Configuration;
+using BM.Configuration;
 using DM.Configuration;
 using DM.infrastructure.Efcore;
 using Frameworks;
@@ -45,6 +46,7 @@ namespace ServiceHost
             DiscountBootestrapper.Configuration(services, ConnectionString);
             InventoryBootestrapper.Configoration(services, ConnectionString);
             AccountBootestrapper.Configure(services, ConnectionString);
+            BlogBootestrapper.Configuration(services, ConnectionString);
 
             services.AddTransient<IAuthHelper, AuthHelper>();
             services.AddTransient<IFileUploader, FileUploader>();

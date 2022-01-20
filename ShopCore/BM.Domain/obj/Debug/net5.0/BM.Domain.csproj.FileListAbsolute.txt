@@ -1,0 +1,15 @@
+D:\ShopCore\ShopCore\BM.Domain\bin\Debug\net5.0\BM.Domain.deps.json
+D:\ShopCore\ShopCore\BM.Domain\bin\Debug\net5.0\BM.Domain.dll
+D:\ShopCore\ShopCore\BM.Domain\bin\Debug\net5.0\ref\BM.Domain.dll
+D:\ShopCore\ShopCore\BM.Domain\bin\Debug\net5.0\BM.Domain.pdb
+D:\ShopCore\ShopCore\BM.Domain\obj\Debug\net5.0\BM.Domain.csprojAssemblyReference.cache
+D:\ShopCore\ShopCore\BM.Domain\obj\Debug\net5.0\BM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ShopCore\ShopCore\BM.Domain\obj\Debug\net5.0\BM.Domain.AssemblyInfoInputs.cache
+D:\ShopCore\ShopCore\BM.Domain\obj\Debug\net5.0\BM.Domain.AssemblyInfo.cs
+D:\ShopCore\ShopCore\BM.Domain\obj\Debug\net5.0\BM.Domain.csproj.CoreCompileInputs.cache
+D:\ShopCore\ShopCore\BM.Domain\obj\Debug\net5.0\BM.Domain.dll
+D:\ShopCore\ShopCore\BM.Domain\obj\Debug\net5.0\ref\BM.Domain.dll
+D:\ShopCore\ShopCore\BM.Domain\obj\Debug\net5.0\BM.Domain.pdb
+D:\ShopCore\ShopCore\BM.Domain\bin\Debug\net5.0\BM.Application.Contract.dll
+D:\ShopCore\ShopCore\BM.Domain\bin\Debug\net5.0\BM.Application.Contract.pdb
+D:\ShopCore\ShopCore\BM.Domain\obj\Debug\net5.0\BM.Domain.csproj.CopyComplete

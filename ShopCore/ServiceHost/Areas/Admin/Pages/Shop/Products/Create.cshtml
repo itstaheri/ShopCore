@@ -3,6 +3,10 @@
 @{
 }
 
+@{
+
+    ViewData["Title"] = "ایجاد محصولات";
+}
 <div class="panel panel-default">
     <div class="panel-heading"><h3 class="panel-title">ایجاد محصول</h3></div>
     <div class="panel-body">
@@ -19,7 +23,7 @@
                 </div>
                 <div class="form-group">
                     <label>Description</label>
-                    <input type="text" class="form-control" id="Description" name="Description" />
+                    <textarea id="Description" name="ckeditor"></textarea>
                 </div>
                 <div class="form-group">
                     <label>ShortDescription</label>
@@ -87,55 +91,55 @@
                     <label>Storage</label>
                     <input type="text" class="form-control" id="Storage" name="Storage" />
                 </div>
-                    <div class="form-group">
-                        <label>ScreenSize</label>
-                        <input type="text" class="form-control" id="ScreenSize" name="ScreenSize" />
-                    </div>
-                    <div class="form-group">
-                        <label>NetworkSupport</label>
-                        <input type="text" class="form-control" id="NetworkSupport" name="NetworkSupport" />
-                    </div>
-                    <div class="form-group">
-                        <label>OperatingSystem</label>
-                        <input type="text" class="form-control" id="OperatingSystem" name="OperatingSystem" />
-                    </div>
-                    <div class="form-group">
-                        <label>Resolution</label>
-                        <input type="text" class="form-control" id="Resolution" name="Resolution" />
-                    </div>
-                    <div class="form-group">
-                        <label>Ram</label>
-                        <input type="text" class="form-control" id="Ram" name="Ram" />
-                    </div>
-                    <div class="form-group">
-                        <label>TouchId</label>
-                        <input type="text" class="form-control" id="TouchId" name="TouchId" />
-                    </div>
+                <div class="form-group">
+                    <label>ScreenSize</label>
+                    <input type="text" class="form-control" id="ScreenSize" name="ScreenSize" />
+                </div>
+                <div class="form-group">
+                    <label>NetworkSupport</label>
+                    <input type="text" class="form-control" id="NetworkSupport" name="NetworkSupport" />
+                </div>
+                <div class="form-group">
+                    <label>OperatingSystem</label>
+                    <input type="text" class="form-control" id="OperatingSystem" name="OperatingSystem" />
+                </div>
+                <div class="form-group">
+                    <label>Resolution</label>
+                    <input type="text" class="form-control" id="Resolution" name="Resolution" />
+                </div>
+                <div class="form-group">
+                    <label>Ram</label>
+                    <input type="text" class="form-control" id="Ram" name="Ram" />
+                </div>
+                <div class="form-group">
+                    <label>TouchId</label>
+                    <input type="text" class="form-control" id="TouchId" name="TouchId" />
+                </div>
 
-                    <div class="form-group">
-                        <label>بارگذاری تصویر اصلی</label>
-                        <input type="file" class="form-control" id="OriginalImage" name="OriginalImage" />
-                        <span asp-validation-for="@Model.product.OriginalImage" class="text-danger"></span>
-                    </div>
+                <div class="form-group">
+                    <label>بارگذاری تصویر اصلی</label>
+                    <input type="file" class="form-control" id="OriginalImage" name="OriginalImage" />
+                    <span asp-validation-for="@Model.product.OriginalImage" class="text-danger"></span>
+                </div>
 
-                    <div class="form-group">
-                        <label>بارگذاری کاتالوگ </label>
-                        <input type="file" class="form-control" id="CatalogeImages" name="CatalogeImages" multiple />
+                <div class="form-group">
+                    <label>بارگذاری کاتالوگ </label>
+                    <input type="file" class="form-control" id="CatalogeImages" name="CatalogeImages" multiple />
 
-                    </div>
-
-
-                    <div class="form-group">
-                        <label>
-                            انتخاب گروه
-                        </label>
-                        <select asp-items="Model.ProductCategories" name="CategoryId" id="CategoryId" class="form-control">
-                            <option value="0">انتخاب گروه</option>
-                        </select>
-                    </div>
+                </div>
 
 
-                    <button type="submit">ایجاد</button>
+                <div class="form-group">
+                    <label>
+                        انتخاب گروه
+                    </label>
+                    <select asp-items="Model.ProductCategories" name="CategoryId" id="CategoryId" class="form-control">
+                        <option value="0">انتخاب گروه</option>
+                    </select>
+                </div>
+
+
+                <button type="submit">ایجاد</button>
             </form>
         </div>
     </div>

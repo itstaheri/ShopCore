@@ -1,0 +1,63 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Blog.Articles.EditModel
+@{
+}
+
+
+@{
+
+    ViewData["Title"] = "ویرایش مقاله";
+}
+<div class="panel panel-default">
+    <div class="panel-heading"><h3 class="panel-title">ویرایش مقاله</h3></div>
+    <div class="panel-body">
+        <div class=" form">
+            <form action="" method="post" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label>موضوع</label>
+                    <input type="text" class="form-control" id="Title" name="Title" value="@Model.Article.Title"/>
+                </div>
+                <div class="form-group">
+                    <label>توضیحات کوتاه</label>
+                    <input type="text" class="form-control" id="ShortDescription" name="ShortDescription" value="@Model.Article.ShortDescription"/>
+                </div>
+                <div class="form-group">
+                    <label>توضیحات</label>
+                    <input type="text" class="form-control" id="Description" name="Description" value="@Model.Article.Description"/>
+                </div>
+                <div class="form-group">
+                    <label>PictureAlt</label>
+                    <input type="text" class="form-control" id="PictureAlt" name="PictureAlt" value="@Model.Article.PictureAlt"/>
+                </div>
+                <div class="form-group">
+                    <label>PictureTitle</label>
+                    <input type="number" class="form-control" id="PictureTitle" name="PictureTitle" value="@Model.Article.Title"/>
+                </div>
+
+                <div class="form-group">
+                    <label>بارگذاری تصویر</label>
+                    <input type="file" class="form-control" id="Picture" name="Picture" />
+
+                </div>
+
+
+
+                <div class="form-group">
+                    <label>
+                        انتخاب گروه
+                    </label>
+                    <select asp-items="Model.categories" name="CategoryId" id="CategoryId" class="form-control">
+                        <option value="0">انتخاب گروه</option>
+                    </select>
+                </div>
+
+
+                <button type="submit" class="btn-success">ویرایش</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

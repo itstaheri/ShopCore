@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AM.Bootestrapper\AM.Configuration.csproj" />
+    <ProjectReference Include="..\BM.Configuration\BM.Configuration.csproj" />
     <ProjectReference Include="..\DM.Configuration\DM.Configuration.csproj" />
     <ProjectReference Include="..\IM.Configuration\IM.Configuration.csproj" />
     <ProjectReference Include="..\Query\Query.csproj" />

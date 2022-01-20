@@ -3,7 +3,10 @@
 @{
 }
 
+@{
 
+    ViewData["Title"] = "ویرایش محصول";
+}
 <div class="panel panel-default">
     <div class="panel-heading"><h3 class="panel-title">ایجاد محصول</h3></div>
     <div class="panel-body">
@@ -153,10 +156,10 @@
         <div class="row">
             <div class="col-md-12">
 
-                    @foreach (var item in Model.Catalog)
-                    {
-                        <img src="~/Img/ProductImages/@Model.Products.ProductName/@(item)" height="80px" width="80px">
-                    }
+                @foreach (var item in Model.Catalog)
+                {
+                    <img src="~/Img/ProductImages/@Model.Products.ProductName/@(item)" height="80px" width="80px">
+                }
 
 
             </div>
