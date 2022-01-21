@@ -31,7 +31,8 @@ namespace BM.Infrastracture.Efcore.Repositories
                 Id = x.Id,
                 CreateionDate = x.CreateDate.ToString(),
                 IsRemoved = x.IsRemoved,
-                Name = x.Name
+                Name = x.Name,
+                ArticleCount = x.articles.Count
 
             }).ToList();
         }

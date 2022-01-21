@@ -1772,6 +1772,51 @@
           "bin/placeholder/AM.Infrastracture.Efcore.dll": {}
         }
       },
+      "BM.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+        },
+        "compile": {
+          "bin/placeholder/BM.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BM.Application.Contract.dll": {}
+        }
+      },
+      "BM.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BM.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BM.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BM.Domain.dll": {}
+        }
+      },
+      "BM.Infrastracture.Efcore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AM.Infrastracture.Efcore": "1.0.0",
+          "BM.Domain": "1.0.0",
+          "Frameworks": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BM.Infrastracture.Efcore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BM.Infrastracture.Efcore.dll": {}
+        }
+      },
       "DM.Application.Contract/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6306,6 +6351,21 @@
       "path": "../AM.Infrastracture.Efcore/AM.Infrastracture.Efcore.csproj",
       "msbuildProject": "../AM.Infrastracture.Efcore/AM.Infrastracture.Efcore.csproj"
     },
+    "BM.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../BM.Application.Contract/BM.Application.Contract.csproj",
+      "msbuildProject": "../BM.Application.Contract/BM.Application.Contract.csproj"
+    },
+    "BM.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BM.Domain/BM.Domain.csproj",
+      "msbuildProject": "../BM.Domain/BM.Domain.csproj"
+    },
+    "BM.Infrastracture.Efcore/1.0.0": {
+      "type": "project",
+      "path": "../BM.Infrastracture.Efcore/BM.Infrastracture.Efcore.csproj",
+      "msbuildProject": "../BM.Infrastracture.Efcore/BM.Infrastracture.Efcore.csproj"
+    },
     "DM.Application.Contract/1.0.0": {
       "type": "project",
       "path": "../DM.Application.Contract/DM.Application.Contract.csproj",
@@ -6359,6 +6419,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BM.Infrastracture.Efcore >= 1.0.0",
       "DM.infrastructure.Efcore >= 1.0.0",
       "IM.Infrastracture.Efcore >= 1.0.0",
       "SM.Infrastructure.EfCore >= 1.0.0"
@@ -6399,6 +6460,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj": {
+              "projectPath": "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj"
+            },
             "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
               "projectPath": "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj"
             },

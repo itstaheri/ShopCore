@@ -13,6 +13,7 @@
     <ProjectReference Include="..\BM.Application\BM.Application.csproj" />
     <ProjectReference Include="..\BM.Domain\BM.Domain.csproj" />
     <ProjectReference Include="..\BM.Infrastracture.Efcore\BM.Infrastracture.Efcore.csproj" />
+    <ProjectReference Include="..\Query\Query.csproj" />
   </ItemGroup>
 
 </Project>

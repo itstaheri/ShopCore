@@ -9,6 +9,10 @@ using BM.Infrastracture.Efcore;
 using BM.Infrastracture.Efcore.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Query.BlogQuery;
+using Query.Contract.Article;
+using Query.Contract.ArticleCategory;
+using Query.Contract.ArticleComment;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +33,11 @@ namespace BM.Configuration
 
             services.AddTransient<IArticleCommentRepository, ArticleCommentRepository>();
             services.AddTransient<IArticleCommentApplication, ArticleCommentApplication>();
+
+
+           services.AddTransient<IArticleQueryRepository, ArticleQueryRepository>();
+          services.AddTransient<IArticleCategoryQueryRepository, ArticlecategoryQueryRepository>();
+          services.AddTransient<IArticleCommentsQueryRepository, ArticleCommentsQueryRepository>();
 
             services.AddDbContext<BlogContext>(x => { x.UseSqlServer(connectionString); });
         }

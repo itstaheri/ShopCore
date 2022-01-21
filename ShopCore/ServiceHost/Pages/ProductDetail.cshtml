@@ -1,14 +1,14 @@
 ﻿@page "{id:long}"
 @model ServiceHost.Pages.ProductDetailModel
 @inject Frameworks.IAuthHelper auth;
-@{ 
+@{
     var authDetail = auth.CurrentAccountInfo();
-} 
+}
 
 @using Frameworks;
 
 @{
-    ViewData["Title"] = "صفحه ی محصول";
+    @(ViewData["title"] = Model.Product.ProductName)
 }
 
 
@@ -73,11 +73,11 @@
                                     </a>
                                 </div>
                                 @*<div class=" product_d_action">
-                                <ul>
-                                    <li><a href="#" title="افزودن به علاقه‌مندی‌ها">+ افزودن به علاقه‌مندی‌ها</a></li>
-                                    <li><a href="#" title="افزودن به علاقه‌مندی‌ها">+ مقایسه</a></li>
-                                </ul>
-                            </div>*@
+                                        <ul>
+                                            <li><a href="#" title="افزودن به علاقه‌مندی‌ها">+ افزودن به علاقه‌مندی‌ها</a></li>
+                                            <li><a href="#" title="افزودن به علاقه‌مندی‌ها">+ مقایسه</a></li>
+                                        </ul>
+                                    </div>*@
                                 <div class="product_meta">
                                     <span>دسته: <a asp-page="Category" asp-route-CategoryId="@Model.Product.CategoryId">@Model.Product.CategoryName</a></span>
                                 </div>
@@ -212,7 +212,7 @@
                                                             <label for="email">ایمیل </label>
                                                             <input type="email" id="email" type="email" dir="ltr">
                                                         </div>
-                                                        <input type="hidden" name="UserId" id="UserId" value="@authDetail.Id"/>
+                                                        <input type="hidden" name="UserId" id="UserId" value="@authDetail.Id" />
                                                     </div>
                                                     <button type="submit">ثبت</button>
                                                 </form>

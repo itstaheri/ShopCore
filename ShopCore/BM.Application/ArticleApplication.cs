@@ -28,7 +28,7 @@ namespace BM.Application
 
         public void Create(CreateArticle commend)
         {
-            var Picture = _Uploader.Upload(commend.Picture, commend.Id.ToString(), commend.Title);
+            var Picture = _Uploader.Upload(commend.Picture, "ArticleImages", commend.Id.ToString());
             var currentInfo = _auth.CurrentAccountInfo();
             var Article = new ArticleModel(commend.Title, Picture, commend.PictureAlt, commend.Title, commend.ShortDescription, commend.Description,currentInfo.Username , commend.CategoryId);
             _repository.Create(Article);
@@ -36,7 +36,7 @@ namespace BM.Application
 
         public void Edit(EditArticle commend)
         {
-            var Picture = _Uploader.Upload(commend.Picture, commend.Id.ToString(), commend.Title);
+            var Picture = _Uploader.Upload(commend.Picture, "ArticleImages", commend.Id.ToString());
             var currentInfo = _auth.CurrentAccountInfo();
             var Article = _repository.GetBy(commend.Id);
             Article.Edit(commend.Title, Picture, commend.PictureAlt, commend.Title, commend.ShortDescription, commend.Description, currentInfo.Username, commend.CategoryId);

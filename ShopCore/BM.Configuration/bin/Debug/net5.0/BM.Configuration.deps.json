@@ -12,7 +12,8 @@
           "BM.Application.Contract": "1.0.0",
           "BM.Domain": "1.0.0",
           "BM.Infrastracture.Efcore": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Query": "1.0.0"
         },
         "runtime": {
           "BM.Configuration.dll": {}
@@ -1339,6 +1340,38 @@
           "BM.Infrastracture.Efcore.dll": {}
         }
       },
+      "DM.Application.Contract/1.0.0": {
+        "dependencies": {
+          "SM.Application.Contracts": "1.0.0",
+          "SM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DM.Application.Contract.dll": {}
+        }
+      },
+      "DM.Domain/1.0.0": {
+        "dependencies": {
+          "DM.Application.Contract": "1.0.0",
+          "SM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DM.Domain.dll": {}
+        }
+      },
+      "DM.infrastructure.Efcore/1.0.0": {
+        "dependencies": {
+          "DM.Domain": "1.0.0",
+          "Frameworks": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "SM.Application.Contracts": "1.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
+        },
+        "runtime": {
+          "DM.infrastructure.Efcore.dll": {}
+        }
+      },
       "Frameworks/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Cookies": "2.2.0",
@@ -1365,6 +1398,29 @@
         },
         "runtime": {
           "IM.Domain.dll": {}
+        }
+      },
+      "IM.Infrastracture.Efcore/1.0.0": {
+        "dependencies": {
+          "IM.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
+        },
+        "runtime": {
+          "IM.Infrastracture.Efcore.dll": {}
+        }
+      },
+      "Query/1.0.0": {
+        "dependencies": {
+          "BM.Infrastracture.Efcore": "1.0.0",
+          "DM.infrastructure.Efcore": "1.0.0",
+          "IM.Infrastracture.Efcore": "1.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
+        },
+        "runtime": {
+          "Query.dll": {}
         }
       },
       "SM.Application.Contracts/1.0.0": {
@@ -2268,6 +2324,21 @@
       "serviceable": false,
       "sha512": ""
     },
+    "DM.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DM.infrastructure.Efcore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Frameworks/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -2279,6 +2350,16 @@
       "sha512": ""
     },
     "IM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IM.Infrastracture.Efcore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Query/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

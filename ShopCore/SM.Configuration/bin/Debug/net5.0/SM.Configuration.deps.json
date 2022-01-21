@@ -1312,6 +1312,36 @@
           "AM.Infrastracture.Efcore.dll": {}
         }
       },
+      "BM.Application.Contract/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+        },
+        "runtime": {
+          "BM.Application.Contract.dll": {}
+        }
+      },
+      "BM.Domain/1.0.0": {
+        "dependencies": {
+          "BM.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "BM.Domain.dll": {}
+        }
+      },
+      "BM.Infrastracture.Efcore/1.0.0": {
+        "dependencies": {
+          "AM.Infrastracture.Efcore": "1.0.0",
+          "BM.Domain": "1.0.0",
+          "Frameworks": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "SM.Infrastructure.EfCore": "1.0.0"
+        },
+        "runtime": {
+          "BM.Infrastracture.Efcore.dll": {}
+        }
+      },
       "DM.Application.Contract/1.0.0": {
         "dependencies": {
           "SM.Application.Contracts": "1.0.0",
@@ -1386,6 +1416,7 @@
       },
       "Query/1.0.0": {
         "dependencies": {
+          "BM.Infrastracture.Efcore": "1.0.0",
           "DM.infrastructure.Efcore": "1.0.0",
           "IM.Infrastracture.Efcore": "1.0.0",
           "SM.Infrastructure.EfCore": "1.0.0"
@@ -2287,6 +2318,21 @@
       "sha512": ""
     },
     "AM.Infrastracture.Efcore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BM.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BM.Infrastracture.Efcore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -15,5 +15,6 @@ namespace BM.Application.Contract.ArticleComment
         public string Username { get; set; }
         public long ArticleId { get; set; }
         public string ArticleName { get; set; }
+        public bool IsConfirm { get; set; }
     }
 }

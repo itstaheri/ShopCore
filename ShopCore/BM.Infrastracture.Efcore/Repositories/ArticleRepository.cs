@@ -43,19 +43,19 @@ namespace BM.Infrastracture.Efcore.Repositories
 
 
 
-            });
+            }).ToList();
 
             foreach (var item in query)
             {
                 var category = _context.articleCategories.SingleOrDefault(x => x.Id == item.CategoryId).Name;
-                item.CategoryName = item.CategoryName;
+                item.CategoryName = category;
             }
             if (commend!=null)
             {
                 if (!string.IsNullOrWhiteSpace(commend.Title))
-                    query = query.Where(x => x.Title == commend.Title);
+                    query = query.Where(x => x.Title == commend.Title).ToList();
             }
-            return query.ToList();
+            return query;
         }
 
         public ArticleModel GetBy(long Id)

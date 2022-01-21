@@ -1,0 +1,57 @@
+﻿@model Query.BlogQuery.ArticleSidebarViewModel;
+
+
+<div class="col-lg-3 col-md-12">
+    <div class="blog_sidebar_widget">
+
+        <div class="widget_list comments">
+            <div class="widget_title">
+                <h3>دیدگاه‌های جدید</h3>
+            </div>
+            @foreach (var item in Model.comments)
+            {
+                <div class="post_wrapper">
+                    <div class="post_thumb">
+                        <a href="blog-details.html"><img src="~/Img/ProfileImages/@item.Username" alt="comment"></a>
+                    </div>
+                    <div class="post_info">
+                        <span> <a>@item.Username</a> می‌گوید:</span>
+                        <a asp-page="articleDetail" asp-route-Id="@item.ArticleId">@item.text</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="widget_list widget_post">
+            <div class="widget_title">
+                <h3>مطالب اخیر</h3>
+            </div>
+            @foreach (var item in Model.articles)
+            {
+                <div class="post_wrapper">
+                    <div class="post_thumb">
+                        <a href="blog-details.html"><img src="~/Img/ArticleImages/@item.Id/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle"></a>
+                    </div>
+                    <div class="post_info">
+                        <h4><a href="blog-details.html">@item.Title</a></h4>
+                        <span>@item.CreationDate</span>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="widget_list widget_categories">
+            <div class="widget_title">
+                <h3>دسته ها</h3>
+            </div>
+            <ul>
+                @foreach (var item in Model.categories)
+                {
+                    <li><a asp-page="Category" asp-route-CategoryId="@item.Id">@item.Name</a></li>
+                }
+
+            </ul>
+        </div>
+
+    </div>
+</div>

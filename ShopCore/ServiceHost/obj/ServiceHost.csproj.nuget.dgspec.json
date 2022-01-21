@@ -555,6 +555,9 @@
               },
               "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj"
+              },
+              "D:\\ShopCore\\ShopCore\\Query\\Query.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\Query\\Query.csproj"
               }
             }
           }
@@ -1622,6 +1625,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj": {
+                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj"
+              },
               "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
                 "projectPath": "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj"
               },

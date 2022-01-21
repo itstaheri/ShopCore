@@ -37,7 +37,9 @@ namespace BM.Infrastracture.Efcore.Repositories
                 Text = x.Text,
                 title =x.Title,
                 Username = x.Username,
-                ArticleId = x.ArticleId
+                ArticleId = x.ArticleId,
+                IsConfirm = x.IsActive
+
 
             }).ToList();
             foreach (var item in query)

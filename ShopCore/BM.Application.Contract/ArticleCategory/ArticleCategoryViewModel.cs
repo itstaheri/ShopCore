@@ -12,5 +12,6 @@ namespace BM.Application.Contract.ArticleCategory
         public string Name { get; set; }
         public string CreateionDate { get; set; }
         public bool IsRemoved { get; set; }
+        public long ArticleCount { get; set; }
     }
 }

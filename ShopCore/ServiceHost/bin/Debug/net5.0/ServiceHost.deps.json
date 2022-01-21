@@ -2526,7 +2526,8 @@
           "BM.Application.Contract": "1.0.0",
           "BM.Domain": "1.0.0",
           "BM.Infrastracture.Efcore": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Query": "1.0.0"
         },
         "runtime": {
           "BM.Configuration.dll": {}
@@ -2714,6 +2715,7 @@
       },
       "Query/1.0.0": {
         "dependencies": {
+          "BM.Infrastracture.Efcore": "1.0.0",
           "DM.infrastructure.Efcore": "1.0.0",
           "IM.Infrastracture.Efcore": "1.0.0",
           "SM.Infrastructure.EfCore": "1.0.0"

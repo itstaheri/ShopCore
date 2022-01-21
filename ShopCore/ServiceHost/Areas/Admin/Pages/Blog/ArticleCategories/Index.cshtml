@@ -1,0 +1,101 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Blog.ArticleCategories.IndexModel
+@{
+}
+
+
+<h1>Product Categories</h1>
+
+@{
+
+    ViewData["Title"] = "مدیریت گروه مقالات";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h4 class="page-title pull-right">@ViewData["title"]</h4>
+        <p class="pull-left">
+            <a class="btn btn-success btn-lg" asp-page="./create">ایجاد گروه مقاله جدید</a>
+        </p>
+    </div>
+</div>
+
+
+<div class="row" id="ProductCategoriesDiv">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">لیست گروه مقالات</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <table id="datatable" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+
+
+                                    <th>نام</th>
+                                    <th>تاریخ تولید</th>
+                                    <th>وضعیت</th>
+                                    <th>عملیات</th>
+                                    <th>مقالات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.articleCategories)
+                                {
+                                    <tr>
+                                        <td>@item.Name</td>
+                                        <td>@item.CreateionDate</td>
+
+                                        @if (item.IsRemoved == false)
+                                        {
+
+                                            <form asp-page-handler="Remove" method="post">
+                                                <td class="success">
+                                                    <input type="hidden" name="Id" id="Id" value="@item.Id" />
+                                                    <button class="btn-danger" type="submit">حذف</button>
+                                                </td>
+                                            </form>
+                                        }
+                                        else
+                                        {
+                                            <form asp-page-handler="Active" method="post">
+                                                <td class="success">
+                                                    <input type="hidden" name="Id" id="Id" value="@item.Id" />
+                                                    <button class="btn-success" type="submit">فعال کردن</button>
+                                                </td>
+                                            </form>
+                                        }
+                                        <td>
+                                            <a class="btn btn-warning pull-right m-rl-5"
+                                               asp-page="./Edit" asp-route-id="@item.Id">
+                                                <i class="fa fa-edit"></i> ویرایش
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a>@item.ArticleCount</a>
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/AdminTheme/assets/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/AdminTheme/assets/datatables/dataTables.bootstrap.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#datatable').dataTable();
+        });
+    </script>
+}

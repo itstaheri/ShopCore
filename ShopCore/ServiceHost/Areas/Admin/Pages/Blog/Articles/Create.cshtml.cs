@@ -15,6 +15,13 @@ namespace ServiceHost.Areas.Admin.Pages.Blog.Articles
         private readonly IArticleApplication _repository;
         private readonly IArticleCategoryApplication _category;
         public List<SelectListItem> categories;
+
+        public CreateModel(IArticleApplication repository, IArticleCategoryApplication category)
+        {
+            _repository = repository;
+            _category = category;
+        }
+
         public void OnGet()
         {
             categories = _category.List().Select(x => new SelectListItem(x.Name, x.Id.ToString())).ToList();

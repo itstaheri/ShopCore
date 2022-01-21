@@ -17,8 +17,8 @@ namespace BM.Domain.ArticleCategory
             Name = name;
         }
 
-        public void Remove() => IsRemoved = false;
-        public void Active() => IsRemoved = true;
+        public void Remove() => IsRemoved = true;
+        public void Active() => IsRemoved = false;
         public long Id { get; private set; }
         public string Name { get; private set; }
         public bool IsRemoved { get; private set; }

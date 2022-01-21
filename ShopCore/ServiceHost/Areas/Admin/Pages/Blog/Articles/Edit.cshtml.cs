@@ -15,6 +15,7 @@ namespace ServiceHost.Areas.Admin.Pages.Blog.Articles
         private readonly IArticleApplication _repository;
         private readonly IArticleCategoryApplication _category;
         public List<SelectListItem> categories;
+        [BindProperty] public EditArticle Article { get; set; }
 
         public EditModel(IArticleApplication repository, IArticleCategoryApplication category)
         {
@@ -23,9 +24,10 @@ namespace ServiceHost.Areas.Admin.Pages.Blog.Articles
            
         }
 
-        [BindProperty] public EditArticle Article { get; set; }
+     
         public void OnGet(long Id)
         {
+            Article = _repository.GetValueforEdit(Id);
             categories = _category.List().Select(x => new SelectListItem(x.Name, x.Id.ToString())).ToList();
         }
         public RedirectToPageResult OnPost(EditArticle commend)

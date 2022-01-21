@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BM.Infrastracture.Efcore\BM.Infrastracture.Efcore.csproj" />
     <ProjectReference Include="..\DM.infrastructure.Efcore\DM.infrastructure.Efcore.csproj" />
     <ProjectReference Include="..\IM.Infrastracture.Efcore\IM.Infrastracture.Efcore.csproj" />
     <ProjectReference Include="..\SM.Infrastructure.EfCore\SM.Infrastructure.EfCore.csproj" />

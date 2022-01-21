@@ -259,3 +259,14 @@ D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\BM.Infrastracture.Efcore.pdb
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Blog\Articles\Index.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Blog\Articles\Create.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Blog\Articles\Edit.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Blog\ArticleCategories\Create.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Blog\ArticleCategories\Index.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Blog\ArticleCategories\Edit.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Blog\ArticleComments\Index.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Blog\ArticleDetail.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Blog\Category.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Blog\Index.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Blog\Search.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ArticleSidebar\default.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\BlogLayout.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ArticleCategory\default.cshtml.g.cs

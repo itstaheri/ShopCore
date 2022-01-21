@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Img\CategoryImages\" />
+    <Folder Include="wwwroot\Img\ArticleImages\" />
     <Folder Include="wwwroot\Img\ProfileImages\" />
     <Folder Include="wwwroot\Img\ProductImages\" />
     <Folder Include="wwwroot\Img\ShopSliders\" />
