@@ -46,7 +46,7 @@ namespace Query.ProductQuery
 
         public List<string> GetCatalog(long id,string root)
         {
-            var filename = _shop.products.SingleOrDefault(x => x.Id == id).ProductName;
+            var filename = _shop.products.SingleOrDefault(x => x.ProductId == id).ProductName;
             List<string> names = new List<string>();
             DirectoryInfo di = new DirectoryInfo($"{root}//Img//ProductImages//{filename}");
             FileInfo[] files = di.GetFiles();
@@ -59,17 +59,23 @@ namespace Query.ProductQuery
 
         public ProductDetailQueryModel GetDetail(long id)
         {
+           
             int discountRate = 0;
-            var Price = _inventory.inventory.Select(x => new { x.Productid, x.Price }).FirstOrDefault(x=>x.Productid == id).Price;
+            double Price = 0;
+            if (_inventory.inventory.FirstOrDefault(x => x.Productid == id)!=null)
+            {
+                 Price = _inventory.inventory.Select(x => new { x.Productid, x.Price }).FirstOrDefault(x => x.Productid == id).Price;
+
+            }
             if (_discount.customerDiscounts.Any(x => x.Start < DateTime.Now && x.End > DateTime.Now))
             {
                  discountRate = _discount.customerDiscounts.Where(x => x.Start < DateTime.Now && x.End > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).FirstOrDefault(x => x.ProductId == id).DiscountRate;
 
             }
-            var product = _shop.products.Include(x=>x.productcategory).SingleOrDefault(x => x.Id == id);
+            var product = _shop.products.Include(x=>x.productcategory).FirstOrDefault(x =>x.ProductId == id);
             var query =new ProductDetailQueryModel
             {
-                Id = product.Id,
+                Id = product.ProductId,
                 Description = product.Description,
                 CreationDate = product.CreationDate,
                 MetaDescription = product.MetaDescription,
@@ -115,7 +121,7 @@ namespace Query.ProductQuery
             
             var query = _shop.products.Where(x => x.IsDeleted == false).Select(x => new ProductQueryModel
             {
-                Id = x.Id,
+                Id = x.ProductId,
                 CategoryName = x.productcategory.CategoryName,
                 Slug = x.Slug,
                 Picture = x.Picture,
@@ -164,7 +170,7 @@ namespace Query.ProductQuery
 
             var query = _shop.products.Select(x => new ProductQueryModel
             {
-                Id = x.Id,
+                Id = x.ProductId,
                 CategoryName = x.productcategory.CategoryName,
                 PictureTitle = x.PictureTitle,
                 Slug = x.Slug,

@@ -39,7 +39,7 @@
                         <div class="product-details-tab">
                             <div id="img-1" class="zoomWrapper single-zoom">
                                 <a href="#">
-                                    <img id="zoom1" title="@Model.Product.PictureTitle" src="~/Img/ProductImages/@Model.Product.ProductName/@Model.Product.Picture" data-zoom-image="~/Img/ProductImages/@Model.Product.ProductName/@Model.Product.Picture" alt="@Model.Product.PictureAlt">
+                                    <img id="zoom1" title="@Model.Product.PictureTitle" src="/Img/ProductImages/@Model.Product.ProductName/@Model.Product.Picture" data-zoom-image="/Img/ProductImages/@Model.Product.ProductName/@Model.Product.Picture" alt="@Model.Product.PictureAlt">
                                 </a>
                             </div>
                             <div class="single-zoom-thumb">
@@ -48,8 +48,8 @@
                                     @foreach (var pic in Model.catalogNames)
                                     {
                                         <li>
-                                            <a class="elevatezoom-gallery active" data-update="" data-image="~/Img/ProductImages/@Model.Product.ProductName/@pic" data-zoom-image="~/Img/ProductImages/@Model.Product.ProductName/@pic">
-                                                <img src="~/Img/ProductImages/@Model.Product.ProductName/@pic" title="@Model.Product.PictureTitle" alt="@Model.Product.PictureAlt" height="50" width="60">
+                                            <a class="elevatezoom-gallery active" data-update="" data-image="/Img/ProductImages/@Model.Product.ProductName/@pic" data-zoom-image="/Img/ProductImages/@Model.Product.ProductName/@pic">
+                                                <img src="/Img/ProductImages/@Model.Product.ProductName/@pic" title="@Model.Product.PictureTitle" alt="@Model.Product.PictureAlt" height="50" width="60">
                                             </a>
 
                                         </li>
@@ -121,7 +121,7 @@
                             <div class="product_info_button">
                                 <ul class="nav" role="tablist">
                                     <li>
-                                        <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">توضیحات</a>
+                                        <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true">توضیحات</a>
                                     </li>
                                     <li>
                                         <a data-toggle="tab" href="#sheet" role="tab" aria-controls="sheet" aria-selected="false">مشخصات فنی</a>

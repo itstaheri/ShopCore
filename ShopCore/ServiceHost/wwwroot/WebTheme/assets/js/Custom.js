@@ -33,8 +33,8 @@ function addToCart(id, name, price, picture) {
 function updateCart() {
     let products = $.cookie(cookieName);
     products = JSON.parse(products);
-    $("#cart_items_count").text(products.length);
-    const cartItemsWrapper = $("#cart_items_wrapper");
+    $(".cart_count").text(products.length);
+    const cartItemsWrapper = $(".mini_cart_inner");
     cartItemsWrapper.html('');
     products.forEach(product => {
         const save =

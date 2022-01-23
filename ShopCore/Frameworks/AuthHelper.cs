@@ -89,7 +89,7 @@ namespace Frameworks
                 new Claim("permissions", permissions),
                 new Claim("Mobile", account.Number),
                 new Claim(ClaimTypes.Email,account.Email),
-                new Claim("Picture",account.Picture),
+                new Claim("Picture",account.Picture ?? ""),
 
             };
 

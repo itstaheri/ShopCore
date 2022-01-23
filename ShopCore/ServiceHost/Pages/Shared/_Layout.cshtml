@@ -1,5 +1,11 @@
 ﻿@inject Frameworks.IAuthHelper authHelper;
+@inject SettingManagement.ISettingRepository setting;
 
+
+@{ 
+    SettingManagement.settingViewModel info;
+    info = setting.GetValue();
+}
 <!DOCTYPE html>
 <html class="no-js" lang="fa" dir="rtl">
 
@@ -21,7 +27,11 @@
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="~/WebTheme/assets/css/style.css">
-
+    <link href="~/lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/lib/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="~/lib/jquery-ui-1.13.1/jquery-ui.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -40,13 +50,13 @@
                             <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
                         </div>
                         <div class="antomi_message">
-                            <p>ارسال رایگان - ضمانت بازگشت وجه 30 روزه</p>
+                            <p>@info.HeaderRight</p>
                         </div>
                         <div class="header_top_settings text-right">
                             <ul>
-                                <li><a href="#">آدرس‌های فروشگاه</a></li>
+
                                 <li><a href="#">پیگیری سفارش</a></li>
-                                <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)800456789">(+98) 800 456 789 </a></li>
+                                <li>تلفن تماس:@info.ContectNumber </a></li>
                                 @if (authHelper.CurrentAccountRole() == "1")
                                 {
                                     <li>
@@ -209,7 +219,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4 col-md-5">
                             <div class="antomi_message">
-                                <p>ارسال رایگان - ضمانت بازگشت وجه 30 روزه</p>
+                                <p>@info.HeaderRight</p>
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-7">
@@ -217,8 +227,8 @@
                                 <ul>
                                     <li><a href="#">آدرس‌های فروشگاه</a></li>
                                     <li><a href="#">پیگیری سفارش</a></li>
-                                    <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)800456789">(+98) 800 456 789 </a></li>
-                                    <li>ضمانت کیفیت محصولات</li>
+                                    <li>تلفن تماس: @info.ContectNumber </a></li>
+                                    <li>@info.HeaderLeft</li>
                                 </ul>
                             </div>
                         </div>
@@ -432,76 +442,28 @@
     </header>
     <!--header area end-->
     <!--slider area start-->
-    <section class="slider_section slider_s_four mb-60">
-       @RenderSection("Slider", false);
-    </section>
+  
+        @RenderSection("Slider", false)
+    
     <!--slider area end-->
     <!--shipping area start-->
     <!--shipping area end-->
     <!--home section bg area start-->
-    <div class="home_section_bg">
+<div class="home_section_bg">
 
-        <!--Categories product area start-->
-        <!--Categories product area end-->
-        <!--product area start-->
-        @RenderBody()
-        <!--product area end-->
-        <!--banner area start-->
-        <div class="banner_area mb-55">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <figure class="single_banner">
-                            <div class="banner_thumb">
-                                <a href="shop.html"><img src="assets/img/bg/banner4.jpg" alt=""></a>
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <figure class="single_banner">
-                            <div class="banner_thumb">
-                                <a href="shop.html"><img src="assets/img/bg/banner5.jpg" alt=""></a>
-                            </div>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--banner area end-->
-        <!--banner area start-->
-        <div class="banner_area banner_style2 banner_style4 mb-60">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3">
-                        <figure class="single_banner">
-                            <div class="banner_thumb">
-                                <a href="shop.html"><img src="assets/img/bg/banner6.jpg" alt=""></a>
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <figure class="single_banner">
-                            <div class="banner_thumb">
-                                <a href="shop.html"><img src="assets/img/bg/banner7.jpg" alt=""></a>
-                            </div>
-                        </figure>
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <figure class="single_banner">
-                            <div class="banner_thumb">
-                                <a href="shop.html"><img src="assets/img/bg/banner8.jpg" alt=""></a>
-                            </div>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--banner area end-->
-        <!--product area start-->
-   
-        <!--product area end-->
+    <!--Categories product area start-->
+    <!--Categories product area end-->
+    <!--product area start-->
+    @RenderBody()
+    <!--product area end-->
+    <!--banner area start-->
+    @RenderSection("Banner",false)
+    <!--banner area end-->
+    <!--blog area start-->
+    @RenderSection("Blog",false)
+    <!--blog area end-->
 
-    </div>
+</div>
     <!--home section bg area end-->
     <!--footer area start-->
     <footer class="footer_widgets">
@@ -766,21 +728,22 @@
     <!-- JS
     ============================================ -->
     <!-- Plugins JS -->
-    <script src="~/WebTheme/assets/js/plugins.js"></script>
-
-    <!-- Main JS -->
-    <script src="~/WebTheme/assets/js/main.js"></script>
-    <script src="~/WebTheme/assets/js/plugins.js"></script>
-
-    <!-- Main JS -->
-    <script src="~/WebTheme/assets/js/main.js"></script>
     <script src="~/lib/jquery/dist/jquery.js"></script>
-    <!--Custom.js-->
     <script src="~/WebTheme/assets/js/plugins.js"></script>
-    <script src="~/WebTheme/assets/js/Custom.js"></script>
+    <script src="~/lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="~/lib/jquery-ui-1.13.1/jquery-ui.min.js"></script>
+    <script src="~/lib/elevatezoom-master/jquery.elevatezoom.js"></script>
+    <script src="~/lib/jquery.ripples-master/dist/jquery.ripples-min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
     <script src="~/WebTheme/assets/js/main.js"></script>
+
+    <!-- Main JS -->
+    <!--Custom.js-->
+    <script src="~/WebTheme/assets/js/Custom.js"></script>
     <script src="~/WebTheme/assets/js/map.js"></script>
-    <script src="~/WebTheme/assets/js/plugins.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 

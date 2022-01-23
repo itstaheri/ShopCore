@@ -26,7 +26,7 @@ namespace SM.Infrastructure.EfCore.Repositories
 
         public ProductModel GetBy(long Id)
         {
-            return _context.products.SingleOrDefault(x => x.Id == Id);
+            return _context.products.SingleOrDefault(x => x.ProductId == Id);
         }
 
         public  List<ProductViewModel> GetProductsBy(SearchProduct commend)
@@ -35,7 +35,7 @@ namespace SM.Infrastructure.EfCore.Repositories
             {
                 CategoryName = x.productcategory.CategoryName,
                 ProductCode= x.ProductCode,
-                ProductId = x.Id,
+                ProductId = x.ProductId,
                 ProductName = x.ProductName,
                 QuantityInStock = x.QuantityInStock,
                 CreationDate = x.CreationDate.ToFarsi(),

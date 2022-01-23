@@ -70,7 +70,7 @@ namespace IM.Infrastracture.Efcore.Repository
 
         public List<InventoryViewModel> search(SearchInventory commend)
         {
-            var product = _product.products.Select(x => new { x.Id, x.ProductName });
+            var product = _product.products.Select(x => new { x.ProductId, x.ProductName });
             var query = _context.inventory.Select(x => new InventoryViewModel
             {
                 Id = x.Id,
@@ -88,7 +88,7 @@ namespace IM.Infrastracture.Efcore.Repository
             var inventory = query.OrderByDescending(x => x.Id).ToList();
             inventory.ForEach(item =>
             {
-                item.ProductName = product.FirstOrDefault(x => x.Id == item.ProductId)?.ProductName;
+                item.ProductName = product.FirstOrDefault(x => x.ProductId == item.ProductId)?.ProductName;
 
             });
             return inventory;

@@ -1,0 +1,38 @@
+﻿@model List<BM.Application.Contract.Article.ArticleViewModel>;
+
+<div class="blog_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section_title s_title_style3">
+                    <h2>آخرین مطالب بلاگ</h2>
+                </div>
+                <div class="blog_container blog_column4 owl-carousel">
+                    @foreach (var item in Model)
+                    {
+                        <article class="single_blog">
+                            <figure>
+                                <div class="blog_thumb">
+                                    <a  asp-page="Blog/ArticleDetail" asp-route-id="@item.Id"><img src="/Img/ArticleImages/@item.Id/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle"></a>
+                                </div>
+                                <figcaption class="blog_content">
+                                    <h4><a  asp-page="Blog/ArticleDetail" asp-route-id="@item.Id">@item.Title</a></h4>
+                                    <div class="post_meta">
+                                        <p>توسط  <a href="#">@item.Username</a> تاریخ <a href="#">@item.CreationDate</a></p>
+                                    </div>
+                                    <div class="post_desc">
+                                        @Html.Raw(item.ShortDescription)
+                                    </div>
+                                    <footer class="post_readmore">
+                                        <a asp-page="Blog/ArticleDetail" asp-route-id="@item.Id"> بیشتر بخوانید</a>
+                                    </footer>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

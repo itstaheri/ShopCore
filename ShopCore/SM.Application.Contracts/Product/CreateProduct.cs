@@ -12,7 +12,10 @@ namespace SM.Application.Contracts.Product
     public class CreateProduct
     {
      
+      //  [MaxLength(10,ErrorMessage ="Error")]
         public string ProductName { get; set; }
+
+        //[Required]
         public string ProductCode { get;  set; }
         public string Picture { get; set; }
         public string Description { get;  set; }

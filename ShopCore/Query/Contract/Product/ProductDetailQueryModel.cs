@@ -8,7 +8,7 @@ namespace Query.Contract.Product
 {
     public class ProductDetailQueryModel
     {
-        public int Id { get;  set; }
+        public long Id { get;  set; }
         public string ProductName { get;  set; }
         public string ProductCode { get;  set; }
         public string Picture { get; set; }

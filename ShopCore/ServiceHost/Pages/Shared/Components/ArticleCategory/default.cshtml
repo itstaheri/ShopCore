@@ -10,7 +10,7 @@
                 @foreach (var item in Model)
                 {
                     <li>
-                        <a asp-page="./ArticleCategory" asp-route-CategoryId="@item.Id"> @item.Name</a><i class="fa fa-angle-left"></i>
+                        <a asp-page="/Blog/Category" asp-route-CategoryId="@item.Id"> @item.Name</a><i class="fa fa-angle-left"></i>
                     </li>
                 }
 

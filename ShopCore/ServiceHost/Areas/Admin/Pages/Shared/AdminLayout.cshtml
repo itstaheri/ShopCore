@@ -1,5 +1,5 @@
 ﻿@inject Frameworks.IAuthHelper AuthHelper;
-@{ 
+@{
     var currentValue = AuthHelper.CurrentAccountInfo();
 }
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
 
 
 
-  
+
 
     <link href="~/AdminTheme/assets/css/persian-datepicker.min.css" rel="stylesheet" />
     <link href="~/AdminTheme/css/animate.css" rel="stylesheet" />
@@ -28,7 +28,6 @@
     <link href="~/AdminTheme/css/style-responsive.css" rel="stylesheet" />
     <link href="~/AdminTheme/css/style.css" rel="stylesheet" />
     <link href="~/AdminTheme/css/waves-effect.css" rel="stylesheet" />
-    <a href="D:\ShopCore\ShopCore\ServiceHost\Areas\Admin\Shared\AdminLayout.cshtml">D:\ShopCore\ShopCore\ServiceHost\Areas\Admin\Shared\AdminLayout.cshtml</a>
 
 </head>
 
@@ -326,16 +325,15 @@
 
 
 
-    </div>
     <!-- END wrapper -->
-    <!-- <script> -->
-    <!-- var resizefunc = []; -->
-    <!-- </script> -->
+    <script>
+        var resizefunc = [];
+    </script>
     <!-- jQuery  -->
+    <script src="~/AdminTheme/js/jquery.min.js"></script>
     <script src="~/AdminTheme/assets/js/bootstrap.min.js"></script>
     <script src="~/AdminTheme/assets/js/waves.js"></script>
     <script src="~/AdminTheme/assets/js/wow.min.js"></script>
-    <script src="~/AdminTheme/assets/js/jquery.min.js"></script>
     <script src="~/AdminTheme/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
     <script src="~/AdminTheme/assets/js/jquery.scrollTo.min.js"></script>
     <script src="~/AdminTheme/assets/chat/moment-2.2.1.js"></script>
@@ -366,7 +364,8 @@
     <!-- CUSTOM JS -->
     <script src="~/AdminTheme/js/jquery.app.js"></script>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+
 
     <!-- Dashboard -->
     <script src="~/AdminTheme/js/jquery.dashboard.js"></script>
@@ -377,8 +376,8 @@
     <!-- Todo -->
     <script src="~/AdminTheme/js/jquery.todo.js"></script>
     <!-- validation-->
-    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
     <!--Persian Date Picker-->
@@ -395,6 +394,7 @@
 
     <link href="~/AdminTheme/assets/css/popupStyle.css" rel="stylesheet" />
     <script src="//cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+    <script src="https://cdn.tiny.cloud/1/03bywyfc22f080o11wndvso5su892zkphj49li728tkw9f3f/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
     @RenderSection("Scripts", false)
 
@@ -410,7 +410,7 @@
         });
     </script>
 
-    <script src="https://cdn.tiny.cloud/1/03bywyfc22f080o11wndvso5su892zkphj49li728tkw9f3f/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
 
 
     <script>
@@ -505,10 +505,14 @@
         });
     </script>
     <script>
-        CKEDITOR.replace('ckeditor', {
-            customConfig: ' ~/AdminTheme/assets/js/Config.js'
+        $(function () {
 
+            CKEDITOR.replace('Description', {
+                customConfig: '/AdminTheme/assets/js/Config.js'
+
+            });
         });
+
     </script>
     <script>
         tinymce.init({

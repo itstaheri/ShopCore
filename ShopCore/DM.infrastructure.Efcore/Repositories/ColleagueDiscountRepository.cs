@@ -31,7 +31,7 @@ namespace DM.infrastructure.Efcore.Repositories
         public List<ColleagueDiscountViewModel> GetAllBy(SearchColleagueDiscount commend)
         {
 
-            var product = _product.products.Select(x => new { x.Id, x.ProductName }).ToList();
+            var product = _product.products.Select(x => new { x.ProductId, x.ProductName }).ToList();
             
             var query = _context.colleagueDiscounts.Select(x => new ColleagueDiscountViewModel
             {
@@ -51,7 +51,7 @@ namespace DM.infrastructure.Efcore.Repositories
                 query = query.Where(x => x.ProductId == commend.ProductId);
             }
             var discount = query.OrderByDescending(x => x.Id).ToList();
-            discount.ForEach(discount => discount.ProductName = product.FirstOrDefault(x => x.Id == discount.ProductId)?.ProductName);
+            discount.ForEach(discount => discount.ProductName = product.FirstOrDefault(x => x.ProductId == discount.ProductId)?.ProductName);
 
             return discount;
         }

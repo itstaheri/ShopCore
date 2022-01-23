@@ -23,14 +23,14 @@ namespace Query.BlogQuery
 
         public List<ArticleCategoryQueryViewModel> GetProductsWithCategory(long categoryId)
         {
-            var query = _context.articleCategories.Select(x => new ArticleCategoryQueryViewModel
+            return _context.articleCategories.Where(x=>x.IsRemoved == false && x.Id == categoryId).Include(x => x.articles).ThenInclude(x => x.articleCategory).Select(x => new ArticleCategoryQueryViewModel
             {
                 Id = x.Id,
                 Name = x.Name,
                 articles = Mapping(x.articles)
             }).AsNoTracking().ToList();
 
-            return query;
+           
         }
 
         private static List<ArticleQueryViewModel> Mapping(List<ArticleModel> articles)

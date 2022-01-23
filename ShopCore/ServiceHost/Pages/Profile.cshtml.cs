@@ -35,14 +35,15 @@ namespace ServiceHost.Pages
             Account = _repository.GetProfileItems(_auth.CurrentAccountId());
             Address = _repository.GetValueForEditAddress(_auth.CurrentAccountId());
         }
-        public void OnPostAddress(AddressQueryViewModel commend)
+        public RedirectToPageResult OnPostAddress(AddressQueryViewModel commend)
         {
             _repository.EditAddress(commend);
+            return RedirectToPage();
         }
-        public void OnPostInfo(EditAccount commend)
+        public RedirectToPageResult OnPostInfo(EditAccount commend)
         {
             _account.Edit(commend);
-
+            return RedirectToPage();
         }
     }
 }

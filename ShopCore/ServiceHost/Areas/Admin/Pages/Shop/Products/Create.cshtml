@@ -12,10 +12,11 @@
     <div class="panel-body">
         <div class=" form">
             <form action="" method="post" enctype="multipart/form-data">
-
+                @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
                 <div class="form-group">
                     <label>ProductName</label>
-                    <input type="text" class="form-control" id="ProductName" name="ProductName" dir="auto" />
+                    <input type="text" class="form-control" name="ProductName" dir="auto" />
+                    @*<span asp-validation-for="product.ProductName" class="text-danger"></span>*@
                 </div>
                 <div class="form-group">
                     <label>ProductCode</label>
@@ -23,7 +24,7 @@
                 </div>
                 <div class="form-group">
                     <label>Description</label>
-                    <textarea id="Description" name="ckeditor"></textarea>
+                    <textarea id="Description" name="Description"></textarea>
                 </div>
                 <div class="form-group">
                     <label>ShortDescription</label>
@@ -47,18 +48,31 @@
                                     <div class="card" style="width: 40rem;">
                                         <div class="card-header">سئو</div>
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">
-                                                <div class="form-group">
-                                                    <label>PictureTitle</label>
-                                                    <input type="text" class="form-control" id="PictureTitle" name="PictureTitle" />
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>PictureTitle</label>
+                                                        <input type="text" class="form-control" id="PictureTitle" name="PictureTitle" />
+                                                    </div>
+                                                </div> <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>PictureAlt</label>
+                                                        <input type="text" class="form-control" id="PictureAlt" name="PictureAlt" />
+                                                    </div>
                                                 </div>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <div class="form-group">
-                                                    <label>PictureAlt</label>
-                                                    <input type="text" class="form-control" id="PictureAlt" name="PictureAlt" />
-                                                </div>
-                                            </li>
+                                            </div>
+                                            @*<li class="list-group-item">
+                                        <div class="form-group">
+                                            <label>PictureTitle</label>
+                                            <input type="text" class="form-control" id="PictureTitle" name="PictureTitle" />
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-group">
+                                            <label>PictureAlt</label>
+                                            <input type="text" class="form-control" id="PictureAlt" name="PictureAlt" />
+                                        </div>
+                                    </li>*@
                                             <li class="list-group-item">
                                                 <div class="form-group">
                                                     <label>Slug</label>
@@ -106,6 +120,8 @@
                 <div class="form-group">
                     <label>Resolution</label>
                     <input type="text" class="form-control" id="Resolution" name="Resolution" />
+                    <span asp-validation-for="product.Resolution" class="text-danger"></span>
+
                 </div>
                 <div class="form-group">
                     <label>Ram</label>
@@ -119,7 +135,7 @@
                 <div class="form-group">
                     <label>بارگذاری تصویر اصلی</label>
                     <input type="file" class="form-control" id="OriginalImage" name="OriginalImage" />
-                    <span asp-validation-for="@Model.product.OriginalImage" class="text-danger"></span>
+                    <span asp-validation-for="product.OriginalImage" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">

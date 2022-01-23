@@ -66,9 +66,9 @@ namespace SM.Infrastructure.EfCore.Migrations
 
             modelBuilder.Entity("SM.Domain.Product.ProductModel", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("ProductId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .UseIdentityColumn();
 
                     b.Property<long>("CategoryId")
@@ -134,7 +134,7 @@ namespace SM.Infrastructure.EfCore.Migrations
                     b.Property<string>("TouchId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ProductId");
 
                     b.HasIndex("CategoryId");
 
@@ -178,8 +178,8 @@ namespace SM.Infrastructure.EfCore.Migrations
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");

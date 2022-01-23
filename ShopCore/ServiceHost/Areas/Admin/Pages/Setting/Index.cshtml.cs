@@ -29,6 +29,7 @@ namespace ServiceHost.Areas.Admin.Pages.Setting
         {
             _repository.Edit(commend);
             return RedirectToPage();
+
         }
     }
 }

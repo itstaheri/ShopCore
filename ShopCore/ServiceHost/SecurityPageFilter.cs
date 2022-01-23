@@ -23,14 +23,14 @@ namespace ServiceHost
 
         public void OnPageHandlerExecuting(PageHandlerExecutingContext context)
         {
-            //var needpermission = (NeedsPermissionAttribute)context
+            //var needpermission = (NeedsPermissionAttribute[])context
             //    .HandlerMethod.MethodInfo.GetCustomAttributes(typeof(NeedsPermissionAttribute));
             //var accountPermissions = _authHelper.GetPermissions();
-            //if (needpermission == null)
+            //if (needpermission?.Count() == 0 || context.HttpContext.Request.Path.Value.ToLower().Contains("account"))
             //{
             //    return;
             //}
-            //if (!accountPermissions.Any(x => x != needpermission.Permission))
+            //if (!accountPermissions.Any(x => needpermission.Any(e => e.Permission == x)))
             //{
             //    context.HttpContext.Response.Redirect("/Account");
             //}

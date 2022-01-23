@@ -8,75 +8,58 @@
     Layout = "BlogLayout";
 }
 
-<div class="breadcrumbs_area">
+<div class="blog_bg_area">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="breadcrumb_content">
-                    <ul>
-                        <li><a asp-page="/Blog">بلاگ</a></li>
+                <div class="blog_wrapper blog_nosidebar mb-60">
+                    <div class="blog_header">
+                        <h1>بلاگ</h1>
+                    </div>
+                    <div class="blog_wrapper_inner">
 
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="blog_bg_area">
-    <div class="container">
-        <div class="blog_page_section">
-            <div class="row">
-                <div class="col-lg-9 col-md-12">
-                    <div class="blog_wrapper mb-60">
-                        <div class="blog_header">
-                            <h1>بلاگ</h1>
-                        </div>
-                        <div class="blog_wrapper_inner">
-                            @foreach (var item in Model.Articles)
-                            {
-                                <article class="single_blog">
-                                    <figure>
-                                        <div class="blog_thumb">
-                                            <a asp-page="./Articledetail" asp-route-Id="@item.Id"><img src="~/Img/ArticleImages/@item.Id/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle" height="282" width="399"></a>
+                        @foreach (var item in Model.Articles)
+                        {
+                            <article class="single_blog">
+                                <figure>
+                                    <div class="blog_thumb">
+                                        <a asp-page="ArticleDetail" asp-route-id="@item.Id"><img src="/Img/ArticleImages/@item.Id/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle"></a>
+                                    </div>
+                                    <figcaption class="blog_content">
+                                        <h4 class="post_title"><a  asp-page="ArticleDetail" asp-route-id="@item.Id">@item.Title</a></h4>
+                                        <div class="blog_meta">
+                                            <span class="author">ارسال توسط : <a>@item.Username</a> / </span>
+                                            <span class="meta_date">ارسال شده در :  <a>@item.CreationDate</a></span>
+                                            <span class="blog_categories">ارسال شده در :  <a asp-page="Category" asp-route-CategoryId="@item.CategoryId">@item.CategoryName</a></span>
                                         </div>
-                                        <figcaption class="blog_content">
-                                            <h4 class="post_title"><a href="blog-details.html">@item.Title</a></h4>
-                                            <div class="blog_meta">
-                                                <span class="author">ارسال توسط : <a asp-page="./Articledetail" asp-route-Id="@item.Id">@item.Username</a> / </span>
-                                                <span class="meta_date">ارسال شده در :  <a href="#">@item.CreationDate</a></span>
-                                                <span class="blog_categories">دسته بندی :  <a asp-page="./category" asp-route-CategoryId="@item.CategoryId">@item.CategoryName</a></span>
-                                            </div>
-                                            <div class="blog_desc">
-                                                <p>@item.ShortDescription</p>
-                                            </div>
-                                            <footer class="btn_more">
-                                                <a asp-page="./ArticleDetail" asp-route-Id="@item.Id"> بیشتر بخوانید</a>
-                                            </footer>
-                                        </figcaption>
-                                    </figure>
-                                </article>
-                            }
+                                        <div class="blog_desc">
+                                            @Html.Raw(item.ShortDescription)
+                                        </div>
+                                        <footer class="btn_more">
+                                            <a asp-page="./ArticleDetail" asp-route-id="@item.Id"> بیشتر بخوانید</a>
+                                        </footer>
+                                    </figcaption>
+                                </figure>
+                            </article>
 
-                        </div>
+                        }
                     </div>
-                    <!--blog pagination area start-->
-                    <div class="blog_pagination">
-                        <div class="pagination">
-                            <ul>
-                                <li class="current">1</li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li class="next"><a href="#">بعدی</a></li>
-                                <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--blog pagination area end-->
                 </div>
-                @*@await Component.InvokeAsync("ArticleSidebar");*@
+                <!--blog pagination area start-->
+                <div class="blog_pagination">
+                    <div class="pagination">
+                        <ul>
+                            <li class="current">1</li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="next"><a href="#">بعدی</a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--blog pagination area end-->
             </div>
         </div>
-
     </div>
 </div>

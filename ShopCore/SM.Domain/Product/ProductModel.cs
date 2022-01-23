@@ -78,7 +78,7 @@ namespace SM.Domain.Product
         public void Deleted() => IsDeleted = true;
        
 
-        public int Id { get;private set; }
+        public long ProductId { get;private set; }
         public string ProductName { get; private set; }
         public string ProductCode { get; private set; }
         public string Picture { get; private set; }

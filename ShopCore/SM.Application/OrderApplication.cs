@@ -111,7 +111,7 @@ namespace AM.Application
         {
 
             var order = _shop.orders.SingleOrDefault(x => x.Id == orderId).orderDetails.FirstOrDefault();
-            var product = _shop.products.SingleOrDefault(x => x.Id == order.ProductId);
+            var product = _shop.products.SingleOrDefault(x => x.ProductId == order.ProductId);
             var totalprice = order.UnitPrice * order.Count;
             return new OrderDetailViewModel
             {

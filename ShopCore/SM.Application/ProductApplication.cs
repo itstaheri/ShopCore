@@ -71,7 +71,7 @@ namespace SM.Application
             var value = _repository.GetBy(Id);
             return new EditProduct
             {
-                Id = value.Id,
+                Id = value.ProductId,
                 ProductName = value.ProductName,
                 Picture = value.Picture,
                 Description = value.Description,

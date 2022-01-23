@@ -89,7 +89,7 @@ namespace Query.ProductQuery
         {
             return products.Where(x => x.IsDeleted == false).Select(x => new ProductQueryModel
             {
-                Id = x.Id,
+                Id = x.ProductId,
                 ProductCode = x.ProductCode,
                 CategoryName = x.productcategory.CategoryName,
                 ProductName = x.ProductName,

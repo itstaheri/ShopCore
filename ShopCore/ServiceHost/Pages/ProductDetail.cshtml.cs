@@ -31,7 +31,7 @@ namespace ServiceHost.Pages
         ProductCommentSearchModel NullCommend;
         public void OnGet(long id)
         {
-
+         
             Product = _repository.GetDetail(id);
             catalogNames = _repository.GetCatalog(id,_env.WebRootPath);
             Comments = _ShowComments.Show(id);

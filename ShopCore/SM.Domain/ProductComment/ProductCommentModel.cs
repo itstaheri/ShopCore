@@ -29,7 +29,7 @@ namespace SM.Domain.ProductComment
         public string Title { get; private set; }
         public long UserId { get; private set; }
         public string Text { get; private set; }
-        public int ProductId { get; private set; }
+        public long ProductId { get; private set; }
         public ProductModel product { get; private set; }
        
         public int Status { get; private set; }

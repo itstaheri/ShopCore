@@ -27,18 +27,20 @@ namespace ServiceHost
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            Env = env;
         }
 
         public IConfiguration Configuration { get; }
+        public IWebHostEnvironment Env { get; }
 
         string ConnectionString = "Data Source =.; Initial Catalog = ShopCoreDB; Integrated Security = true";
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages().AddMvcOptions(option=>option.Filters.Add<SecurityPageFilter>()).AddRazorPagesOptions(option =>
+            var mvcBuilder = services.AddRazorPages().AddMvcOptions(option=>option.Filters.Add<SecurityPageFilter>()).AddRazorPagesOptions(option =>
             {
                 option.Conventions.AuthorizeAreaFolder("Admin", "/", "AdminArea");
                // option.Conventions.AuthorizeAreaFolder("Shop", "/", "AdminArea");
@@ -68,7 +70,14 @@ namespace ServiceHost
 
 
             });
+#if DEBUG
 
+            if (Env.IsDevelopment())
+            {
+                mvcBuilder.AddRazorRuntimeCompilation();
+            }
+
+#endif
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, q =>
                 {

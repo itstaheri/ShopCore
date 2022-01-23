@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Shared\Partials\**" />
+    <Content Remove="Pages\Shared\Partials\**" />
+    <EmbeddedResource Remove="Pages\Shared\Partials\**" />
+    <None Remove="Pages\Shared\Partials\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AM.Bootestrapper\AM.Configuration.csproj" />
     <ProjectReference Include="..\BM.Configuration\BM.Configuration.csproj" />
     <ProjectReference Include="..\DM.Configuration\DM.Configuration.csproj" />
@@ -21,6 +28,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.13" />
     <PackageReference Include="Nancy" Version="2.0.0" />
   </ItemGroup>
 

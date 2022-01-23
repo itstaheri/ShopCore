@@ -3,9 +3,40 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+
+}
+@inject SettingManagement.ISettingRepository setting;
+
+
+@{
+    SettingManagement.settingViewModel info;
+    info = setting.GetValue();
+}
+@section Banner{
+
+    <div class="banner_area mb-55">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <figure class="single_banner">
+                        <div class="banner_thumb">
+                            <a href="shop.html"><img src="@info.BannerOne" alt=""></a>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <figure class="single_banner">
+                        <div class="banner_thumb">
+                            <a href="shop.html"><img src="@info.BannerTwo" alt=""></a>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
 }
 
-
+@section Blog{@await Component.InvokeAsync("Blog")};
 @section Slider{@await Component.InvokeAsync("ShopSlider")};
 
 <div class="shipping_area mb-60">
@@ -77,6 +108,7 @@
         <div class="tab-content">
             <div class="tab-pane fade show active" id="Computer3" role="tabpanel">
                 <div class="product_carousel product_style product_column5 owl-carousel">
+
                     @foreach (var item in Model.products)
                     {
                         <article class="single_product">
@@ -119,10 +151,10 @@
                             </figure>
                         </article>
                     }
+
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 </div>
-
