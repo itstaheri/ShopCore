@@ -3097,7 +3097,8 @@
           "AM.Application": "1.0.0",
           "AM.Domain": "1.0.0",
           "AM.Infrastracture.Efcore": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Query": "1.0.0"
         },
         "compile": {
           "bin/placeholder/AM.Configuration.dll": {}
@@ -3399,6 +3400,23 @@
         },
         "runtime": {
           "bin/placeholder/Query.dll": {}
+        }
+      },
+      "SettingManagement/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Frameworks": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.12",
+          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SettingManagement.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SettingManagement.dll": {}
         }
       },
       "SM.Application/1.0.0": {
@@ -10295,6 +10313,11 @@
       "path": "../Query/Query.csproj",
       "msbuildProject": "../Query/Query.csproj"
     },
+    "SettingManagement/1.0.0": {
+      "type": "project",
+      "path": "../SettingManagement/SettingManagement.csproj",
+      "msbuildProject": "../SettingManagement/SettingManagement.csproj"
+    },
     "SM.Application/1.0.0": {
       "type": "project",
       "path": "../SM.Application/SM.Application.csproj",
@@ -10332,7 +10355,8 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
       "Nancy >= 2.0.0",
       "Query >= 1.0.0",
-      "SM.Configuration >= 1.0.0"
+      "SM.Configuration >= 1.0.0",
+      "SettingManagement >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -10384,6 +10408,9 @@
             },
             "D:\\ShopCore\\ShopCore\\Query\\Query.csproj": {
               "projectPath": "D:\\ShopCore\\ShopCore\\Query\\Query.csproj"
+            },
+            "D:\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj": {
+              "projectPath": "D:\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj"
             },
             "D:\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj": {
               "projectPath": "D:\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj"

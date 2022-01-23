@@ -8,6 +8,8 @@ using AM.Infrastracture.Efcore.Repositories;
 using Frameworks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Query.AccountQuery;
+using Query.Contract.Account;
 using System;
 
 namespace AM.Configuration
@@ -23,6 +25,8 @@ namespace AM.Configuration
 
             service.AddTransient<IRoleRepository, RoleRepository>();
             service.AddTransient<IRoleApplication, RoleApplication>();
+
+            service.AddTransient<IAccountQueryRepository, AccountQueryRepository>();
 
          
         }

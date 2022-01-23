@@ -1,0 +1,70 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Setting.IndexModel
+@{
+}
+
+
+<h1>تنظیمات</h1>
+
+<div class="panel panel-default">
+    <div class="panel-heading"><h3 class="panel-title">ایجاد محصول</h3></div>
+    <div class="panel-body">
+        <div class=" form">
+            <form action="" method="post" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label>شماره پشتیبانی</label>
+                    <input type="text" class="form-control" id="ContectNumber" name="ContectNumber" value="@Model.Setting.ContectNumber" />
+                </div>
+                <div class="form-group">
+                    <label>ایمیل پشتیبانی</label>
+                    <input type="email" class="form-control" id="ContectEmail" name="ContectEmail" value="@Model.Setting.ContectEmail" />
+                </div>
+                <div class="form-group">
+                    <label>متن هدر راست</label>
+                    <input type="text" class="form-control" id="HeaderRight" name="HeaderRight" value="@Model.Setting.HeaderRight" />
+                </div>
+                <div class="form-group">
+                    <label>متن هدر چپ</label>
+                    <input type="text" class="form-control" id="HeaderLeft" name="HeaderLeft" value="@Model.Setting.HeaderLeft" />
+                </div>
+                <div class="form-group">
+                    <label>لینک بنر اول</label>
+                    <input type="text" class="form-control" id="BannerOne" name="BannerOne" value="@Model.Setting.BannerOne" />
+                </div>
+                <div class="form-group">
+                    <label>لینک بنر دوم</label>
+                    <input type="text" class="form-control" id="BannerTwo" name="BannerTwo" value="@Model.Setting.BannerTwo" />
+                </div>
+                <div class="form-group">
+                    <label>آدرس تماس با ما</label>
+                    <input type="text" class="form-control" id="ContectUsAdd" name="ContectUsAdd" value="@Model.Setting.ContectUsAdd" />
+                </div>
+                <div class="form-group">
+                    <label>ایمیل دریافت پشتیبانی</label>
+                    <input type="email" class="form-control" id="SmtpEmail" name="SmtpEmail" value="@Model.Setting.SmtpEmail" />
+                </div>
+
+                <div class="form-group">
+                    <label>متن تماس با ما</label>
+                    <textarea class="form-control" name="ContectUs" id="ContectUs">@Model.Setting.ContectUs</textarea>
+                </div>
+
+
+                <div class="form-group">
+                    <label>بارگذاری لوگو</label>
+                    <input type="file" class="form-control" id="Logo" name="Logo" />
+                </div>
+
+                <img src="~/Img/LogoImages/Logo/@Model.Setting.LogoName" />
+                <br />
+                <br />
+                
+                <button type="submit" class="btn-success">اعمال</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

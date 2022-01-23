@@ -6,105 +6,113 @@
 
 
 
-                <!--shop banner area start-->
-        
-                <!--shop banner area end-->
-                <!--shop toolbar start-->
-             
-                <!--shop wrapper start-->
-                <div class="row no-gutters shop_wrapper">
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/Index">خانه</a></li>
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row no-gutters shop_wrapper">
 
-                    @foreach (var item in Model.categories)
-                    {
-                        @foreach (var product in item.products)
-                        {
-                            <div class="col-lg-3 col-md-4 col-12 ">
-                                <article class="single_product">
-                                    <figure>
-                                        <div class="product_thumb">
-                                            <a class="primary_img"><img src="~/Img/ProductImages/@product.ProductName/@(product.Picture)" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
-                                            @*<a class="secondary_img"><img src="~/Img/ProductImages/@(product.ProductCode)1.jpg" alt="@product.PictureAlt" title="@product.PictureTitle"></a>*@
-                                            @if (product.DiscountRate > 0)
-                                            {
-                                                <div class="label_product">
-                                                    <span class="label_sale">@product.DiscountRate %</span>
-                                                </div>
-                                            }
-                                            <div class="action_links">
-                                                <ul>
-                                                    <li class="wishlist"><a href="wishlist.html" title="افزودن به علاقه‌مندی‌ها"><i class="ion-android-favorite-outline"></i></a></li>
-                                                    <li class="compare"><a href="#" title="افزودن به مقایسه"><i class="ion-ios-settings-strong"></i></a></li>
-                                                    <li class="quick_button"><a asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات "><i class="ion-ios-search-strong"></i></a></li>
+    @foreach (var item in Model.categories)
+    {
+        @foreach (var product in item.products)
+        {
+            <div class="col-lg-3 col-md-4 col-12 ">
+                <article class="single_product">
+                    <figure>
+                        <div class="product_thumb">
+                            <a class="primary_img"><img src="~/Img/ProductImages/@product.ProductName/@(product.Picture)" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                            @*<a class="secondary_img"><img src="~/Img/ProductImages/@(product.ProductCode)1.jpg" alt="@product.PictureAlt" title="@product.PictureTitle"></a>*@
+                            @if (product.DiscountRate > 0)
+                            {
+                                <div class="label_product">
+                                    <span class="label_sale">@product.DiscountRate %</span>
+                                </div>
+                            }
+                            <div class="action_links">
+                                <ul>
+                                    <li class="wishlist"><a href="wishlist.html" title="افزودن به علاقه‌مندی‌ها"><i class="ion-android-favorite-outline"></i></a></li>
+                                    <li class="compare"><a href="#" title="افزودن به مقایسه"><i class="ion-ios-settings-strong"></i></a></li>
+                                    <li class="quick_button"><a asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات "><i class="ion-ios-search-strong"></i></a></li>
 
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="product_content grid_content">
-                                            <div class="product_content_inner">
-                                                <h4 class="product_name"><a href="product-details.html">@product.ProductName</a></h4>
-                                               
-                                                <div class="price_box">
-                                                    <span class="old_price">@product.Price تومان</span>
-                                                    <span class="current_price">@product.PriceAfterDiscount تومان</span>
-                                                </div>
-                                                <div class="text">
-                                                    <a asp-page="Category" asp-route-CategoryId="@item.Id">@item.CategoryName</a>
-                                                </div>
-                                            </div>
-                                            <div class="add_to_cart">
-                                                <a href="cart.html" title="افزودن به سبد">افزودن به سبد</a>
-                                            </div>
-                                        </div>
-                                        <div class="product_content list_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">80,000 تومان</span>
-                                                <span class="current_price">70,000 تومان</span>
-                                            </div>
-                                            <div class="product_desc">
-                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی</p>
-                                            </div>
-                                            <div class="add_to_cart">
-                                                <a href="cart.html" title="افزودن به سبد">افزودن به سبد</a>
-                                            </div>
-                                            <div class="action_links">
-                                                <ul>
-                                                    <li class="wishlist"><a href="wishlist.html" title="افزودن به علاقه‌مندی‌ها"><i class="ion-android-favorite-outline"></i> افزودن به علاقه‌مندی‌ها</a></li>
-                                                    <li class="compare"><a href="#" title="افزودن به مقایسه"><i class="ion-ios-settings-strong"></i> مقایسه</a></li>
-                                                    <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="مشاهده سریع"><i class="ion-ios-search-strong"></i> نمایش سریع</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                </article>
+                                </ul>
                             </div>
-                        }
-                    }
-                </div>
+                        </div>
 
-                <div class="shop_toolbar t_bottom">
-                    <div class="pagination">
-                        <ul>
-                            <li class="current">1</li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li class="next"><a href="#">بعدی</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!--shop toolbar end-->
-                <!--shop wrapper end-->
+                        <div class="product_content grid_content">
+                            <div class="product_content_inner">
+                                <h4 class="product_name"><a href="product-details.html">@product.ProductName</a></h4>
+
+                                <div class="price_box">
+                                    <span class="old_price">@product.Price تومان</span>
+                                    <span class="current_price">@product.PriceAfterDiscount تومان</span>
+                                </div>
+                                <div class="text">
+                                    <a asp-page="Category" asp-route-CategoryId="@item.Id">@item.CategoryName</a>
+                                </div>
+                            </div>
+                            <div class="add_to_cart">
+                                <a href="cart.html" title="افزودن به سبد">افزودن به سبد</a>
+                            </div>
+                        </div>
+                        <div class="product_content list_content">
+                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از</a></h4>
+                            <div class="product_rating">
+                                <ul>
+                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="price_box">
+                                <span class="old_price">80,000 تومان</span>
+                                <span class="current_price">70,000 تومان</span>
+                            </div>
+                            <div class="product_desc">
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی</p>
+                            </div>
+                            <div class="add_to_cart">
+                                <a href="cart.html" title="افزودن به سبد">افزودن به سبد</a>
+                            </div>
+                            <div class="action_links">
+                                <ul>
+                                    <li class="wishlist"><a href="wishlist.html" title="افزودن به علاقه‌مندی‌ها"><i class="ion-android-favorite-outline"></i> افزودن به علاقه‌مندی‌ها</a></li>
+                                    <li class="compare"><a href="#" title="افزودن به مقایسه"><i class="ion-ios-settings-strong"></i> مقایسه</a></li>
+                                    <li class="quick_button"><a href="#" data-toggle="modal" data-target="#modal_box" title="مشاهده سریع"><i class="ion-ios-search-strong"></i> نمایش سریع</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
+            </div>
+        }
+    }
+</div>
+
+<div class="shop_toolbar t_bottom">
+    <div class="pagination">
+        <ul>
+            <li class="current">1</li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li class="next"><a href="#">بعدی</a></li>
+            <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!--shop toolbar end-->
+<!--shop wrapper end-->
             </div>
         </div>
     </div>

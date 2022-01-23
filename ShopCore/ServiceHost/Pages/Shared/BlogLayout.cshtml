@@ -57,7 +57,7 @@
                                     
                                 </div>
                                 <div class="search_box">
-                                    <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend">
+                                    <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend" dir="auto">
                                     <button type="submit">جستجو</button>
                                 </div>
                             </form>
@@ -151,7 +151,7 @@
                                         else
                                         {
                                             <li><a class="glyphicon glyphicon-user" asp-page="./Profile"> حساب من</a></li>
-                                            <li><a class="glyphicon glyphicon-user" asp-page="./Account" asp-page-handler="Logout"> خروج</a></li>
+                                            <li><a class="glyphicon glyphicon-circle-arrow-left" asp-page="/Account" asp-page-handler="Logout"> خروج</a></li>
 
 
                                         }
@@ -179,7 +179,7 @@
 
                                     </div>
                                     <div class="search_box">
-                                        <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend">
+                                        <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend" dir="auto">
                                         <button type="submit">جستجو</button>
                                     </div>
                                 </form>
@@ -199,20 +199,7 @@
     </header>
     <!--header area end-->
     <!--breadcrumbs area start-->
-    <div class="breadcrumbs_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="breadcrumb_content">
-                        <ul>
-                            <li><a href="index.html">خانه</a></li>
-                            <li>جزئیات مطلب بلاگ</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  
     <!--breadcrumbs area end-->
     <!--blog body area start-->
     @RenderBody();

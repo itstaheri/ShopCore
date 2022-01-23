@@ -8,10 +8,25 @@
 }
 
 
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/Index">خانه</a></li>
+                        <li><a asp-page="./Cart">سبدخرید</a></li>
+                        <li><a asp-page="./checkout">پرداخت</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="checkout_page_bg">
     <div class="container">
         <div class="Checkout_section">
-            <div class="row">
+            @*<div class="row">
                 <div class="col-12">
                     @if (!authhelper.IsAuthenticated())
                     {
@@ -49,11 +64,17 @@
                     }
 
                 </div>
-            </div>
-            <div class="checkout_form">
+            </div>*@
+
+            <style>
+                #Checkout{
+                    
+                }
+            </style>
+            <div class="checkout_form" id="Checkout">
                 <div class="row">
 
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-8 col-md-8">
                         <div class="checkout_form_right">
                             <form id="1" method="post">
                                 <h3>سفارش شما</h3>
@@ -100,7 +121,7 @@
                                         </tfoot>
                                     </table>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-8 col-md-8">
                                     <div class="checkout_form_left">
                                         <h3>جزئیات پرداخت</h3>
                                         <label for="order_note">توضیحات سفارش</label>
@@ -113,7 +134,7 @@
                                         <label>@item.Name</label>
                                         <input type="radio" name="PaymentMethod" id="PaymentMethod" value="@item.Id" />
                                         <p>@item.Description</p>
-                                        
+
                                     }
 
                                     <div class="order_button">

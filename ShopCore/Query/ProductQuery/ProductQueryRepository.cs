@@ -59,8 +59,13 @@ namespace Query.ProductQuery
 
         public ProductDetailQueryModel GetDetail(long id)
         {
+            int discountRate = 0;
             var Price = _inventory.inventory.Select(x => new { x.Productid, x.Price }).FirstOrDefault(x=>x.Productid == id).Price;
-            var discountRate = _discount.customerDiscounts.Where(x => x.Start < DateTime.Now && x.End > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).FirstOrDefault(x=>x.ProductId == id).DiscountRate;
+            if (_discount.customerDiscounts.Any(x => x.Start < DateTime.Now && x.End > DateTime.Now))
+            {
+                 discountRate = _discount.customerDiscounts.Where(x => x.Start < DateTime.Now && x.End > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).FirstOrDefault(x => x.ProductId == id).DiscountRate;
+
+            }
             var product = _shop.products.Include(x=>x.productcategory).SingleOrDefault(x => x.Id == id);
             var query =new ProductDetailQueryModel
             {

@@ -196,7 +196,7 @@
 
                             </ul>
                         </li>
-                     
+
 
                         <li class="has_sub">
                             <a class="waves-effect" asp-page="/Shop/Orders/index"><i class="glyphicon glyphicon-list-alt"></i><span> سفارشات </span><span class="pull-right"><i class="md md-add"></i></span></a>
@@ -222,7 +222,7 @@
                                 <li><a asp-page="/Blog/ArticleCategories/index">گروه مقالات</a></li>
                                 <li><a asp-page="/Blog/Articles/index">مقالات</a></li>
                                 <li><a asp-page="/Blog/ArticleComments/index">نظرات</a></li>
-                               
+
 
 
                             </ul>
@@ -323,7 +323,6 @@
     <!-- Custom ~/AdminTheme/Files -->
     <link href="~/AdminTheme/css/helper.css" rel="stylesheet" type="text/css" />
     <link href="~/AdminTheme/css/style.css" rel="stylesheet" type="text/css" />
-    <a href="D:\ShopCore\ShopCore\ServiceHost\Areas\Admin\Shared\AdminLayout.cshtml">D:\ShopCore\ShopCore\ServiceHost\Areas\Admin\Shared\AdminLayout.cshtml</a>
 
 
 
@@ -399,14 +398,20 @@
 
     @RenderSection("Scripts", false)
 
+
+
     <script>
 
         $('.PersianDateInput').persianDatepicker({
 
             format: 'YYYY/MM/DD',
-            autoClose: true
+            autoClose: true,
+            initialValueType: "persian"
         });
     </script>
+
+    <script src="https://cdn.tiny.cloud/1/03bywyfc22f080o11wndvso5su892zkphj49li728tkw9f3f/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
 
     <script>
         jQuery.validator.addMethod("maxFileSize",
@@ -484,6 +489,8 @@
         });
     </script>
 
+
+
     <script>
         $(window).load(function () {
             $(".trigger_popup_fricc").click(function () {
@@ -500,7 +507,14 @@
     <script>
         CKEDITOR.replace('ckeditor', {
             customConfig: ' ~/AdminTheme/assets/js/Config.js'
-              
+
+        });
+    </script>
+    <script>
+        tinymce.init({
+            selector: '#BodyContent',
+            plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            toolbar_mode: 'floating',
         });
     </script>
 </body>

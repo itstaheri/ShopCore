@@ -171,7 +171,6 @@ D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\P
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Sliders\ShopSlider\Index.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Sliders\ShopSlider\Create.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Shop\Sliders\ShopSlider\Edit.cshtml.g.cs
-D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Detail.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\Query.dll
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\Query.pdb
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ShopSlider\default.cshtml.g.cs
@@ -270,3 +269,7 @@ D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Blog\Search.cshtml
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ArticleSidebar\default.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\BlogLayout.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\ArticleCategory\default.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Profile.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\SettingManagement.dll
+D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\SettingManagement.pdb
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Setting\Index.cshtml.g.cs

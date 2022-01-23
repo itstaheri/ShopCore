@@ -10,6 +10,7 @@
     <ProjectReference Include="..\DM.Configuration\DM.Configuration.csproj" />
     <ProjectReference Include="..\IM.Configuration\IM.Configuration.csproj" />
     <ProjectReference Include="..\Query\Query.csproj" />
+    <ProjectReference Include="..\SettingManagement\SettingManagement.csproj" />
     <ProjectReference Include="..\SM.Configuration\SM.Configuration.csproj" />
   </ItemGroup>
 
@@ -26,6 +27,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\Img\CategoryImages\" />
     <Folder Include="wwwroot\Img\ArticleImages\" />
+    <Folder Include="wwwroot\Img\LogoImages\" />
     <Folder Include="wwwroot\Img\ProfileImages\" />
     <Folder Include="wwwroot\Img\ProductImages\" />
     <Folder Include="wwwroot\Img\ShopSliders\" />

@@ -1,5 +1,5 @@
 ﻿@inject Frameworks.IAuthHelper authHelper;
-<
+
 <!DOCTYPE html>
 <html class="no-js" lang="fa" dir="rtl">
 
@@ -47,7 +47,13 @@
                                 <li><a href="#">آدرس‌های فروشگاه</a></li>
                                 <li><a href="#">پیگیری سفارش</a></li>
                                 <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)800456789">(+98) 800 456 789 </a></li>
-                                <li>ضمانت کیفیت محصولات</li>
+                                @if (authHelper.CurrentAccountRole() == "1")
+                                {
+                                    <li>
+                                        <a asp-page="/Admin">ورود به پنل ادمین </a>
+
+                                    </li>
+                                }
                             </ul>
                         </div>
                         <div class="header_configure_area">
@@ -89,7 +95,7 @@
                                     </select>
                                 </div>
                                 <div class="search_box">
-                                    <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend">
+                                    <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend" dir="auto">
                                     <button type="submit">جستجو</button>
                                 </div>
                             </form>
@@ -239,7 +245,7 @@
                                         </select>
                                     </div>
                                     <div class="search_box">
-                                        <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend">
+                                        <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend" dir="auto">
                                         <button type="submit">جستجو</button>
                                     </div>
                                 </form>
@@ -427,17 +433,15 @@
     <!--header area end-->
     <!--slider area start-->
     <section class="slider_section slider_s_four mb-60">
-        @await Component.InvokeAsync("ShopSlider")
+       @RenderSection("Slider", false);
     </section>
     <!--slider area end-->
     <!--shipping area start-->
-   
     <!--shipping area end-->
     <!--home section bg area start-->
     <div class="home_section_bg">
 
         <!--Categories product area start-->
-       
         <!--Categories product area end-->
         <!--product area start-->
         @RenderBody()
@@ -464,7 +468,6 @@
             </div>
         </div>
         <!--banner area end-->
-      
         <!--banner area start-->
         <div class="banner_area banner_style2 banner_style4 mb-60">
             <div class="container">
@@ -495,518 +498,7 @@
         </div>
         <!--banner area end-->
         <!--product area start-->
-        <div class="small_product_area small_product_style2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="small_product_list">
-                            <div class="section_title">
-                                <h2>کامپیوتر و شبکه</h2>
-                            </div>
-                            <div class="product_carousel small_p_container  product_column1 owl-carousel">
-                                <div class="product_items">
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product9.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product10.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">82,000 تومان</span>
-                                                <span class="current_price">78,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product11.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product12.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">72,000 تومان</span>
-                                                <span class="current_price">68,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product13.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product14.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">86,000 تومان</span>
-                                                <span class="current_price">79,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="product_items">
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product9.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product10.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">82,000 تومان</span>
-                                                <span class="current_price">78,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product11.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product12.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">72,000 تومان</span>
-                                                <span class="current_price">68,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product13.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product14.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">86,000 تومان</span>
-                                                <span class="current_price">79,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="small_product_list">
-                            <div class="section_title">
-                                <h2>بازی و کنسول</h2>
-                            </div>
-                            <div class="product_carousel small_p_container  product_column1 owl-carousel">
-                                <div class="product_items">
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product1.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product2.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">82,000 تومان</span>
-                                                <span class="current_price">78,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product3.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product4.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">72,000 تومان</span>
-                                                <span class="current_price">68,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product5.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product6.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">86,000 تومان</span>
-                                                <span class="current_price">79,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="product_items">
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product9.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product10.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">82,000 تومان</span>
-                                                <span class="current_price">78,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product11.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product12.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">72,000 تومان</span>
-                                                <span class="current_price">68,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product13.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product14.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">86,000 تومان</span>
-                                                <span class="current_price">79,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="small_product_list">
-                            <div class="section_title">
-                                <h2>موبایل و تبلت</h2>
-                            </div>
-                            <div class="product_carousel small_p_container  product_column1 owl-carousel">
-                                <div class="product_items">
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product13.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product14.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">82,000 تومان</span>
-                                                <span class="current_price">78,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product15.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product16.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">72,000 تومان</span>
-                                                <span class="current_price">68,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product17.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product18.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">86,000 تومان</span>
-                                                <span class="current_price">79,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="product_items">
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product19.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product20.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">82,000 تومان</span>
-                                                <span class="current_price">78,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product1.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product2.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">72,000 تومان</span>
-                                                <span class="current_price">68,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                    <figure class="single_product">
-                                        <div class="product_thumb">
-                                            <a class="primary_img" href="product-details.html"><img src="assets/img/product/product3.jpg" alt=""></a>
-                                            <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product4.jpg" alt=""></a>
-                                        </div>
-                                        <div class="product_content">
-                                            <h4 class="product_name"><a href="product-details.html">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</a></h4>
-                                            <div class="product_rating">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="price_box">
-                                                <span class="old_price">86,000 تومان</span>
-                                                <span class="current_price">79,000 تومان</span>
-                                            </div>
-                                            <div class="product_cart_button">
-                                                <a href="cart.html" title="افزودن به سبد"><i class="fa fa-shopping-bag"></i></a>
-                                            </div>
-
-                                        </div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+   
         <!--product area end-->
 
     </div>

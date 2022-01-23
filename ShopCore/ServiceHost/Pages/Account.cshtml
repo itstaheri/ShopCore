@@ -5,6 +5,20 @@
 }
 
 
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/">خانه</a></li>
+                        <li><a asp-page="./Account">ورود / ثبت نام</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="login_page_bg">
     <div class="container">
         <div class="customer_login">
@@ -13,7 +27,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="account_form login">
                         <h2>ورود</h2>
-                        @if (Model.LoginMessage != null)  
+                        @if (Model.LoginMessage != null)
                         {
                             <div class="alert alert-danger">@Model.LoginMessage</div>
 

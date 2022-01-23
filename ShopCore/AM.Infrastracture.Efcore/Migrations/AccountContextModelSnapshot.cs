@@ -86,6 +86,40 @@ namespace AM.Infrastracture.Efcore.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.OwnsOne("AM.Domain.AccountAgg.AccountAddressModel", "accountAddress", b1 =>
+                        {
+                            b1.Property<long>("ProductId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("bigint")
+                                .UseIdentityColumn();
+
+                            b1.Property<string>("Address")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("City")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("County")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<long>("Id")
+                                .HasColumnType("bigint");
+
+                            b1.Property<long>("PostalCode")
+                                .HasColumnType("bigint");
+
+                            b1.HasKey("ProductId");
+
+                            b1.ToTable("accounts");
+
+                            b1.WithOwner("account")
+                                .HasForeignKey("ProductId");
+
+                            b1.Navigation("account");
+                        });
+
+                    b.Navigation("accountAddress");
+
                     b.Navigation("role");
                 });
 

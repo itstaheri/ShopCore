@@ -16,6 +16,7 @@ using Microsoft.Extensions.Configuration.UserSecrets;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Query.Contract.Cart;
+
 using SM.Configuration;
 using System;
 using System.Collections.Generic;
@@ -47,6 +48,8 @@ namespace ServiceHost
             InventoryBootestrapper.Configoration(services, ConnectionString);
             AccountBootestrapper.Configure(services, ConnectionString);
             BlogBootestrapper.Configuration(services, ConnectionString);
+            SettingManagement.SettingConfiguration.Configure(services, ConnectionString);
+    
 
             services.AddTransient<IAuthHelper, AuthHelper>();
             services.AddTransient<IFileUploader, FileUploader>();
