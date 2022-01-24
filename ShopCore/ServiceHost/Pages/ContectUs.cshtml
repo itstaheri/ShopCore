@@ -1,0 +1,86 @@
+﻿@page
+@model ServiceHost.Pages.ContectUsModel
+@inject SettingManagement.ISettingRepository _info;
+
+@{
+    var info = new SettingManagement.settingViewModel();
+    info = _info.GetValue();
+}
+
+
+@section Title{ <title>@(ViewData["Title"] ="تماس با ما") | موبایل شاپ </title>}
+
+<div class="breadcrumbs_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb_content">
+                    <ul>
+                        <li><a asp-page="/">خانه</a></li>
+                        <li><a asp-page="/ContextUs">تماس با ما</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="contact_page_bg">
+    <div class="alert-success"> @ViewData["Result"]</div>  
+    <!--contact map start-->
+    @*<div class="contact_map">
+            <div class="map-area">
+                <div id="googleMap"></div>
+            </div>
+        </div>*@
+    <!--contact map end-->
+    <div class="container">
+        <!--contact area start-->
+        <div class="contact_area">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact_message content">
+                        <h3>تماس با ما</h3>
+                        <div>
+                            <p>@Html.Raw(info.ContectUs)</p>
+                        </div>
+                        <ul>
+                            <li><i class="fa fa-fw fa-fax"></i> @info.ContectUsAdd</li>
+                            <li><i class="fa fa-fw fa-phone"></i> <span class="ltr-text">@info.ContectNumber</span></li>
+                            <li><i class="fa fa-fw fa-envelope-o"></i> <a href="#">@info.ContectEmail</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact_message form">
+                        <h3>با ما در میان بگذارید</h3>
+                        <form id="contact-form" method="post">
+                            <p>
+                                <label> نام شما (الزامی)</label>
+                                <input name="Name" placeholder="نام *" type="text" required dir="auto">
+                            </p>
+                            <p>
+                                <label> ایمیل شما (الزامی)</label>
+                                <input name="UserEmail" placeholder="* ایمیل" type="email" dir="auto" required>
+                            </p>
+                            <p>
+                                <label> موضوع</label>
+                                <input name="Subject" placeholder="موضوع" type="text">
+                            </p>
+                            <div class="contact_textarea">
+                                <label> پیام شما</label>
+                                <textarea name="Text" placeholder="پیام *" class="form-control2" required></textarea>
+                            </div>
+                            <input type="hidden" name="Emailreceiver" value="@info.SmtpEmail" />
+                            <button type="submit">ارسال</button>
+                            <p class="form-messege"></p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--contact area end-->
+    </div>
+</div>

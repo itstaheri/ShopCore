@@ -12,6 +12,7 @@ namespace Query.Contract.ArticleComment
         public string title { get; set; }
         public string text { get; set; }
         public string Username { get; set; }
+        public string Picture { get; set; }
         public string CreationDate { get; set; }
         public long ArticleId { get; set; }
     }

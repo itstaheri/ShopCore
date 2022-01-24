@@ -7,10 +7,11 @@
 
 @using Frameworks;
 
-@{
-    ViewData["title"] = Model.Product.ProductName;
-}
 
+
+
+
+@section Title{ <title>@(ViewData["Title"] = $"{Model.Product.ProductName}") | موبایل شاپ </title>}
 
 
 <div class="breadcrumbs_area">
@@ -80,7 +81,7 @@
                                 <div class="product_variant quantity">
                                     <label>تعداد</label>
                                     <input min="1" max="100" value="1" type="number" id="productCount">
-                                    <a class="cart-btn" onclick="addToCart('@Model.Product.Id', '@Model.Product.ProductName', '@Model.Product.DoublePrice',  '@Model.Product.Picture')">
+                                    <a class="list-group-item" onclick="addToCart('@Model.Product.Id', '@Model.Product.ProductName', '@Model.Product.DoublePrice',  '@Model.Product.Picture')">
                                         @*<button class="button" type="submit">افزودن به سبد</button>*@
                                         <i class="ion-bag"></i>
                                         افزودن به سبد خرید
@@ -134,8 +135,8 @@
                             <div class="tab-content">
                                 <div class="tab-pane fade show active" id="info" role="tabpanel">
                                     <div class="product_info_content">
-                                        <p>@Model.Product.ShortDescription</p>
-                                        <p>@Model.Product.Description</p>
+                                        @Html.Raw(Model.Product.ShortDescription)
+                                        @Html.Raw(Model.Product.Description)
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="sheet" role="tabpanel">
@@ -176,7 +177,7 @@
                                         </form>
                                     </div>
                                     <div class="product_info_content">
-                                        <p>@Model.Product.Description</p>
+                                        @Html.Raw(Model.Product.Description)
                                     </div>
                                 </div>
 
@@ -209,25 +210,19 @@
                                             <div class="product_review_form">
                                                 <form asp-page-handler="Comment" method="post">
                                                     <div class="row">
-                                                        <div class="col-12">
-                                                            <label for="review_comment">نقد و بررسی شما </label>
-                                                            <textarea name="comment" id="review_comment"></textarea>
-                                                        </div>
                                                         <div class="col-lg-6 col-md-6">
                                                             <label for="author">موضوع</label>
                                                             <input id="title" name="title" type="text">
 
                                                         </div>
-                                                        <div class="col-lg-6 col-md-6">
-                                                            <label for="author">متن</label>
-                                                            <input id="Text" name="Text" type="text">
+                                                        <div class="col-12">
+                                                            <label for="review_comment">نقد و بررسی شما </label>
+                                                            <textarea name="comment" id="review_comment"></textarea>
+                                                        </div>
 
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6">
-                                                            <label for="email">ایمیل </label>
-                                                            <input type="email" id="email" type="email" dir="ltr">
-                                                        </div>
+
                                                         <input type="hidden" name="UserId" id="UserId" value="@authDetail.Id" />
+                                                        <input type="hidden" name="ProductId" id="UserId" value="@Model.Product.Id" />
                                                     </div>
                                                     <button type="submit">ثبت</button>
                                                 </form>
@@ -235,7 +230,7 @@
                                         }
                                         else
                                         {
-                                            <div class="alert alert-success">لطفا برای ثبت نظر اول وارد <b><a asp-page="./Account">حساب خود</a></b> شوید.</div>
+                                            <div class="alert alert-warning">لطفا برای ثبت نظر اول وارد <b><a asp-page="./Account">حساب خود</a></b> شوید.</div>
                                         }
                                     </div>
                                 </div>
@@ -246,7 +241,68 @@
             </div>
             <!--product info end-->
         </div>
+        <section class="product_area related_products">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section_title">
+                        <h2>محصولات مرتبط </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="product_carousel product_style product_column5 owl-carousel">
+                @foreach (var item in Model.RelateProducts)
+                {
+                    @foreach (var product in item.products)
+                    {
 
+
+                        <article class="single_product">
+                            <figure>
+                                <div class="product_thumb">
+                                    <a class="primary_img" asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات "><img src="~/Img/ProductImages/@product.ProductName/@(product.Picture)" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                                    @*<a class="secondary_img"><img src="~/Img/ProductImages/@(product.ProductCode)1.jpg" alt="@product.PictureAlt" title="@product.PictureTitle"></a>*@
+                                    @if (product.DiscountRate > 0)
+                                    {
+                                        <div class="label_product">
+                                            <span class="label_sale">@product.DiscountRate %</span>
+                                        </div>
+                                    }
+
+                                </div>
+
+                                <div class="product_content grid_content">
+                                    <div class="product_content_inner">
+                                        <h4 class="product_name"><a asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات ">@product.ProductName</a></h4>
+
+                                        <div class="price_box">
+                                            @if (product.HasDiscount == true)
+                                            {
+                                                <span class="old_price">@product.Price تومان</span>
+                                                <span class="current_price">@product.PriceAfterDiscount تومان</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="current_price">@product.Price تومان</span>
+                                            }
+                                        </div>
+                                        <div class="text">
+                                            <a asp-page="Category" asp-route-CategoryId="@item.Id">@item.CategoryName</a>
+                                        </div>
+                                    </div>
+                                    <div class="add_to_cart">
+                                        <a asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات ">مشاهده جزییات</a>
+                                    </div>
+                                </div>
+
+                            </figure>
+                        </article>
+
+                    }
+                }
+
+            </div>
+
+        </section>
     </div>
 
 </div>

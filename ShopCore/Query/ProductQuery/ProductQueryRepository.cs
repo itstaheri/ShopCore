@@ -35,8 +35,7 @@ namespace Query.ProductQuery
 
             foreach (var item in cartItems)
             {
-                var itemInventory = inventory.Any(q => q.Productid == item.Id &&
-                q.inventoryOperations.FirstOrDefault(x=>x.InventoryId == q.Id).Count >= item.Count);
+                var itemInventory = inventory.Any(q => q.Productid == item.Id && q.inventoryOperations.FirstOrDefault(x=>x.InventoryId == q.Id).Count >= item.Count);
                 if (itemInventory == true)
                     item.IsInStock = true;
                
@@ -72,32 +71,33 @@ namespace Query.ProductQuery
                  discountRate = _discount.customerDiscounts.Where(x => x.Start < DateTime.Now && x.End > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).FirstOrDefault(x => x.ProductId == id).DiscountRate;
 
             }
-            var product = _shop.products.Include(x=>x.productcategory).FirstOrDefault(x =>x.ProductId == id);
-            var query =new ProductDetailQueryModel
+            var product = _shop.products.Include(x => x.productcategory).FirstOrDefault(x => x.ProductId == id);
+
+            var query = new ProductDetailQueryModel
             {
                 Id = product.ProductId,
                 Description = product.Description,
-                CreationDate = product.CreationDate,
+                CreationDate = product.CreationDate.ToFarsi(),
                 MetaDescription = product.MetaDescription,
                 ShortDescription = product.ShortDescription,
                 CategoryId = product.CategoryId,
                 Keywoard = product.Keywoard,
                 NetworkSupport = product.NetworkSupport,
                 OperatingSystem = product.OperatingSystem,
-                PictureAlt =product.PictureAlt,
-                PictureTitle =product.PictureTitle,
+                PictureAlt = product.PictureAlt,
+                PictureTitle = product.PictureTitle,
                 ProductCode = product.ProductCode,
                 ProductName = product.ProductName,
-                Ram =product.Ram,
+                Ram = product.Ram,
                 Resolution = product.Resolution,
                 Slug = product.Slug,
-                ScreenSize =product.ScreenSize,
-                TouchId =product.TouchId,
-                Storage =product.Storage,
+                ScreenSize = product.ScreenSize,
+                TouchId = product.TouchId,
+                Storage = product.Storage,
                 Picture = product.Picture,
                 CategoryName = product.productcategory.CategoryName,
                 discountRate = discountRate
-                
+
             };
             if (Price != null)
             {
@@ -111,7 +111,7 @@ namespace Query.ProductQuery
             }
 
             return query;
-
+          
         }
 
         public List<ProductQueryModel> list()

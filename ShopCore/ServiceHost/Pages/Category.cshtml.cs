@@ -12,6 +12,7 @@ namespace ServiceHost.Pages
     {
         private readonly IProductcategoryQuery _repository;
         public List<ProductCategoryQueyViewModel> categories;
+        public string Result;
         public CategoryModel(IProductcategoryQuery repository)
         {
             _repository = repository;
@@ -19,6 +20,7 @@ namespace ServiceHost.Pages
 
         public void OnGet(long CategoryId)
         {
+            Result = _repository.GetCategoriesWithProduct(CategoryId).FirstOrDefault(x => x.Id == CategoryId).CategoryName;
             categories = _repository.GetCategoriesWithProduct(CategoryId);
         }
 

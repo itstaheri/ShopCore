@@ -30,7 +30,7 @@ namespace Query.ProductQuery
         public List<ProductCategoryQueyViewModel> GetAll()
         {
             return _context.productcategories.Where(x => x.IsDeleted == false)
-                .Select(x => new ProductCategoryQueyViewModel { CategoryName = x.CategoryName, Slug = x.Slug, Id = x.Id })
+                .Select(x => new ProductCategoryQueyViewModel { CategoryName = x.CategoryName, Slug = x.Slug, Id = x.Id ,Picture = x.Picture})
                 .ToList();
             
         }

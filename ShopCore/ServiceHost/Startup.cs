@@ -4,6 +4,7 @@ using DM.Configuration;
 using DM.infrastructure.Efcore;
 using Frameworks;
 using Frameworks.Sms;
+using Frameworks.Smtp;
 using Frameworks.ZarinPal;
 using IM.Configuration;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -40,10 +41,10 @@ namespace ServiceHost
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var mvcBuilder = services.AddRazorPages().AddMvcOptions(option=>option.Filters.Add<SecurityPageFilter>()).AddRazorPagesOptions(option =>
-            {
-                option.Conventions.AuthorizeAreaFolder("Admin", "/", "AdminArea");
-               // option.Conventions.AuthorizeAreaFolder("Shop", "/", "AdminArea");
+            var mvcBuilder = services.AddRazorPages().AddMvcOptions(option => option.Filters.Add<SecurityPageFilter>()).AddRazorPagesOptions(option =>
+              {
+                  option.Conventions.AuthorizeAreaFolder("Admin", "/", "AdminArea");
+                // option.Conventions.AuthorizeAreaFolder("Shop", "/", "AdminArea");
             });
             ShopBootestrapper.Configuration(services, ConnectionString);
             DiscountBootestrapper.Configuration(services, ConnectionString);
@@ -51,7 +52,8 @@ namespace ServiceHost
             AccountBootestrapper.Configure(services, ConnectionString);
             BlogBootestrapper.Configuration(services, ConnectionString);
             SettingManagement.SettingConfiguration.Configure(services, ConnectionString);
-    
+
+
 
             services.AddTransient<IAuthHelper, AuthHelper>();
             services.AddTransient<IFileUploader, FileUploader>();
@@ -59,6 +61,7 @@ namespace ServiceHost
             services.AddTransient<ICartCalculator, CartCalculator>();
             services.AddTransient<IZarinPalFactory, ZarinPalFactory>();
             services.AddTransient<ISmsService, SmsService>();
+            services.AddTransient<ISmtpService, SmtpService>();
 
             // 
             services.AddHttpContextAccessor();
@@ -92,7 +95,7 @@ namespace ServiceHost
                 option.AddPolicy("AdminArea", builder => builder.RequireRole(new List<string> { "1" }));
                 //option.AddPolicy("Shop", builder => builder.RequireRole("1"));
             });
-            
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

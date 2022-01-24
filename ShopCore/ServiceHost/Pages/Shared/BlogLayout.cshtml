@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>@(ViewData["Title"] = "موبایل شاپ") | بلاگ</title>
+    @RenderSection("Title")
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -32,57 +32,57 @@
         <div class="container">
             <div class="row">
                 @*<div class="col-12">
-                    <div class="canvas_open">
-                        <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
-                    </div>
-                    <div class="Offcanvas_menu_wrapper">
-                        <div class="canvas_close">
-                            <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                        <div class="canvas_open">
+                            <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
                         </div>
-                        <div class="antomi_message">
-                            <p>ارسال رایگان - ضمانت بازگشت وجه 30 روزه</p>
-                        </div>
-                        <div class="header_top_settings text-right">
-                            <ul>
-                                <li><a href="#">آدرس‌های فروشگاه</a></li>
-                                <li><a href="#">پیگیری سفارش</a></li>
-                                <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)800456789">(+98) 800 456 789 </a></li>
-                                <li>ضمانت کیفیت محصولات</li>
-                            </ul>
-                        </div>
+                        <div class="Offcanvas_menu_wrapper">
+                            <div class="canvas_close">
+                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            </div>
+                            <div class="antomi_message">
+                                <p>ارسال رایگان - ضمانت بازگشت وجه 30 روزه</p>
+                            </div>
+                            <div class="header_top_settings text-right">
+                                <ul>
+                                    <li><a href="#">آدرس‌های فروشگاه</a></li>
+                                    <li><a href="#">پیگیری سفارش</a></li>
+                                    <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)800456789">(+98) 800 456 789 </a></li>
+                                    <li>ضمانت کیفیت محصولات</li>
+                                </ul>
+                            </div>
 
-                        <div class="search_container">
-                            <form method="get" asp-page="./Search">
-                                <div class="hover_category">
+                            <div class="search_container">
+                                <form method="get" asp-page="./Search">
+                                    <div class="hover_category">
 
-                                </div>
-                                <div class="search_box">
-                                    <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend" dir="auto">
-                                    <button type="submit">جستجو</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div id="menu" class="text-left ">
-                            <ul class="offcanvas_main_menu">
+                                    </div>
+                                    <div class="search_box">
+                                        <input placeholder="جستجوی محصول ..." type="text" name="commend" id="commend" dir="auto">
+                                        <button type="submit">جستجو</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="menu" class="text-left ">
+                                <ul class="offcanvas_main_menu">
 
-                                <li class="menu-item-has-children">
-                                    <a href="contact.html"> تماس با ما</a>
-                                </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="contact.html"> تماس با ما</a>
+                                    </li>
 
-                            </ul>
+                                </ul>
+                            </div>
+                            <div class="Offcanvas_footer">
+                                <span><a href="#"><i class="fa fa-envelope-o"></i> info@yourdomain.com</a></span>
+                                <ul>
+                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="Offcanvas_footer">
-                            <span><a href="#"><i class="fa fa-envelope-o"></i> info@yourdomain.com</a></span>
-                            <ul>
-                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>*@
+                    </div>*@
             </div>
         </div>
     </div>
@@ -93,24 +93,24 @@
             <div class="container">
                 <!--header top start-->
                 @*<div class="header_top">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-5">
-                            <div class="antomi_message">
-                                <p>ارسال رایگان - ضمانت بازگشت وجه 30 روزه</p>
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-5">
+                                <div class="antomi_message">
+                                    <p>ارسال رایگان - ضمانت بازگشت وجه 30 روزه</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-7">
+                                <div class="header_top_settings text-right">
+                                    <ul>
+                                        <li><a href="#">آدرس‌های فروشگاه</a></li>
+                                        <li><a href="#">پیگیری سفارش</a></li>
+                                        <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)800456789">(+98) 800 456 789 </a></li>
+                                        <li>ضمانت کیفیت محصولات</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-8 col-md-7">
-                            <div class="header_top_settings text-right">
-                                <ul>
-                                    <li><a href="#">آدرس‌های فروشگاه</a></li>
-                                    <li><a href="#">پیگیری سفارش</a></li>
-                                    <li>تلفن تماس: <a class="ltr-text" href="tel:+(+98)800456789">(+98) 800 456 789 </a></li>
-                                    <li>ضمانت کیفیت محصولات</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>*@
+                    </div>*@
                 <!--header top start-->
                 <!--header middel start-->
                 <div class="header_middle sticky-header">

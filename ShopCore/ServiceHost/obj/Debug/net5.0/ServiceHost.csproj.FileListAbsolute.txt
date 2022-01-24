@@ -554,3 +554,5 @@ D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor
 D:\ShopCore\ShopCore\ServiceHost\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Blog\default.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\AboutUs.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\ContectUs.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\ChangePassword.cshtml.g.cs

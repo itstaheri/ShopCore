@@ -16,14 +16,14 @@ namespace Query.Contract.Product
         public string ShortDescription { get;  set; }
         public long QuantityInStock { get;  set; }
         public bool IsDeleted { get;  set; }
-        public DateTime CreationDate { get;  set; }
+        public string CreationDate { get;  set; }
 
         public string Storage { get;  set; }
-        public float ScreenSize { get;  set; }
+        public string ScreenSize { get;  set; }
         public string NetworkSupport { get;  set; }
         public string OperatingSystem { get;  set; }
-        public int Resolution { get;  set; }
-        public int Ram { get;  set; }
+        public string Resolution { get;  set; }
+        public string Ram { get;  set; }
         public string TouchId { get;  set; }
 
 

@@ -20,7 +20,7 @@ namespace AM.Application.Contract.Account
         public string Number { get; set; }
         public string ProfilePicture { get; set; }
         public string Email { get; set; }
-        public IFormFile Picture { get; set; }
+        public IFormFile Image { get; set; }
     }
 }
  

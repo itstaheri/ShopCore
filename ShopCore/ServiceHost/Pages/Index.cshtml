@@ -7,7 +7,7 @@
 }
 @inject SettingManagement.ISettingRepository setting;
 
-
+@section Title{ <title>@(ViewData["Title"] = "صفحه ی اصلی") | موبایل شاپ </title>}
 @{
     SettingManagement.settingViewModel info;
     info = setting.GetValue();
@@ -56,8 +56,8 @@
                     <img src="~/WebTheme/assets/img/about/shipping2.png" alt="">
                 </div>
                 <div class="shipping_content">
-                    <h4>ارسال رایگان</h4>
-                    <p>ارسال رایگان به تمام نقاط کشور</p>
+                    <h4>امکان پرداخت آنلاین</h4>
+                    <p> پرداخت آنلاین با درگاه مستقیم</p>
                 </div>
             </div>
             <div class="single_shipping">
@@ -65,8 +65,8 @@
                     <img src="~/WebTheme/assets/img/about/shipping3.png" alt="">
                 </div>
                 <div class="shipping_content">
-                    <h4>ارسال رایگان</h4>
-                    <p>ارسال رایگان به تمام نقاط کشور</p>
+                    <h4>پرداخت درب منزل</h4>
+                    <p>در صورت احراز شرایط</p>
                 </div>
             </div>
             <div class="single_shipping">
@@ -74,8 +74,8 @@
                     <img src="~/WebTheme/assets/img/about/shipping4.png" alt="">
                 </div>
                 <div class="shipping_content">
-                    <h4>ارسال رایگان</h4>
-                    <p>ارسال رایگان به تمام نقاط کشور</p>
+                    <h4>پشتیبانی کامل</h4>
+                    <p>پشتیبانی فنی قبل و بعد خرید</p>
                 </div>
             </div>
             <div class="single_shipping">
@@ -83,8 +83,8 @@
                     <img src="~/WebTheme/assets/img/about/shipping5.png" alt="">
                 </div>
                 <div class="shipping_content">
-                    <h4>ارسال رایگان</h4>
-                    <p>ارسال رایگان به تمام نقاط کشور</p>
+                    <h4>7 روز محلت تست</h4>
+                    <p>در صورت احراز شرایط</p>
                 </div>
             </div>
         </div>

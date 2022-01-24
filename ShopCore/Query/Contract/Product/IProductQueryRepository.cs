@@ -15,5 +15,6 @@ namespace Query.Contract.Product
         List<string> GetCatalog(long id,string root);
         List<CartItem> CheckInventory(List<CartItem> cartItems);
 
+
     }
 }

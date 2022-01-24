@@ -2,14 +2,14 @@
 @model ServiceHost.Pages.Blog.SearchModel
 @{
 }
-
+@section Title{ <title>@(ViewData["Title"] ="صفحه ی اصلی") | بلاگ </title>}
 @{
     ViewData["title"] = "مقالات";
     Layout = "BlogLayout";
 }
 <style>
-    #Alert{
-        text-align : center;
+    #Alert {
+        text-align: center;
     }
 </style>
 
@@ -19,8 +19,8 @@
             <div class="col-12">
                 <div class="breadcrumb_content">
                     <ul>
-                        <li><a asp-page="/Blog">بلاگ</a></li>
-                      
+                        <li><a asp-page="/Blog/Index">بلاگ</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -37,9 +37,9 @@
                             <h1>بلاگ</h1>
                         </div>
                         <h2>نتیجه جستجو برای : @Model.value </h2>
-                        @if (!string.IsNullOrWhiteSpace(Model.value))
+                        @if (Model.Articles.Count == 0)
                         {
-                            <div  class="alert-danger" id="Alert">چیزی یافت نشد!</div>
+                            <div class="alert-danger" id="Alert">چیزی یافت نشد!</div>
                         }
                         <div class="blog_wrapper_inner">
                             @foreach (var item in Model.Articles)

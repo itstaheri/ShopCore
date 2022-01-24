@@ -26,7 +26,7 @@ namespace SM.Domain.ProductCategory
         {
             CategoryName = categoryname;
             CreationDate = DateTime.Now;
-            if (!string.IsNullOrWhiteSpace(Picture))
+            if (!string.IsNullOrWhiteSpace(picture))
                 Picture = picture;
 
             Slug = slug;
@@ -35,7 +35,7 @@ namespace SM.Domain.ProductCategory
         }
         public void Edit(string categoryName, string slug, string picture)
         {
-            if (!string.IsNullOrWhiteSpace(Picture))
+            if (!string.IsNullOrWhiteSpace(picture))
                 Picture = picture;
             CategoryName = categoryName;
             Slug = slug;

@@ -56,6 +56,7 @@ namespace Query.BlogQuery
             {
                 Id = x.Id,
                 Name = x.Name,
+                
              
             }).AsNoTracking().ToList();
 

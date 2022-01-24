@@ -22,6 +22,7 @@ namespace ServiceHost.Pages
         [BindProperty] public EditAccount AccountInfo { get; set; }
 
         private readonly IAuthHelper _auth;
+        public long RoleId;
         public ProfileModel(IAccountQueryRepository repository, IAuthHelper auth, IAccountApplication account)
         {
             _repository = repository;
@@ -31,6 +32,7 @@ namespace ServiceHost.Pages
 
         public void OnGet()
         {
+            RoleId = long.Parse(_auth.CurrentAccountRole());
             AccountInfo = _account.GetValueForEdit(_auth.CurrentAccountId());
             Account = _repository.GetProfileItems(_auth.CurrentAccountId());
             Address = _repository.GetValueForEditAddress(_auth.CurrentAccountId());

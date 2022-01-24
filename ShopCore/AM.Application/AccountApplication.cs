@@ -31,7 +31,21 @@ namespace AM.Application
             account.Actived();
             _repository.Save();
         }
-
+        public void UserChangePassword(ChangePasswordModel commend)
+        {
+            var account = _repository.GetBy(commend.Id);
+            var CheckPassword = _ToHash.Check(account.Password,commend.Password);
+            if (CheckPassword.Verified == true)
+            {
+                var Password = _ToHash.Hash(commend.RePassword);
+                account.ChangePassword(Password);
+                _repository.Save();
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+        }
         public void ChangePassword(ChangePasswordModel commend)
         {
             var account = _repository.GetBy(commend.Id);
@@ -51,10 +65,10 @@ namespace AM.Application
         {
             var operation = new OperationResult();
             string path = $"{commend.Username}";
-            var PicName = _Uploader.Upload(commend.Picture, "ProfileImages", path);
+            var PicName = _Uploader.Upload(commend.Image, "ProfileImages", path);
 
-
-            if (_repository.Exist(commend.Username, commend.Email, commend.Number) != true)
+        
+            if (_repository.Exist(commend.Username, commend.Email, commend.Number) != true )
             {
                 if (commend.RoleId == 0) commend.RoleId = 2;
 
@@ -68,10 +82,15 @@ namespace AM.Application
 
         public void Edit(EditAccount commend)
         {
+            var check = _repository.GetAll(null).Any(x => x.Id != commend.Id && x.Username !=commend.Username && x.Number !=commend.Number && x.Email!=commend.Email);
             string path = $"{commend.Username}";
-            var PicName = _Uploader.Upload(commend.Picture, "ProfileImages", path);
+            string PicName = "";
+            if (commend.Image.Length>0)
+            {
+                PicName = _Uploader.Upload(commend.Image, "ProfileImages", path);
+            }
 
-            if (_repository.Exist(commend.Username, commend.Email, commend.Number) != true)
+            if (check == true)
             {
                 var account = _repository.GetBy(commend.Id);
                 account.Edit(commend.FullName, commend.Username, commend.RoleId, commend.Number, PicName, commend.Email);

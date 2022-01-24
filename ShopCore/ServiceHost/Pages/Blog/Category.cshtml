@@ -1,8 +1,8 @@
-﻿@page  "{CategoryId}"
+﻿@page  "{CategoryId:long}"
 @model ServiceHost.Pages.Blog.CategoryModel
 @{
 }
-
+@section Title{ <title>@(ViewData["Title"] ="صفحه ی اصلی") | بلاگ </title>}
 @{
     ViewData["title"] = "مقالات";
     Layout = "BlogLayout";
@@ -14,7 +14,7 @@
             <div class="col-12">
                 <div class="breadcrumb_content">
                     <ul>
-                        <li><a asp-page="/Blog">بلاگ</a></li>
+                        <li><a asp-page="/Blog/Index">بلاگ</a></li>
 
                     </ul>
                 </div>

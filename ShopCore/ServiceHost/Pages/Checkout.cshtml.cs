@@ -75,7 +75,7 @@ namespace ServiceHost.Pages
             if (cart.PaymentMethod == 2)
             {
                 var Code = _order.PaymentSucceeded(orderId, 0);
-                Response.Cookies.Delete("cart-item");
+                Response.Cookies.Delete("cart-items");
                 return RedirectToPage("./PaymentResult",Result.Succeeded("سفارش شما با موفقیت ثبت شد ، منتظر تماس از طرف کارشناسان ما باشید.",null));
             }
             var paymentResponse =_zarinpal.CreatePaymentRequest(cart.PayAmount.ToString(), UserData.Number, UserData.Email, "موبایل", orderId);
@@ -90,7 +90,7 @@ namespace ServiceHost.Pages
             {
                
                var Code = _order.PaymentSucceeded(oId, verify.RefID);
-                Response.Cookies.Delete("cart-item");
+                Response.Cookies.Delete("cart-items");
                return RedirectToPage("./PaymentResult",Result.Succeeded("پرداخت با موفقیت انجام شد.",Code));
             }
             else

@@ -54,7 +54,8 @@ namespace SM.Infrastructure.EfCore.Repositories
                 CategoryName = x.CategoryName,
                 Slug = x.Slug,
                 Isdeleted = x.IsDeleted,
-                ProductCount = x.products.Count()
+                ProductCount = x.products.Count(),
+                Picture =x.Picture
 
                 
             });

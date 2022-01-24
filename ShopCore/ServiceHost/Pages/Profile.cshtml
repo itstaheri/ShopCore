@@ -3,7 +3,7 @@
 @{
 }
 
-
+@section Title{ <title>@(ViewData["Title"] ="پروفایل") | موبایل شاپ </title>}
 
 <div class="breadcrumbs_area">
     <div class="container">
@@ -33,7 +33,6 @@
                             <ul role="tablist" class="nav flex-column dashboard-list">
                                 <li><a href="#dashboard" data-toggle="tab" class="nav-link active">داشبورد</a></li>
                                 <li> <a href="#orders" data-toggle="tab" class="nav-link">سفارشات</a></li>
-                                <li><a href="#downloads" data-toggle="tab" class="nav-link">دریافت ها</a></li>
                                 <li><a href="#address" data-toggle="tab" class="nav-link">آدرس ها</a></li>
                                 <li><a href="#account-details" data-toggle="tab" class="nav-link">جزئیات حساب</a></li>
                                 <li><a href="login.html" class="nav-link">خروج</a></li>
@@ -45,7 +44,7 @@
                         <div class="tab-content dashboard_content">
                             <div class="tab-pane fade show active" id="dashboard">
                                 <h3>داشبورد </h3>
-                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با <a href="#">سفارشات اخیر</a>لورم ایپسوم متن <a href="#">لورم ایپسوم متن ساختگی با تولید</a> لورم <a href="#">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</a></p>
+                                <p>@Model.AccountInfo.FullName به پنل کاربری خود خوش آمدید</p>
                             </div>
                             <div class="tab-pane fade" id="orders">
                                 <h3>سفارشات</h3>
@@ -92,6 +91,7 @@
                                                     {
                                                         <span class="success">معلق</span>
                                                     }
+                                                    <td>@item.PayAmount</td>
                                                     <td>
                                                         @if (item.PayMethod == 1)
                                                         {
@@ -103,8 +103,11 @@
                                                         }
                                                     </td>
                                                     <td>@item.Code</td>
-                                                    
-                                                    <td><a href="cart.html" class="view">مشاهده</a></td>
+
+                                                    <td>
+                                                       مشاهده
+
+                                                    </td>
                                                 </tr>
 
                                             }
@@ -112,64 +115,58 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="downloads">
-                                <h3>دریافت ها</h3>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>محصول</th>
-                                                <th>دریافت ها</th>
-                                                <th>انقضا</th>
-                                                <th>دریافت</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</td>
-                                                <td>10 تیر 1397</td>
-                                                <td><span class="danger">منقضی شده</span></td>
-                                                <td><a href="#" class="view">برای دریافت فایل خود کلیک کنید</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>لورم ایپسوم متن ساختگی با تولید سادگی</td>
-                                                <td>11 مرداد 1397</td>
-                                                <td>هرگز</td>
-                                                <td><a href="#" class="view">برای دریافت فایل خود کلیک کنید</a></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+
                             <div class="tab-pane" id="address">
-                                <form asp-page-handler="Address" method="post">
+                                <div class="address">
+                                    <div class="login_form_container">
+                                        <div class="account_login_form">
+                                            <form asp-page-handler="Address" method="post">
 
-                                    <br>
-                                    <label>کد پستی</label>
-                                    <input type="text" name="PostalCode" id="PostalCode" value="@Model.Address.PostalCode">
-                                    <label>شهر</label>
-                                    <input type="text" name="City" id="City" value="@Model.Address.City">
-                                    <label>استان</label>
-                                    <input type="text" name="County" id="PostalCode" value="@Model.Address.County">
-                                    <label>آدرس</label>
-                                    <textarea name="Address" id="Address">@Model.Address.PostalCode</textarea>
+                                                <br>
+                                                <label>کد پستی</label>
+                                                <input type="text" name="PostalCode" id="PostalCode" value="@Model.Address.PostalCode">
+                                                <label>استان</label>
+                                                <input type="text" name="City" id="City" value="@Model.Address.City">
+                                                <label>شهراستان</label>
+                                                <input type="tel" name="County" id="County" value="@Model.Address.County">
+                                                <label>آدرس دقیق</label>
+                                                <textarea name="Address" id="Address">@Model.Address.Address</textarea>
 
-                                    <br>
+                                                <br>
 
-                                    <div class="save_button primary_btn default_button">
-                                        <button type="submit">ذخیره</button>
+                                                <div class="save_button primary_btn default_button">
+                                                    <button type="submit">ذخیره</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="account-details">
                                 <h3>جزئیات حساب </h3>
                                 <div class="login">
                                     <div class="login_form_container">
                                         <div class="account_login_form">
-                                            <form asp-page-handler="Info" method="post">
-                                               
-                                                <img src="~/Img/ProfileImages/@Model.AccountInfo.Username/@Model.Account.Picture" height="70" width="70"/>
-                                                <input type="file" name="Picture" id="Picture" />
+                                            <form asp-page-handler="Info" method="post" enctype="multipart/form-data">
+                                                <div id="qm">
+                                                </div>
+                                                <br />
+                                                <div id="qm">
+                                                    <div class="col-lg-3 col-sm-3 col-12">
+                                                        <span>عکس پروفایل</span>
+                                                        <div class="input-group">
+                                                            <label class="input-group-btn">
+                                                                <span class="btn btn-primary">
+                                                                    Browse&hellip; <input type="file" name="Image" style="display: none;">
+                                                                </span>
+                                                            </label>
+                                                            <input type="text" class="form-control" readonly>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <br />
+
                                                 <br>
                                                 <label>نام کاربری</label>
                                                 <input type="text" name="Username" id="Username" value="@Model.AccountInfo.Username">
@@ -178,12 +175,16 @@
                                                 <label>ایمیل</label>
                                                 <input type="email" name="Email" id="Email" value="@Model.AccountInfo.Email">
                                                 <label>موبایل</label>
+
                                                 <input type="number" name="Number" id="Number" value="@Model.AccountInfo.Number">
-                                              
+                                                <input type="hidden" name="Id" id="Id" value="@Model.Account.Id">
+                                                <input type="hidden" name="RoleId" id="RoleId" value="@Model.RoleId">
+
                                                 <br>
-                                                
+
                                                 <div class="save_button primary_btn default_button">
                                                     <button type="submit">ذخیره</button>
+                                                    <a class="btn btn-info" asp-page="./ChangePassword" asp-route-Id="@Model.Account.Id">تغییر رمز عبور</a>
                                                 </div>
                                             </form>
                                         </div>
@@ -197,3 +198,39 @@
         </section>
     </div>
 </div>
+
+<
+<script>
+    $(function () {
+
+        // This code will attach `fileselect` event to all file inputs on the page
+        $(document).on('change', ':file', function () {
+            var input = $(this),
+                numFiles = input.get(0).files ? input.get(0).files.length : 1,
+                label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+            input.trigger('fileselect', [numFiles, label]);
+        });
+
+
+        $(document).ready(function () {
+            //below code executes on file input change and append name in text control
+            $(':file').on('fileselect', function (event, numFiles, label) {
+
+                var input = $(this).parents('.input-group').find(':text'),
+                    log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+                if (input.length) {
+                    input.val(log);
+                } else {
+                    if (log) alert(log);
+                }
+
+            });
+        });
+
+    });
+</script>
+
+
+
+

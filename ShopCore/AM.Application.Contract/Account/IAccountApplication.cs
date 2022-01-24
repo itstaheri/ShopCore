@@ -19,5 +19,6 @@ namespace AM.Application.Contract.Account
         EditAccount GetValueForEdit(long Id);
         OperationResult Login(Login commend);
         void Logout();
+        void UserChangePassword(ChangePasswordModel commend);
     }
 }

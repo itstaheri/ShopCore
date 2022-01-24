@@ -6,7 +6,7 @@
 @{
     ViewData["Title"] = "پرداخت";
 }
-
+@section Title{ <title>@(ViewData["Title"] ="پرداخت") | موبایل شاپ </title>}
 
 <div class="breadcrumbs_area">
     <div class="container">
@@ -27,48 +27,47 @@
     <div class="container">
         <div class="Checkout_section">
             @*<div class="row">
-                <div class="col-12">
-                    @if (!authhelper.IsAuthenticated())
-                    {
-                        <div class="user-actions">
-                            <h3>
-                                <i class="fa fa-file-o" aria-hidden="true"></i>
-                                حساب کاربری دارید؟
-                                <a class="Returning" href="#" data-toggle="collapse" data-target="#checkout_login" aria-expanded="true">وارد حساب خود شوید</a>
+                    <div class="col-12">
+                        @if (!authhelper.IsAuthenticated())
+                        {
+                            <div class="user-actions">
+                                <h3>
+                                    <i class="fa fa-file-o" aria-hidden="true"></i>
+                                    حساب کاربری دارید؟
+                                    <a class="Returning" href="#" data-toggle="collapse" data-target="#checkout_login" aria-expanded="true">وارد حساب خود شوید</a>
 
-                            </h3>
-                            <div id="checkout_login" class="collapse">
-                                <div class="checkout_info">
-                                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
-                                    <form action="#">
-                                        <div class="form_group">
-                                            <label>نام کاربری یا ایمیل <span>*</span></label>
-                                            <input type="text" dir="ltr">
-                                        </div>
-                                        <div class="form_group">
-                                            <label>رمز عبور <span>*</span></label>
-                                            <input type="password" dir="ltr">
-                                        </div>
-                                        <div class="form_group group_3 ">
-                                            <button type="submit">ورود</button>
-                                            <label for="remember_box">
-                                                <input id="remember_box" type="checkbox">
-                                                <span> به خاطر سپاری </span>
-                                            </label>
-                                        </div>
-                                        <a href="#">رمز عبور خود را فراموش کرده اید؟</a>
-                                    </form>
+                                </h3>
+                                <div id="checkout_login" class="collapse">
+                                    <div class="checkout_info">
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
+                                        <form action="#">
+                                            <div class="form_group">
+                                                <label>نام کاربری یا ایمیل <span>*</span></label>
+                                                <input type="text" dir="ltr">
+                                            </div>
+                                            <div class="form_group">
+                                                <label>رمز عبور <span>*</span></label>
+                                                <input type="password" dir="ltr">
+                                            </div>
+                                            <div class="form_group group_3 ">
+                                                <button type="submit">ورود</button>
+                                                <label for="remember_box">
+                                                    <input id="remember_box" type="checkbox">
+                                                    <span> به خاطر سپاری </span>
+                                                </label>
+                                            </div>
+                                            <a href="#">رمز عبور خود را فراموش کرده اید؟</a>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    }
+                        }
 
-                </div>
-            </div>*@
+                    </div>
+                </div>*@
 
             <style>
-                #Checkout{
-                    
+                #Checkout {
                 }
             </style>
             <div class="checkout_form" id="Checkout">

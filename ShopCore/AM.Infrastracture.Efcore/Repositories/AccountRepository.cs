@@ -71,7 +71,8 @@ namespace AM.Infrastracture.Efcore.Repositories
         {
             var account = _context.accounts
                 .Any(x => x.Username == Username || x.Email == Email || x.Number == Number);
-            return account == true;
+            if (account == true) return true;
+            return false;
         }
 
         public AccountModel GetByUsername(string Username)

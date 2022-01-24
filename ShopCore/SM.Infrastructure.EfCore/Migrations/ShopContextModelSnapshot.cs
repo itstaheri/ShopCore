@@ -113,14 +113,14 @@ namespace SM.Infrastructure.EfCore.Migrations
                     b.Property<long>("QuantityInStock")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("Ram")
-                        .HasColumnType("int");
+                    b.Property<string>("Ram")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Resolution")
-                        .HasColumnType("int");
+                    b.Property<string>("Resolution")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("ScreenSize")
-                        .HasColumnType("real");
+                    b.Property<string>("ScreenSize")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ShortDescription")
                         .HasColumnType("nvarchar(max)");
@@ -248,8 +248,8 @@ namespace SM.Infrastructure.EfCore.Migrations
                             b1.Property<long>("OrderId")
                                 .HasColumnType("bigint");
 
-                            b1.Property<int>("ProductId")
-                                .HasColumnType("int");
+                            b1.Property<long>("ProductId")
+                                .HasColumnType("bigint");
 
                             b1.Property<double>("TotalPrice")
                                 .HasColumnType("float");

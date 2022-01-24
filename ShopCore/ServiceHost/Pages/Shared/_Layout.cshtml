@@ -2,7 +2,7 @@
 @inject SettingManagement.ISettingRepository setting;
 
 
-@{ 
+@{
     SettingManagement.settingViewModel info;
     info = setting.GetValue();
 }
@@ -12,7 +12,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>قالب Antomi | قالب فروشگاهی آنتومی</title>
+    @RenderSection("Title")
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -55,7 +55,6 @@
                         <div class="header_top_settings text-right">
                             <ul>
 
-                                <li><a href="#">پیگیری سفارش</a></li>
                                 <li>تلفن تماس:@info.ContectNumber </a></li>
                                 @if (authHelper.CurrentAccountRole() == "1")
                                 {
@@ -225,8 +224,7 @@
                         <div class="col-lg-8 col-md-7">
                             <div class="header_top_settings text-right">
                                 <ul>
-                                    <li><a href="#">آدرس‌های فروشگاه</a></li>
-                                    <li><a href="#">پیگیری سفارش</a></li>
+
                                     <li>تلفن تماس: @info.ContectNumber </a></li>
                                     <li>@info.HeaderLeft</li>
                                 </ul>
@@ -240,7 +238,7 @@
                     <div class="row align-items-center">
                         <div class="column1 col-lg-3 col-md-6">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                <a href="index.html"><img src="/Img/LogoImages/Logo/@info.LogoName" alt="@info.LogoName"></a>
                             </div>
                         </div>
 
@@ -267,7 +265,7 @@
                                 <div class="mini_cart_wrapper">
                                     <a href="javascript:void(0)">
                                         <i class="fa fa-shopping-bag"></i>
-                                        <span class="cart_price"><span>152,000 تومان</span> <i class="ion-ios-arrow-down"></i></span>
+                                        @*<span class="cart_price"><span>152,000 تومان</span> <i class="ion-ios-arrow-down"></i></span>*@
                                         <span class="cart_count" id="cart_item_count">0</span>
 
                                     </a>
@@ -317,11 +315,8 @@
 
                                         </li>
                                         <li>
-                                            <a href="blog.html">بلاگ<i class="fa fa-angle-down"></i></a>
-                                            <ul class="sub_menu pages">
-                                                <li><a href="blog-details.html">جزئیات مطلب بلاگ</a></li>
+                                            <a asp-page="/Blog/Index">بلاگ<i class=""></i></a>
 
-                                            </ul>
                                         </li>
 
                                         <li><a asp-page="./aboutUs">درباره ما</a></li>
@@ -349,7 +344,7 @@
                                 <div class="mini_cart_wrapper">
                                     <a href="javascript:void(0)">
                                         <i class="fa fa-shopping-bag"></i>
-                                        <span class="cart_price"><span>152,000 تومان</span> <i class="ion-ios-arrow-down"></i></span>
+                                        @*<span class="cart_price"><span>152,000 تومان</span> <i class="ion-ios-arrow-down"></i></span>*@
                                         <span class="cart_count" id="cart_item_count">0</span>
 
                                     </a>
@@ -403,11 +398,8 @@
 
                                         </li>
                                         <li>
-                                            <a asp-page="/Blog/Index">بلاگ<i class="fa fa-angle-down"></i></a>
-                                            <ul class="sub_menu pages">
-                                                <li><a href="blog-details.html"></a></li>
+                                            <a asp-page="/Blog/Index">بلاگ<i class=""></i></a>
 
-                                            </ul>
                                         </li>
 
                                         <li><a asp-page="./aboutUs">درباره ما</a></li>
@@ -431,7 +423,7 @@
                         </div>
                         <div class="column3 col-lg-3 col-md-6">
                             <div class="header_bigsale h_bigsale_four">
-                                <a href="#">فروش بزرگ جمعه سیاه</a>
+                                <a asp-page="/Index">فروش بزرگ جمعه سیاه</a>
                             </div>
                         </div>
                     </div>
@@ -442,28 +434,28 @@
     </header>
     <!--header area end-->
     <!--slider area start-->
-  
-        @RenderSection("Slider", false)
-    
+
+    @RenderSection("Slider", false)
+
     <!--slider area end-->
     <!--shipping area start-->
     <!--shipping area end-->
     <!--home section bg area start-->
-<div class="home_section_bg">
+    <div class="home_section_bg">
 
-    <!--Categories product area start-->
-    <!--Categories product area end-->
-    <!--product area start-->
-    @RenderBody()
-    <!--product area end-->
-    <!--banner area start-->
-    @RenderSection("Banner",false)
-    <!--banner area end-->
-    <!--blog area start-->
-    @RenderSection("Blog",false)
-    <!--blog area end-->
+        <!--Categories product area start-->
+        <!--Categories product area end-->
+        <!--product area start-->
+        @RenderBody()
+        <!--product area end-->
+        <!--banner area start-->
+        @RenderSection("Banner", false)
+        <!--banner area end-->
+        <!--blog area start-->
+        @RenderSection("Blog", false)
+        <!--blog area end-->
 
-</div>
+    </div>
     <!--home section bg area end-->
     <!--footer area start-->
     <footer class="footer_widgets">

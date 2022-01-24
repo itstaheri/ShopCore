@@ -3,6 +3,7 @@ using SM.Domain.ProductCategory;
 using SM.Domain.ProductComment;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,8 @@ namespace SM.Domain.Product
     {
         public ProductModel(string productName, string productCode,string picture, string description, string shortDescription, 
             long quantityInStock,string pictureAlt, string pictureTitle, string slug, 
-            string keywoard, string metaDescription, long categoryId,string storage,float screensize,string networkSupport
-            ,string operatingSystem,int resolution,int ram,string touchID)
+            string keywoard, string metaDescription, long categoryId,string storage,string screensize,string networkSupport
+            ,string operatingSystem,string resolution,string ram,string touchID)
         {
             ProductName = productName;
             ProductCode = productCode;
@@ -42,8 +43,8 @@ namespace SM.Domain.Product
         }
         public void Edit(string productName, string productCode,string picture, string description, string shortDescription,
           long quantityInStock, string pictureAlt, string pictureTitle, string slug,
-          string keywoard, string metaDescription, long categoryId, string storage, float screensize, string networkSupport
-            , string operatingSystem, int resolution, int ram, string touchID)
+          string keywoard, string metaDescription, long categoryId, string storage, string screensize, string networkSupport
+            , string operatingSystem, string resolution, string ram, string touchID)
         {
             ProductName = productName;
             ProductCode = productCode;
@@ -77,7 +78,7 @@ namespace SM.Domain.Product
         public void Actived() => IsDeleted = false;
         public void Deleted() => IsDeleted = true;
        
-
+       
         public long ProductId { get;private set; }
         public string ProductName { get; private set; }
         public string ProductCode { get; private set; }
@@ -89,11 +90,11 @@ namespace SM.Domain.Product
         public DateTime CreationDate { get; private set; }
 
         public string Storage { get; private set; }
-        public float ScreenSize { get; private set; }
+        public string ScreenSize { get; private set; }
         public string NetworkSupport { get; private set; }
         public string OperatingSystem { get; private set; }
-        public int Resolution { get;private set; }
-        public int Ram { get; private set; }
+        public string Resolution { get;private set; }
+        public string Ram { get; private set; }
         public string TouchId { get; private set; }
 
 
