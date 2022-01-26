@@ -14,30 +14,31 @@
             <form action="" method="post" enctype="multipart/form-data">
                 @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
                 <div class="form-group">
-                    <label>ProductName</label>
+                    <label>نام محصول</label>
                     <input type="text" class="form-control" name="ProductName" dir="auto" />
                     @*<span asp-validation-for="product.ProductName" class="text-danger"></span>*@
                 </div>
                 <div class="form-group">
-                    <label>ProductCode</label>
+                    <label>کد محصول</label>
                     <input type="text" class="form-control" id="ProductCode" name="ProductCode" />
                 </div>
                 <div class="form-group">
-                    <label>Description</label>
+                    <label>توضیحات کوتاه</label>
+                    <input type="text" class="form-control" name="ShortDescription" />
+                </div>
+                <div class="form-group">
+                    <label>توضیحات</label>
                     <textarea id="Description" name="Description"></textarea>
                 </div>
-                <div class="form-group">
-                    <label>ShortDescription</label>
-                    <input type="text" class="form-control" id="ShortDescription" name="ShortDescription" />
-                </div>
-                <div class="form-group">
-                    <label>QuantityInStock</label>
-                    <input type="number" class="form-control" id="QuantityInStock" name="QuantityInStock" />
-                </div>
-                <div class="form-group">
-                    <label>Price</label>
-                    <input type="text" class="form-control" id="Price" name="Price" />
-                </div>
+
+                @*<div class="form-group">
+            <label>QuantityInStock</label>
+            <input type="number" class="form-control" id="QuantityInStock" name="QuantityInStock" />
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="text" class="form-control" id="Price" name="Price" />
+        </div>*@
 
 
                 <div class="row">
@@ -103,33 +104,33 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Storage</label>
+                    <label>حافظه</label>
                     <input type="text" class="form-control" id="Storage" name="Storage" />
                 </div>
                 <div class="form-group">
-                    <label>ScreenSize</label>
+                    <label>سایز صفحه نمایش</label>
                     <input type="text" class="form-control" id="ScreenSize" name="ScreenSize" />
                 </div>
                 <div class="form-group">
-                    <label>NetworkSupport</label>
+                    <label>شبکه</label>
                     <input type="text" class="form-control" id="NetworkSupport" name="NetworkSupport" />
                 </div>
                 <div class="form-group">
-                    <label>OperatingSystem</label>
+                    <label>سیستم عامل</label>
                     <input type="text" class="form-control" id="OperatingSystem" name="OperatingSystem" />
                 </div>
                 <div class="form-group">
-                    <label>Resolution</label>
+                    <label>کیفیت دوربین</label>
                     <input type="text" class="form-control" id="Resolution" name="Resolution" />
                     <span asp-validation-for="product.Resolution" class="text-danger"></span>
 
                 </div>
                 <div class="form-group">
-                    <label>Ram</label>
+                    <label>رم</label>
                     <input type="text" class="form-control" id="Ram" name="Ram" />
                 </div>
                 <div class="form-group">
-                    <label>TouchId</label>
+                    <label>حسگر اثرانگشت</label>
                     <input type="text" class="form-control" id="TouchId" name="TouchId" />
                 </div>
 

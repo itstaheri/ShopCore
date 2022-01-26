@@ -50,7 +50,7 @@
                                     </div>
                                 </div>
                                 <div class="blog_thumb" id="image">
-                                    <img src="~/Img/ArticleImages/@Model.Article.Id/@Model.Article.Picture" alt="@Model.Article.PictureAlt" title="@Model.Article.PictureTitle">
+                                    <img src="~/Img/ArticleImages/@Model.Article.Title/@Model.Article.Picture" alt="@Model.Article.PictureAlt" title="@Model.Article.PictureTitle">
                                 </div>
                                 <figcaption class="blog_content">
                                     <div class="post_content">
@@ -80,16 +80,17 @@
                         </article>
                         <div class="related_posts">
                             <h3>مطالب مرتبط</h3>
-                            @foreach (var item in Model.RealtedArticles)
-                            {
-                                @foreach (var article in item.articles)
+                            <div class="row">
+                                @foreach (var item in Model.RealtedArticles)
                                 {
-                                    <div class="row">
+                                    @foreach (var article in item.articles)
+                                    {
+
                                         <div class="col-lg-4 col-md-6">
                                             <article class="single_related">
                                                 <figure>
                                                     <div class="related_thumb">
-                                                        <img src="/Img/ArticleImages/@article.Id/@article.Picture" alt="@article.PictureAlt" title="@article.PictureTitle" height="408" width="297">
+                                                        <img src="/Img/ArticleImages/@article.Title/@article.Picture" alt="@article.PictureAlt" title="@article.PictureTitle" height="408" width="297">
                                                     </div>
                                                     <figcaption class="related_content">
                                                         <h4><a asp-page="./ArticleDetail" asp-route-id="@article.Id">@article.Title</a></h4>
@@ -102,12 +103,13 @@
                                             </article>
                                         </div>
 
-                                    </div>
+
+
+                                    }
 
                                 }
-
-                            }
-                        </div>
+                            </div>
+                            </div>
                         <div class="comments_box">
                             <h3>@Model.comments.Count دیدگاه </h3>
                             @foreach (var item in Model.comments)

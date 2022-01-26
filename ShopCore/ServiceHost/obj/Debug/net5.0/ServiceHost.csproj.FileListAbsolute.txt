@@ -556,3 +556,5 @@ D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\AboutUs.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\ContectUs.cshtml.g.cs
 D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\ChangePassword.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\ForgotPassword.cshtml.g.cs
+D:\ShopCore\ShopCore\ServiceHost\obj\Debug\net5.0\Razor\Pages\Result.cshtml.g.cs

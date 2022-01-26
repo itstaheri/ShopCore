@@ -25,7 +25,6 @@ namespace AM.Domain.AccountAgg
             Email = email;
             IsRemoved = false;
             SignupDate = DateTime.Now;
-            accountAddress = new AccountAddressModel();
         }
         public void Edit(string fullName, string username, long roleId, string number, string profilePicture, string email)
         {
@@ -36,7 +35,6 @@ namespace AM.Domain.AccountAgg
             if (!string.IsNullOrWhiteSpace(profilePicture))
                 ProfilePicture = profilePicture;
             Email = email;
-            accountAddress = new AccountAddressModel();
         }
 
         public void Actived() => IsRemoved = false;
@@ -54,6 +52,6 @@ namespace AM.Domain.AccountAgg
         public string Email { get; private set; }
         public bool IsRemoved { get; private set; }
         public DateTime SignupDate { get; private set; }
-        public AccountAddressModel accountAddress { get; private set; }
+       public AccountAddressModel accountAddress { get; private set; }
     }
 }

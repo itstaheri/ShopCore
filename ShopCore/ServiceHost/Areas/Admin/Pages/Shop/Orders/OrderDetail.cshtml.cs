@@ -11,7 +11,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Orders
     public class OrderDetailValueModel : PageModel
     {
         private readonly IOrderApplication _repository;
-        public OrderDetailViewModel Order { get; set; }
+        public List<OrderDetailViewModel> OrderDetail { get; set; }
 
         public OrderDetailValueModel(IOrderApplication repository)
         {
@@ -19,7 +19,7 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Orders
         }
         public void OnGet(long Id)
         {
-            Order = _repository.GetOrderdetail(Id);
+            OrderDetail = _repository.GetOrderdetail(Id);
         }
     }
 }

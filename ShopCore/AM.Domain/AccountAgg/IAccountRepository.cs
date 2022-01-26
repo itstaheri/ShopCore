@@ -12,8 +12,10 @@ namespace AM.Domain.AccountAgg
         void Create(AccountModel commend);
         List<AccountViewModel> GetAll(AccountSearchModel commend);
         AccountModel GetBy(long Id);
+        AccountModel GetByEmail(string Email);
         void Save();
-        bool Exist(string Username,string Email,string Number);
+        bool Exist(string Username);
         AccountModel GetByUsername(string Username);
+        bool ExistEmail(string Email);
     }
 }

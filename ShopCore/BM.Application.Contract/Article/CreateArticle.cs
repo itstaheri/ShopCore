@@ -15,7 +15,7 @@ namespace BM.Application.Contract.Article
         public string PictureAlt { get;  set; }
         public string PictureTitle { get; set; }
         public string ShortDescription { get;  set; }
-        public string Description { get;  set; }
+        public string DescriptionArticle { get;  set; }
       
         public long CategoryId { get;  set; }
     }

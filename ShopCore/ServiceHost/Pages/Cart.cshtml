@@ -1,6 +1,7 @@
 ﻿@page
 @model ServiceHost.Pages.CartModel;
 @inject Frameworks.IAuthHelper auth;
+@using Frameworks;
 
 @section Title{ <title>@(ViewData["Title"] ="سبد خرید") | موبایل شاپ </title>}
 
@@ -56,14 +57,14 @@
                                                     <td class="product_remove"><a asp-page-handler="Remove" asp-route-Id="@cart.Id"><i class="fa fa-trash-o"></i></a></td>
                                                     <td class="product_thumb"><a asp-page="./ProductDetail" asp-route-id="@cart.Id"><img src="~/Img/ProductImages/@cart.Name/@cart.Picture" alt=""></a></td>
                                                     <td class="product_name"><a asp-page="./ProductDetail" asp-route-id="@cart.Id">@cart.Name</a></td>
-                                                    <td class="product-price">@cart.UnitPrice تومان</td>
+                                                    <td class="product-price">@cart.UnitPrice.ToMoney() تومان</td>
                                                     <td class="pro-quantity">
                                                         <div class="quantity-selection">
                                                             <input type="number" value="@cart.Count" min="1" onchange="changeCartItemCount('@cart.Id', 'totalItemPrice-@cart.Id', this.value)">
                                                         </div>
                                                     </td>
                                                     <td class="pro-subtotal">
-                                                        <span id="totalItemPrice-@cart.Id">@cart.TotalPrice تومان </span>
+                                                        <span id="totalItemPrice-@cart.Id">@cart.TotalPrice.ToMoney() تومان </span>
                                                     </td>
 
 
@@ -99,17 +100,17 @@
                                     <div class="coupon_inner">
                                         <div class="cart_subtotal">
                                             <p>جمع جزء</p>
-                                            <p class="cart_amount">@Model.totalPrice تومان</p>
+                                            <p class="cart_amount">@Model.totalPrice.ToMoney() تومان</p>
                                         </div>
                                         <div class="cart_subtotal">
                                             <p>هزینه ارسال</p>
-                                            <p class="cart_amount">20,000 تومان</p>
+                                            <p class="cart_amount">مجانی</p>
                                         </div>
                                         <a href="#">محاسبه هزینه</a>
 
                                         <div class="cart_subtotal has-border">
                                             <p>جمع</p>
-                                            <p class="cart_amount">@(Model.totalPrice+20000) تومان</p>
+                                            <p class="cart_amount">@(Model.totalPrice.ToMoney()) تومان</p>
                                         </div>
                                         <div class="checkout_btn">
                                             @if (auth.IsAuthenticated())

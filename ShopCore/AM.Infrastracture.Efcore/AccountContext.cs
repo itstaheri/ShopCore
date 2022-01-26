@@ -18,10 +18,11 @@ namespace AM.Infrastracture.Efcore
         }
         public DbSet<AccountModel> accounts { get; set; }
         public DbSet<RoleModel> roles { get; set; }
-
+        public DbSet<AccountAddressModel> accountAddresses { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new AccountMapping());
+            builder.ApplyConfiguration(new AccountAddressMapping());
             builder.ApplyConfiguration(new RoleMapping());
             base.OnModelCreating(builder);
         }

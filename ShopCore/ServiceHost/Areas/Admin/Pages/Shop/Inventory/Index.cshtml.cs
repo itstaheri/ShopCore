@@ -18,7 +18,6 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
         private readonly IInventoryApplication _repository;
         public List<InventoryViewModel> Inventory;
         private readonly IProductApplication _product;
-       // public List<SelectListItem> products { get; set; }
        
 
         public IndexModel(IInventoryApplication repository, IProductApplication product)
@@ -27,9 +26,9 @@ namespace ServiceHost.Areas.Admin.Pages.Shop.Inventory
             _product = product;
         }
         [NeedsPermission(InventoryPermission.ListInventory)]
-        public void OnGet(SearchInventory x,SearchProduct p)
+        public void OnGet(SearchProduct p)
         {
-            Inventory = _repository.GetAll(x);
+            Inventory = _repository.GetAll(null);
 
         }
         public void OnPost(SearchInventory x)

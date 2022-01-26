@@ -28,9 +28,19 @@ namespace Query.AccountQuery
 
         public void EditAddress(AddressQueryViewModel commend)
         {
-            var info = _context.accounts.SingleOrDefault(x => x.Id == commend.Id);
-            info.accountAddress.Add(commend.PostalCode, commend.City, commend.County,commend.Address, commend.UserId);
-            _context.SaveChanges();
+            var info = _context.accountAddresses.FirstOrDefault(x => x.UserId == commend.UserId);
+            if (info==null)
+            {
+                var address = new AccountAddressModel(commend.PostalCode, commend.City, commend.County, commend.Address, commend.UserId);
+                _context.accountAddresses.Add(address);
+                _context.SaveChanges();
+            }
+            else
+            {
+                info.Edit(commend.PostalCode, commend.City, commend.County, commend.Address, commend.UserId);
+                _context.SaveChanges();
+            }
+
         }
 
        
@@ -97,19 +107,16 @@ namespace Query.AccountQuery
 
         public AddressQueryViewModel GetValueForEditAddress(long Id)
         {
-            if (_context.accounts.SingleOrDefault(x => x.Id == Id).accountAddress == null)
-                return new AddressQueryViewModel();
-            
-            var info = _context.accounts.SingleOrDefault(x => x.Id == Id).accountAddress;
-            return new AddressQueryViewModel
+            return _context.accountAddresses.Select(x => new AddressQueryViewModel
             {
-                Id = info.Id,
-                Address = info.Address,
-                City = info.City,
-                County = info.County,
-                PostalCode = info.PostalCode,
-                UserId = info.UserId
-            };
+                Id = x.Id,
+                Address = x.Address,
+                City = x.City,
+                County = x.City,
+                PostalCode = x.PostalCode,
+                UserId = x.UserId
+
+            }).FirstOrDefault(x => x.UserId == Id);
         }
 
      

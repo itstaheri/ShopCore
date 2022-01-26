@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ServiceHost.Pages
 {
+    [Authorize]
     public class ChangepasswordModel : PageModel
     {
         private readonly IAccountApplication _repository;
@@ -18,7 +19,7 @@ namespace ServiceHost.Pages
             _repository = repository;
         }
         public long AccountId;
-        [Authorize]
+     
         public void OnGet(long Id)
         {
             AccountId = Id;
@@ -30,7 +31,8 @@ namespace ServiceHost.Pages
                 
             }
             _repository.UserChangePassword(commend);
-            return RedirectToPage("./Profile");
+            _repository.Logout();
+            return RedirectToPage("./Account");
         }
     }
 }

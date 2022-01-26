@@ -44,8 +44,8 @@ namespace ServiceHost
             var mvcBuilder = services.AddRazorPages().AddMvcOptions(option => option.Filters.Add<SecurityPageFilter>()).AddRazorPagesOptions(option =>
               {
                   option.Conventions.AuthorizeAreaFolder("Admin", "/", "AdminArea");
-                // option.Conventions.AuthorizeAreaFolder("Shop", "/", "AdminArea");
-            });
+                  // option.Conventions.AuthorizeAreaFolder("Shop", "/", "AdminArea");
+              });
             ShopBootestrapper.Configuration(services, ConnectionString);
             DiscountBootestrapper.Configuration(services, ConnectionString);
             InventoryBootestrapper.Configoration(services, ConnectionString);
@@ -120,6 +120,7 @@ namespace ServiceHost
 
             app.UseEndpoints(endpoints =>
             {
+               
                 endpoints.MapRazorPages();
                 endpoints.MapDefaultControllerRoute();
             });

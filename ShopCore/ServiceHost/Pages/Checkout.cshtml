@@ -111,11 +111,11 @@
                                             </tr>
                                             <tr>
                                                 <th>حمل و نقل</th>
-                                                <td><strong>20,000</strong></td>
+                                                <td><strong>مجانی</strong></td>
                                             </tr>
                                             <tr class="order_total">
                                                 <th>مجموع سفارش</th>
-                                                <td><strong>@((Model.cart.TotalAmount+20000).ToMoney())</strong></td>
+                                                <td><strong>@Model.cart.TotalAmount.ToMoney()</strong></td>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -131,9 +131,9 @@
                                     @foreach (var item in PaymentMethod.GetMethod())
                                     {
                                         <label>@item.Name</label>
-                                        <input type="radio" name="PaymentMethod" id="PaymentMethod" value="@item.Id" />
-                                        <p>@item.Description</p>
 
+                                        <p>@item.Description</p>
+                                        <input type="radio" name="PaymentMethod" id="PaymentMethod" value="@item.Id" size="2" />
                                     }
 
                                     <div class="order_button">
@@ -148,3 +148,11 @@
         </div>
     </div>
 </div>
+
+<style>
+    #PaymentMethod {
+        border: 0px;
+        width: 100%;
+        height: 2em;
+    }
+</style>

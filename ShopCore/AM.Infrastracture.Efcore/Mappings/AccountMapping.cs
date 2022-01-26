@@ -16,8 +16,9 @@ namespace AM.Infrastracture.Efcore.Mappings
             builder.HasKey(x => x.Id);
             builder.HasOne(x => x.role).WithMany(x => x.accounts).HasForeignKey(x => x.RoleId);
 
-            builder.OwnsOne(x => x.accountAddress).WithOwner(x => x.account).HasForeignKey(x=>x.UserId);
-            
+            builder.HasOne(x => x.accountAddress).WithOne(x => x.account)
+                .HasForeignKey<AccountAddressModel>(x=>x.UserId);
+
         }
     }
 }

@@ -7,6 +7,7 @@ using Framework;
 using AM.Domain.Role;
 using System.Linq;
 using AM.Application.Contract.Role;
+using Frameworks.Smtp;
 
 namespace AM.Application
 {
@@ -17,13 +18,15 @@ namespace AM.Application
         private readonly IAccountRepository _repository;
         private readonly IAuthHelper _AuthHelper;
         private readonly IRoleApplication _roleRepository;
-        public AccountApplication(IAccountRepository repository, IPasswordHasher ToHash, IFileUploader Uploader, IAuthHelper AuthHelper, IRoleApplication roleRepository)
+        private readonly ISmtpService _smtp;
+        public AccountApplication(ISmtpService smtp,IAccountRepository repository, IPasswordHasher ToHash, IFileUploader Uploader, IAuthHelper AuthHelper, IRoleApplication roleRepository)
         {
             _repository = repository;
             _ToHash = ToHash;
             _Uploader = Uploader;
             _AuthHelper = AuthHelper;
             _roleRepository = roleRepository;
+            _smtp = smtp;
         }
         public void Active(long Id)
         {
@@ -68,7 +71,7 @@ namespace AM.Application
             var PicName = _Uploader.Upload(commend.Image, "ProfileImages", path);
 
         
-            if (_repository.Exist(commend.Username, commend.Email, commend.Number) != true )
+            if (_repository.Exist(commend.Username) !=true)
             {
                 if (commend.RoleId == 0) commend.RoleId = 2;
 
@@ -165,6 +168,21 @@ namespace AM.Application
             _repository.Save();
         }
 
+        public void ForgotPassword(string Email)
+        {
+            if (_repository.ExistEmail(Email) == true)
+            {
+                var User = _repository.GetByEmail(Email);
+                var NewPass = CodeGenerator.Generate("dQxim3z");
+                var Password = _ToHash.Hash(NewPass);
+                User.ChangePassword(Password);
+                _repository.Save();
+                _smtp.ForgotPassword(User.Email, NewPass);
 
+            }
+          
+            
+
+        }
     }
 }

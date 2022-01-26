@@ -2,6 +2,7 @@
 using Frameworks.Sms;
 using IM.Application.Contract.Inventory;
 using IM.Domain.Inventory;
+using Microsoft.EntityFrameworkCore;
 using SM.Application.Contracts.Order;
 using SM.Domain.OrderAgg;
 using SM.Infrastructure.EfCore;
@@ -18,16 +19,14 @@ namespace AM.Application
         private readonly IAuthHelper _authHelper;
         private readonly IOrderRepository _repository;
         private readonly IInventoryRepository _inventory;
-        private readonly IOrderRepository _order;
         private readonly ShopContext _shop;
         private readonly ISmsService _smsService;
 
-        public OrderApplication(ISmsService smsService,ShopContext shop,IOrderRepository order, IAuthHelper authHelper, IOrderRepository repository, IInventoryRepository inventory)
+        public OrderApplication(ISmsService smsService,ShopContext shop, IAuthHelper authHelper, IOrderRepository repository, IInventoryRepository inventory)
         {
             _authHelper = authHelper;
             _repository = repository;
             _inventory = inventory;
-            _order = order;
             _shop = shop;
             _smsService = smsService;
         }
@@ -40,7 +39,7 @@ namespace AM.Application
         public string PaymentSucceeded(long OrderId, long RefId)
         {
             #region Reduce
-            var order = _order.GetBy(OrderId);
+            var order = _repository.GetBy(OrderId);
             //foreach (var q in order.orderDetails)
             //{
             //    var InventoryOperatin   = _inventory.GetBy(q.Id).inventoryOperations;
@@ -107,24 +106,27 @@ namespace AM.Application
             _repository.RemoveOrder(OrderId);
         }
 
-        public OrderDetailViewModel GetOrderdetail(long orderId)
+        public List<OrderDetailViewModel> GetOrderdetail(long orderId)
         {
 
-            var order = _shop.orders.SingleOrDefault(x => x.Id == orderId).orderDetails.FirstOrDefault();
-            var product = _shop.products.SingleOrDefault(x => x.ProductId == order.ProductId);
-            var totalprice = order.UnitPrice * order.Count;
-            return new OrderDetailViewModel
+            var query = _shop.orders.FirstOrDefault(x => x.Id == orderId).orderDetails.Select(x => new OrderDetailViewModel
             {
-                Count = order.Count,
-                TotalPrice = totalprice,
-                UnitPrice = order.UnitPrice,
-                ProductId = order.ProductId,
-                ProductName = product.ProductName,
-                Picture = product.Picture
-                
-            };
+                Id = x.Id,
+                Count = x.Count,
+                ProductId = x.ProductId,
+                TotalPrice = x.TotalPrice,
+                UnitPrice = x.UnitPrice,
 
+            }).ToList();
 
+            foreach (var item in query)
+            {
+                var product = _shop.products.FirstOrDefault(x => x.ProductId == item.ProductId);
+                item.ProductName = product.ProductName;
+                item.Picture = product.Picture;
+
+            }
+            return query;
 
         }
     }

@@ -46,7 +46,8 @@ namespace SM.Infrastructure.EfCore.Repositories
                 PayAmount = x.PayAmount,
                 CustomerDescription = x.CustomerDescription,
                 IsFinaly = x.IsFinaly,
-                PaymentMethod = x.PaymentMethod
+                PaymentMethod = x.PaymentMethod,
+                Description = x.CustomerDescription
             }).AsNoTracking().ToList();
 
             foreach (var item in query)
@@ -62,7 +63,7 @@ namespace SM.Infrastructure.EfCore.Repositories
                 if (!string.IsNullOrWhiteSpace(commend.Username))
                     query=  query.Where(x => x.Username == commend.Username).ToList();
 
-                if (commend.Status != null || commend.Status > 0)
+                if (commend.Status != null && commend.Status > 0)
                     query = query.Where(x => x.Status == commend.Status).ToList();
 
             }

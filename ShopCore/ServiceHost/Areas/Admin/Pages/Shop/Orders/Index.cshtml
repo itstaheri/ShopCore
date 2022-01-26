@@ -3,7 +3,7 @@
 @{
 }
 
-<h1>Colleague Discounts</h1>
+<h1>Orders</h1>
 
 @{
 
@@ -12,7 +12,7 @@
 
 <div class="row">
     <div class="col-sm-12">
-        <h4 class="page-title pull-right">@ViewData["title"]</h4>
+        <h4 class="page-title pull-right">@ViewData["Title"]</h4>
 
     </div>
 </div>
@@ -72,10 +72,8 @@
                                     <th>نهایی شده</th>
                                     <th>تاریخ ثبت</th>
                                     <th>وضعیت فعلی</th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th>توضیحات</th>
+                                    
 
                                 </tr>
                             </thead>
@@ -104,28 +102,29 @@
                                         @if (item.Status == 1)
                                         {
                                             <td>
-                                                <a class="bi bi-exclamation alert alert-info">در حال برسی</a>
+                                                <a>در حال برسی</a>
                                             </td>
 
                                         }
                                         else if (item.Status == 2)
                                         {
                                             <td>
-                                                <a class="bi bi-check alert alert-success">ارسال شده</a>
+                                                <a >ارسال شده</a>
                                             </td>
                                         }
                                         else if (item.Status == 3)
                                         {
                                             <td>
-                                                <a class="bi bi-x alert alert-danger">بسته شده</a>
+                                                <a >بسته شده</a>
                                             </td>
                                         }
                                         else if (item.Status == 4)
                                         {
                                             <td>
-                                                <a class="bi bi-x alert alert-warning">معلق</a>
+                                                <a >معلق</a>
                                             </td>
                                         }
+                                        <td>@item.CustomerDescription</td>
                                         <td>
                                             <a>
                                                 <form asp-page-handler="StatusSended" method="post">
@@ -138,7 +137,7 @@
                                             <a>
                                                 <form asp-page-handler="StatusPending" method="post">
                                                     <input type="hidden" name="OrderId" id="OrderId" value="@item.Id" />
-                                                    <button type="submit" class="btn btn-info">در حال برسی</button>
+                                                    <button type="submit"  class="btn btn-primary">در حال برسی</button>
                                                 </form>
                                             </a>
                                         </td>
@@ -152,7 +151,7 @@
                                         </td>
 
                                         <td>
-                                            <a class="glyphicon glyphicon-eye-open btn-info" asp-page="Orderdetail" asp-route-Id="@item.Id" > جزییات</a>
+                                            <a class="btn btn-info" asp-page="Orderdetail" asp-route-Id="@item.Id" > <i class="glyphicon glyphicon-eye-open"></i> جزییات</a>
                                         </td>
 
                                     </tr>

@@ -13,13 +13,13 @@
         <br />
         <div class="row">
             <div class="col-12">
-
-                @foreach (var item in Model.categories)
-                {
-                    @foreach (var product in item.products)
+                <div class="row no-gutters shop_wrapper">
+                    @foreach (var item in Model.categories)
                     {
+                        @foreach (var product in item.products)
+                        {
 
-                        <div class="row no-gutters shop_wrapper">
+
                             <div class="col-lg-3 col-md-4 col-12 ">
                                 <article class="single_product">
                                     <figure>
@@ -63,17 +63,17 @@
                                 </article>
                             </div>
 
-                        </div>
+                        }
                     }
-                }
-
-
-                <div class="shop_toolbar t_bottom">
 
                 </div>
-                <!--shop toolbar end-->
-                <!--shop wrapper end-->
-            </div>
+
+                    <div class="shop_toolbar t_bottom">
+
+                    </div>
+                    <!--shop toolbar end-->
+                    <!--shop wrapper end-->
+                </div>
         </div>
     </div>
 </div>

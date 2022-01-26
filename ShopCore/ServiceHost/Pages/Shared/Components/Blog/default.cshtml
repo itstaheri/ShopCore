@@ -13,7 +13,7 @@
                         <article class="single_blog">
                             <figure>
                                 <div class="blog_thumb">
-                                    <a  asp-page="Blog/ArticleDetail" asp-route-id="@item.Id"><img src="/Img/ArticleImages/@item.Id/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle"></a>
+                                    <a  asp-page="Blog/ArticleDetail" asp-route-id="@item.Id"><img src="/Img/ArticleImages/@item.Title/@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle"></a>
                                 </div>
                                 <figcaption class="blog_content">
                                     <h4><a  asp-page="Blog/ArticleDetail" asp-route-id="@item.Id">@item.Title</a></h4>

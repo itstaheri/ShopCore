@@ -40,7 +40,7 @@ namespace IM.Domain.Inventory
         public void Reduce(long count, long operatorId, string description,long orderId)
         {
             var currentcount = CurrentInventory() - count;
-            var operation = new InventoryOperationModel(true, count, operatorId, currentcount, description, orderId, Id);
+            var operation = new InventoryOperationModel(false, count, operatorId, currentcount, description, orderId, Id);
             inventoryOperations.Add(operation);
             InStock = currentcount > 0;
 

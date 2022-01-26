@@ -66,7 +66,7 @@ namespace Query.ProductQuery
                  Price = _inventory.inventory.Select(x => new { x.Productid, x.Price }).FirstOrDefault(x => x.Productid == id).Price;
 
             }
-            if (_discount.customerDiscounts.Any(x => x.Start < DateTime.Now && x.End > DateTime.Now))
+            if (_discount.customerDiscounts.Any(x=>x.DiscountRate>0) == true)
             {
                  discountRate = _discount.customerDiscounts.Where(x => x.Start < DateTime.Now && x.End > DateTime.Now).Select(x => new { x.DiscountRate, x.ProductId }).FirstOrDefault(x => x.ProductId == id).DiscountRate;
 

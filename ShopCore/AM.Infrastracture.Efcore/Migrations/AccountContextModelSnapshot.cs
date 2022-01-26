@@ -19,6 +19,36 @@ namespace AM.Infrastracture.Efcore.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.12");
 
+            modelBuilder.Entity("AM.Domain.AccountAgg.AccountAddressModel", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("County")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("PostalCode")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("accountAddresses");
+                });
+
             modelBuilder.Entity("AM.Domain.AccountAgg.AccountModel", b =>
                 {
                     b.Property<long>("Id")
@@ -78,6 +108,17 @@ namespace AM.Infrastracture.Efcore.Migrations
                     b.ToTable("roles");
                 });
 
+            modelBuilder.Entity("AM.Domain.AccountAgg.AccountAddressModel", b =>
+                {
+                    b.HasOne("AM.Domain.AccountAgg.AccountModel", "account")
+                        .WithOne("accountAddress")
+                        .HasForeignKey("AM.Domain.AccountAgg.AccountAddressModel", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("account");
+                });
+
             modelBuilder.Entity("AM.Domain.AccountAgg.AccountModel", b =>
                 {
                     b.HasOne("AM.Domain.Role.RoleModel", "role")
@@ -85,40 +126,6 @@ namespace AM.Infrastracture.Efcore.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.OwnsOne("AM.Domain.AccountAgg.AccountAddressModel", "accountAddress", b1 =>
-                        {
-                            b1.Property<long>("ProductId")
-                                .ValueGeneratedOnAdd()
-                                .HasColumnType("bigint")
-                                .UseIdentityColumn();
-
-                            b1.Property<string>("Address")
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.Property<string>("City")
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.Property<string>("County")
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.Property<long>("Id")
-                                .HasColumnType("bigint");
-
-                            b1.Property<long>("PostalCode")
-                                .HasColumnType("bigint");
-
-                            b1.HasKey("ProductId");
-
-                            b1.ToTable("accounts");
-
-                            b1.WithOwner("account")
-                                .HasForeignKey("ProductId");
-
-                            b1.Navigation("account");
-                        });
-
-                    b.Navigation("accountAddress");
 
                     b.Navigation("role");
                 });
@@ -151,6 +158,11 @@ namespace AM.Infrastracture.Efcore.Migrations
                         });
 
                     b.Navigation("Permissions");
+                });
+
+            modelBuilder.Entity("AM.Domain.AccountAgg.AccountModel", b =>
+                {
+                    b.Navigation("accountAddress");
                 });
 
             modelBuilder.Entity("AM.Domain.Role.RoleModel", b =>

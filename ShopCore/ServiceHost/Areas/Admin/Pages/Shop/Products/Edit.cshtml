@@ -17,29 +17,30 @@
             <form method="post" enctype="multipart/form-data">
 
                 <div class="form-group">
-                    <label>ProductName</label>
+                    <label>نام محصول</label>
                     <input type="text" class="form-control" id="ProductName" name="ProductName" value="@Model.Products.ProductName" />
                 </div>
                 <div class="form-group">
-                    <label>ProductCode</label>
+                    <label>کد محصول</label>
                     <input type="text" class="form-control" id="ProductCode" name="ProductCode" value="@Model.Products.ProductCode" />
                 </div>
                 <div class="form-group">
-                    <label>Description</label>
+                    <label>توضیحات کوتاه</label>
+                    <input type="text" class="form-control"  name="ShortDescription" value="@Model.Products.ShortDescription" />
+                </div>
+                <div class="form-group">
+                    <label>توضیحات</label>
                     <textarea type="text" class="form-control" id="Description" name="Description">@Model.Products.Description</textarea>
                 </div>
-                <div class="form-group">
-                    <label>ShortDescription</label>
-                    <textarea type="text" class="form-control" id="ShortDescription" name="ShortDescription">@Model.Products.ShortDescription</textarea>
-                </div>
-                <div class="form-group">
-                    <label>QuantityInStock</label>
-                    <input type="number" class="form-control" id="QuantityInStock" name="QuantityInStock" value="@Model.Products.QuantityInStock" />
-                </div>
+
                 @*<div class="form-group">
-                        <label>Price</label>
-                        <input type="text" class="form-control" id="Price" name="Price" value="@Model.Products.Price" />
-                    </div>*@
+            <label>QuantityInStock</label>
+            <input type="number" class="form-control" id="QuantityInStock" name="QuantityInStock" value="@Model.Products.QuantityInStock" />
+        </div>*@
+                @*<div class="form-group">
+            <label>Price</label>
+            <input type="text" class="form-control" id="Price" name="Price" value="@Model.Products.Price" />
+        </div>*@
 
 
                 <div class="row">
@@ -91,31 +92,31 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Storage</label>
+                    <label>حافظه</label>
                     <input type="text" class="form-control" id="Storage" name="Storage" value="@Model.Products.Storage" />
                 </div>
                 <div class="form-group">
-                    <label>ScreenSize</label>
+                    <label>سایز صفحه نمایش</label>
                     <input type="text" class="form-control" id="ScreenSize" name="ScreenSize" value="@Model.Products.ScreenSize" />
                 </div>
                 <div class="form-group">
-                    <label>NetworkSupport</label>
+                    <label>شبکه</label>
                     <input type="text" class="form-control" id="NetworkSupport" name="NetworkSupport" value="@Model.Products.NetworkSupport" />
                 </div>
                 <div class="form-group">
-                    <label>OperatingSystem</label>
+                    <label>سیستم عامل</label>
                     <input type="text" class="form-control" id="OperatingSystem" name="OperatingSystem" value="@Model.Products.OperatingSystem" />
                 </div>
                 <div class="form-group">
-                    <label>Resolution</label>
+                    <label>کیفیت دوربین</label>
                     <input type="text" class="form-control" id="Resolution" name="Resolution" value="@Model.Products.Resolution" />
                 </div>
                 <div class="form-group">
-                    <label>Ram</label>
+                    <label>رم</label>
                     <input type="text" class="form-control" id="Ram" name="Ram" value="@Model.Products.Ram" />
                 </div>
                 <div class="form-group">
-                    <label>TouchId</label>
+                    <label>حسگر اثرانگشت</label>
                     <input type="text" class="form-control" id="TouchId" name="TouchId" value="@Model.Products.TouchId" />
                 </div>
 

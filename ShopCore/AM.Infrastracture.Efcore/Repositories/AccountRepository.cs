@@ -67,10 +67,10 @@ namespace AM.Infrastracture.Efcore.Repositories
             _context.SaveChanges();
         }
 
-        public bool Exist(string Username, string Email, string Number)
+        public bool Exist(string Username)
         {
             var account = _context.accounts
-                .Any(x => x.Username == Username || x.Email == Email || x.Number == Number);
+                .Any(x => x.Username == Username);
             if (account == true) return true;
             return false;
         }
@@ -78,6 +78,16 @@ namespace AM.Infrastracture.Efcore.Repositories
         public AccountModel GetByUsername(string Username)
         {
             return _context.accounts.SingleOrDefault(x => x.Username == Username);
+        }
+
+        public bool ExistEmail(string Email)
+        {
+            return _context.accounts.Any(x=>x.Email == Email);
+        }
+
+        public AccountModel GetByEmail(string Email)
+        {
+            return _context.accounts.FirstOrDefault(x => x.Email == Email);
         }
     }
 }

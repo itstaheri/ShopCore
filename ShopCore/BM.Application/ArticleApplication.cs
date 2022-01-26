@@ -28,18 +28,18 @@ namespace BM.Application
 
         public void Create(CreateArticle commend)
         {
-            var Picture = _Uploader.Upload(commend.Picture, "ArticleImages", commend.Id.ToString());
+            var Picture = _Uploader.Upload(commend.Picture, "ArticleImages", commend.Title);
             var currentInfo = _auth.CurrentAccountInfo();
-            var Article = new ArticleModel(commend.Title, Picture, commend.PictureAlt, commend.Title, commend.ShortDescription, commend.Description,currentInfo.Username , commend.CategoryId);
+            var Article = new ArticleModel(commend.Title, Picture, commend.PictureAlt, commend.Title, commend.ShortDescription, commend.DescriptionArticle,currentInfo.Username , commend.CategoryId);
             _repository.Create(Article);
         }
 
         public void Edit(EditArticle commend)
         {
-            var Picture = _Uploader.Upload(commend.Picture, "ArticleImages", commend.Id.ToString());
+            var Picture = _Uploader.Upload(commend.Picture, "ArticleImages", commend.Title);
             var currentInfo = _auth.CurrentAccountInfo();
             var Article = _repository.GetBy(commend.Id);
-            Article.Edit(commend.Title, Picture, commend.PictureAlt, commend.Title, commend.ShortDescription, commend.Description, currentInfo.Username, commend.CategoryId);
+            Article.Edit(commend.Title, Picture, commend.PictureAlt, commend.Title, commend.ShortDescription, commend.DescriptionArticle, currentInfo.Username, commend.CategoryId);
             _repository.Save();
         }
 
@@ -49,7 +49,7 @@ namespace BM.Application
             return new EditArticle
             {
                 Id = Article.Id,
-                Description = Article.Description,             
+                DescriptionArticle = Article.Description,             
                 ShortDescription = Article.ShortDescription,
                 CategoryId = Article.CategoryId,
                 PictureTitle = Article.PictureTitle,

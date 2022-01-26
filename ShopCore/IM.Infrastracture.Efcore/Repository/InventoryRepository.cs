@@ -79,19 +79,21 @@ namespace IM.Infrastracture.Efcore.Repository
                 ProductId = x.Productid,
                 CurrentCount = x.CurrentInventory(),
                 
-            });
-            if (commend.ProductId>0)
-                query = query.Where(x => x.ProductId == commend.ProductId);
-            if (commend.InStock ==false)
-                query = query.Where(x => x.InStock);
-
-            var inventory = query.OrderByDescending(x => x.Id).ToList();
-            inventory.ForEach(item =>
+            }).ToList();
+            
+            query.ForEach(item =>
             {
                 item.ProductName = product.FirstOrDefault(x => x.ProductId == item.ProductId)?.ProductName;
 
             });
-            return inventory;
+            if (commend != null)
+            {
+                if (!string.IsNullOrWhiteSpace(commend.ProductName))
+                    query = query.Where(x => x.ProductName == commend.ProductName).ToList();
+
+            }
+
+            return query;
 
 
         }

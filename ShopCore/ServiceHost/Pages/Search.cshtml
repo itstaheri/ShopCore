@@ -25,62 +25,63 @@
         <div class="row">
             <div class="col-12">
 
-                <h3 class="success">نتیجه جستجو برای : @Model.Value</h3>
+                <h4 class="success">نتیجه جستجو برای : @Model.Value</h4>
                 @if (Model.products.Count == 0)
                 {
                     <div class="alert-danger">نتیجه ایی یافت نشد.</div>
                 }
+            <div class="row no-gutters shop_wrapper">
                 @foreach (var product in Model.products)
                 {
 
-                    <div class="row no-gutters shop_wrapper">
-                        <div class="col-lg-3 col-md-4 col-12 ">
-                            <article class="single_product">
-                                <figure>
-                                    <div class="product_thumb">
-                                        <a class="primary_img" asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات "><img src="~/Img/ProductImages/@product.ProductName/@(product.Picture)" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
-                                        @*<a class="secondary_img"><img src="~/Img/ProductImages/@(product.ProductCode)1.jpg" alt="@product.PictureAlt" title="@product.PictureTitle"></a>*@
-                                        @if (product.DiscountRate > 0)
-                                        {
-                                            <div class="label_product">
-                                                <span class="label_sale">@product.DiscountRate %</span>
-                                            </div>
-                                        }
 
-                                    </div>
-
-                                    <div class="product_content grid_content">
-                                        <div class="product_content_inner">
-                                            <h4 class="product_name"><a asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات ">@product.ProductName</a></h4>
-
-                                            <div class="price_box">
-                                                @if (product.HasDiscount == true)
-                                                {
-                                                    <span class="old_price">@product.Price تومان</span>
-                                                    <span class="current_price">@product.PriceAfterDiscount تومان</span>
-                                                }
-                                                else
-                                                {
-                                                    <span class="current_price">@product.Price تومان</span>
-                                                }
-                                            </div>
-                                            <div class="text">
-                                                <a asp-page="Category" asp-route-CategoryId="@product.CategoryId">@product.CategoryName</a>
-                                            </div>
+                    <div class="col-lg-3 col-md-4 col-12 ">
+                        <article class="single_product">
+                            <figure>
+                                <div class="product_thumb">
+                                    <a class="primary_img" asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات "><img src="~/Img/ProductImages/@product.ProductName/@(product.Picture)" alt="@product.PictureAlt" title="@product.PictureTitle"></a>
+                                    @*<a class="secondary_img"><img src="~/Img/ProductImages/@(product.ProductCode)1.jpg" alt="@product.PictureAlt" title="@product.PictureTitle"></a>*@
+                                    @if (product.DiscountRate > 0)
+                                    {
+                                        <div class="label_product">
+                                            <span class="label_sale">@product.DiscountRate %</span>
                                         </div>
-                                        <div class="add_to_cart">
-                                            <a asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات ">مشاهده جزییات</a>
+                                    }
+
+                                </div>
+
+                                <div class="product_content grid_content">
+                                    <div class="product_content_inner">
+                                        <h4 class="product_name"><a asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات ">@product.ProductName</a></h4>
+
+                                        <div class="price_box">
+                                            @if (product.HasDiscount == true)
+                                            {
+                                                <span class="old_price">@product.Price تومان</span>
+                                                <span class="current_price">@product.PriceAfterDiscount تومان</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="current_price">@product.Price تومان</span>
+                                            }
+                                        </div>
+                                        <div class="text">
+                                            <a asp-page="Category" asp-route-CategoryId="@product.CategoryId">@product.CategoryName</a>
                                         </div>
                                     </div>
+                                    <div class="add_to_cart">
+                                        <a asp-page="./ProductDetail" asp-route-id="@product.Id" title="مشاهده جزییات ">مشاهده جزییات</a>
+                                    </div>
+                                </div>
 
-                                </figure>
-                            </article>
-                        </div>
-
+                            </figure>
+                        </article>
                     </div>
-                }
 
+
+                }
             </div>
+                </div>
 
             <div class="shop_toolbar t_bottom">
 

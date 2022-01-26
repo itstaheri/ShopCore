@@ -35,7 +35,7 @@
                                 <li> <a href="#orders" data-toggle="tab" class="nav-link">سفارشات</a></li>
                                 <li><a href="#address" data-toggle="tab" class="nav-link">آدرس ها</a></li>
                                 <li><a href="#account-details" data-toggle="tab" class="nav-link">جزئیات حساب</a></li>
-                                <li><a href="login.html" class="nav-link">خروج</a></li>
+                                <li><a  asp-page="/Account" asp-page-handler="Logout" class="nav-link">خروج</a></li>
                             </ul>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                                                 <th>مبلغ پرداختی</th>
                                                 <th>روش پرداخت</th>
                                                 <th>کد پیگیری</th>
-                                                <th>اقلام</th>
+                                               
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -104,10 +104,7 @@
                                                     </td>
                                                     <td>@item.Code</td>
 
-                                                    <td>
-                                                       مشاهده
-
-                                                    </td>
+                                                   
                                                 </tr>
 
                                             }
@@ -130,8 +127,8 @@
                                                 <label>شهراستان</label>
                                                 <input type="tel" name="County" id="County" value="@Model.Address.County">
                                                 <label>آدرس دقیق</label>
-                                                <textarea name="Address" id="Address">@Model.Address.Address</textarea>
-
+                                                <input name="Address" id="Address" value="@Model.Address.Address" />
+                                                <input type="hidden" name="UserId" id="UserId" value="@Model.Account.Id">
                                                 <br>
 
                                                 <div class="save_button primary_btn default_button">

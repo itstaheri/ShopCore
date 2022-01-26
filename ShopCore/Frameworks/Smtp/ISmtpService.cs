@@ -9,6 +9,7 @@ namespace Frameworks.Smtp
     public interface ISmtpService
     {
         void Send(EmailViewModel commend);
+        void ForgotPassword(string Email, string Password);
 
 
     }

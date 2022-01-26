@@ -20,5 +20,6 @@ namespace AM.Application.Contract.Account
         OperationResult Login(Login commend);
         void Logout();
         void UserChangePassword(ChangePasswordModel commend);
+        void ForgotPassword(string Email);
     }
 }

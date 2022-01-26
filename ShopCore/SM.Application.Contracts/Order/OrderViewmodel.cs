@@ -13,6 +13,7 @@ namespace SM.Application.Contracts.Order
         public long UserId { get;  set; }
         public int PaymentMethod { get;  set; }
         public string CustomerDescription { get;  set; }
+        public string Description { get;  set; }
         public double PayAmount { get;  set; }
         public int Status { get;  set; }
         public bool IsFinaly { get;  set; }
