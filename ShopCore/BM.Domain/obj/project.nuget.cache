@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "etQdMJ1roxPhTm/G+3GSl/Js34qKm6GuWVLs7lPzTCehznjZZNXzSYtOaqvMW7r/GDaEVgEXbjuf+eSQKyTkrQ==",
+  "dgSpecHash": "C4xFAAYst3C1Ic3LQRKAhf/6Ygzxpf6YZUw8Y5SJOswrlHMdmlVcalzYyrbAkt5yUq9Npv+xiyyfciy2cl6QrQ==",
   "success": true,
-  "projectFilePath": "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
+  "projectFilePath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\alith\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.12\\microsoft.aspnetcore.http.features.5.0.12.nupkg.sha512",
-    "C:\\Users\\alith\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
-    "C:\\Users\\alith\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+    "C:\\Users\\itsta\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.16\\microsoft.aspnetcore.http.features.5.0.16.nupkg.sha512",
+    "C:\\Users\\itsta\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\itsta\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }

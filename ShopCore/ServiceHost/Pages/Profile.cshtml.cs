@@ -18,7 +18,7 @@ namespace ServiceHost.Pages
         private readonly IAccountApplication _account;
 
         public AccountQueryViewModel Account;
-        public AddressQueryViewModel Address;
+        public AddressQueryViewModel Address = new AddressQueryViewModel();
         [BindProperty] public EditAccount AccountInfo { get; set; }
 
         private readonly IAuthHelper _auth;
@@ -35,7 +35,12 @@ namespace ServiceHost.Pages
             RoleId = long.Parse(_auth.CurrentAccountRole());
             AccountInfo = _account.GetValueForEdit(_auth.CurrentAccountId());
             Account = _repository.GetProfileItems(_auth.CurrentAccountId());
-            Address = _repository.GetValueForEditAddress(_auth.CurrentAccountId());
+            var addrress = _repository.GetValueForEditAddress(_auth.CurrentAccountId());
+            if (addrress!=null)
+            {
+                Address = addrress;
+
+            }
         }
         public RedirectToPageResult OnPostAddress(AddressQueryViewModel commend)
         {

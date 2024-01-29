@@ -2,42 +2,112 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "Microsoft.AspNetCore.Http.Features/5.0.12": {
+      "Microsoft.AspNetCore.Http.Features/5.0.16": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Primitives": "5.0.1",
-          "System.IO.Pipelines": "5.0.1"
+          "System.IO.Pipelines": "5.0.2"
         },
         "compile": {
-          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {}
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {}
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Primitives/5.0.1": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
+          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
+          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
         }
       },
-      "System.IO.Pipelines/5.0.1": {
+      "System.IO.Pipelines/5.0.2": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {}
+          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {}
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
         }
       },
       "BM.Application.Contract/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "5.0.12"
+          "Microsoft.AspNetCore.Http.Features": "5.0.16"
+        },
+        "compile": {
+          "bin/placeholder/BM.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BM.Application.Contract.dll": {}
+        }
+      }
+    },
+    "net5.0/win-x64": {
+      "Microsoft.AspNetCore.Http.Features/5.0.16": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "5.0.1",
+          "System.IO.Pipelines": "5.0.2"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/5.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.IO.Pipelines/5.0.2": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "BM.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.16"
         },
         "compile": {
           "bin/placeholder/BM.Application.Contract.dll": {}
@@ -49,10 +119,10 @@
     }
   },
   "libraries": {
-    "Microsoft.AspNetCore.Http.Features/5.0.12": {
-      "sha512": "ArNcbNfXGHVTHSIwkUmP8dLYqjMFB69DLmf6CYA/8+W/zGnJGRVmwE0VCUo7TepXuktOFBn846yt0NT0ZeOYWw==",
+    "Microsoft.AspNetCore.Http.Features/5.0.16": {
+      "sha512": "1QU3LxQr9F5bfmfakJ9FcAG/sOHIA3WZXIQviN+QDP1TsrWzcZ34CLO/IjauLJtO6lYJeXObpCA40lNJfqXbGQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.features/5.0.12",
+      "path": "microsoft.aspnetcore.http.features/5.0.16",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -64,7 +134,7 @@
         "lib/net5.0/Microsoft.AspNetCore.Http.Features.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
-        "microsoft.aspnetcore.http.features.5.0.12.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.5.0.16.nupkg.sha512",
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
@@ -90,10 +160,10 @@
         "version.txt"
       ]
     },
-    "System.IO.Pipelines/5.0.1": {
-      "sha512": "qEePWsaq9LoEEIqhbGe6D5J8c9IqQOUuTzzV6wn1POlfdLkJliZY3OlB0j0f17uMWlqZYjH7txj+2YbyrIA8Yg==",
+    "System.IO.Pipelines/5.0.2": {
+      "sha512": "Iew+dfa6FFiyvWBdRmXApixRY1db+beyutpIck4SOSe0NLM8FD/7AD54MscqVLhvfSMLHO7KadjTRT7fqxOGTA==",
       "type": "package",
-      "path": "system.io.pipelines/5.0.1",
+      "path": "system.io.pipelines/5.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -110,7 +180,7 @@
         "lib/netstandard2.0/System.IO.Pipelines.xml",
         "ref/netcoreapp2.0/System.IO.Pipelines.dll",
         "ref/netcoreapp2.0/System.IO.Pipelines.xml",
-        "system.io.pipelines.5.0.1.nupkg.sha512",
+        "system.io.pipelines.5.0.2.nupkg.sha512",
         "system.io.pipelines.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -128,42 +198,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alith\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\itsta\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
+      "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
       "projectName": "BM.Domain",
-      "projectPath": "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
-      "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-      "outputPath": "D:\\ShopCore\\ShopCore\\BM.Domain\\obj\\",
+      "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
+      "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://www.nuget.org/api/v2/": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj": {
-              "projectPath": "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj"
+            "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj": {
+              "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj"
             }
           }
         }
@@ -183,7 +251,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -192,7 +261,12 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
       }
     }
   }

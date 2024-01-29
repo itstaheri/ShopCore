@@ -60,11 +60,11 @@ namespace ServiceHost.Pages
             if (_exist.Exist(commend.Username) == true)
             {
                 ModelState.AddModelError(nameof(commend.Username), "کاربر دیگری با این نام کاربری وجود دارد");
+                return RedirectToPage();
 
 
             }
-                
-                return RedirectToPage();
+
 
 
             var result =_repository.Register(commend);

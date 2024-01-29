@@ -37,10 +37,11 @@ namespace ServiceHost
         public IConfiguration Configuration { get; }
         public IWebHostEnvironment Env { get; }
 
-        string ConnectionString = "Data Source =.; Initial Catalog = ShopCoreDB; Integrated Security = true";
 
         public void ConfigureServices(IServiceCollection services)
         {
+            string ConnectionString = Configuration.GetConnectionString("ShopCore");
+
             var mvcBuilder = services.AddRazorPages().AddMvcOptions(option => option.Filters.Add<SecurityPageFilter>()).AddRazorPagesOptions(option =>
               {
                   option.Conventions.AuthorizeAreaFolder("Admin", "/", "AdminArea");
@@ -100,18 +101,21 @@ namespace ServiceHost
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                app.UseHsts();
-            }
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //}
+            //else
+            //{
+            //    app.UseExceptionHandler("/Error");
+            //    app.UseHsts();
+            //}
+            app.UseDeveloperExceptionPage();
+
+
             app.UseAuthentication();
             app.UseCookiePolicy();
-            app.UseHttpsRedirection();
+           // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();

@@ -1,41 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ShopCore\\ShopCore\\ServiceHost\\ServiceHost.csproj": {}
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\ServiceHost\\ServiceHost.csproj": {}
   },
   "projects": {
-    "D:\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj",
         "projectName": "AM.Application.Contract",
-        "projectPath": "D:\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\AM.Application.Contract\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               }
             }
           }
@@ -52,11 +51,35 @@
           "dependencies": {
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
             }
           },
           "imports": [
@@ -65,7 +88,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -74,51 +98,50 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj",
         "projectName": "AM.Application",
-        "projectPath": "D:\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\AM.Application\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
               }
             }
           }
@@ -138,7 +161,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -147,51 +171,50 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj",
         "projectName": "AM.Configuration",
-        "projectPath": "D:\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\AM.Bootestrapper\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Bootestrapper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\Query\\Query.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Query\\Query.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj"
               }
             }
           }
@@ -217,7 +240,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -226,42 +250,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj",
         "projectName": "AM.Domain",
-        "projectPath": "D:\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\AM.Domain\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application.Contract\\AM.Application.Contract.csproj"
               }
             }
           }
@@ -281,7 +304,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -290,45 +314,44 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj",
         "projectName": "AM.Infrastracture.Efcore",
-        "projectPath": "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Domain\\AM.Domain.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               }
             }
           }
@@ -343,23 +366,37 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             }
           },
           "imports": [
@@ -368,7 +405,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -377,35 +415,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj",
         "projectName": "BM.Application.Contract",
-        "projectPath": "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -425,316 +462,13 @@
           "dependencies": {
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[5.0.12, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\ShopCore\\ShopCore\\BM.Application\\BM.Application.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\BM.Application\\BM.Application.csproj",
-        "projectName": "BM.Application",
-        "projectPath": "D:\\ShopCore\\ShopCore\\BM.Application\\BM.Application.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\BM.Application\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\ShopCore\\ShopCore\\BM.Configuration\\BM.Configuration.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\BM.Configuration\\BM.Configuration.csproj",
-        "projectName": "BM.Configuration",
-        "projectPath": "D:\\ShopCore\\ShopCore\\BM.Configuration\\BM.Configuration.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\BM.Configuration\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\BM.Application\\BM.Application.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Application\\BM.Application.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\Query\\Query.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Query\\Query.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "Microsoft.Extensions.DependencyInjection.Abstractions": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
-        "projectName": "BM.Domain",
-        "projectPath": "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\BM.Domain\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj",
-        "projectName": "BM.Infrastracture.Efcore",
-        "projectPath": "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             }
           },
           "imports": [
@@ -743,7 +477,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -752,45 +487,47 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application\\BM.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj",
-        "projectName": "DM.Application.Contract",
-        "projectPath": "D:\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\DM.Application.Contract\\obj\\",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application\\BM.Application.csproj",
+        "projectName": "BM.Application",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application\\BM.Application.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               }
             }
           }
@@ -810,7 +547,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -819,124 +557,53 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\DM.Application\\DM.Application.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Configuration\\BM.Configuration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\DM.Application\\DM.Application.csproj",
-        "projectName": "DM.Application",
-        "projectPath": "D:\\ShopCore\\ShopCore\\DM.Application\\DM.Application.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\DM.Application\\obj\\",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Configuration\\BM.Configuration.csproj",
+        "projectName": "BM.Configuration",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Configuration\\BM.Configuration.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Configuration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application\\BM.Application.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application\\BM.Application.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj",
-        "projectName": "DM.Configuration",
-        "projectPath": "D:\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\DM.Configuration\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net5.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
-        },
-        "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
-            "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\DM.Application\\DM.Application.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\DM.Application\\DM.Application.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj"
               }
             }
           }
@@ -962,7 +629,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -971,45 +639,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj",
-        "projectName": "DM.Domain",
-        "projectPath": "D:\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\DM.Domain\\obj\\",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
+        "projectName": "BM.Domain",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj"
-              },
-              "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Application.Contract\\BM.Application.Contract.csproj"
               }
             }
           }
@@ -1029,7 +693,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1038,51 +703,50 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj",
-        "projectName": "DM.infrastructure.Efcore",
-        "projectPath": "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\obj\\",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj",
+        "projectName": "BM.Infrastracture.Efcore",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Domain\\BM.Domain.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
               }
             }
           }
@@ -1097,27 +761,254 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj",
+        "projectName": "DM.Application.Contract",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application.Contract\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application\\DM.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application\\DM.Application.csproj",
+        "projectName": "DM.Application",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application\\DM.Application.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj",
+        "projectName": "DM.Configuration",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Configuration\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application\\DM.Application.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application\\DM.Application.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[5.0.0, )"
             }
@@ -1128,7 +1019,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1137,35 +1029,208 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj",
-        "projectName": "Frameworks",
-        "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\Frameworks\\obj\\",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj",
+        "projectName": "DM.Domain",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Application.Contract\\DM.Application.Contract.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj",
+        "projectName": "DM.infrastructure.Efcore",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Domain\\DM.Domain.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              },
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj",
+        "projectName": "Frameworks",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -1189,7 +1254,7 @@
             },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.AspNetCore.Mvc.Abstractions": {
               "target": "Package",
@@ -1222,7 +1287,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1231,35 +1297,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj",
         "projectName": "IM.Application.Contract",
-        "projectPath": "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -1282,7 +1347,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1291,48 +1357,47 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\IM.Application\\IM.Application.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application\\IM.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\IM.Application\\IM.Application.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application\\IM.Application.csproj",
         "projectName": "IM.Application",
-        "projectPath": "D:\\ShopCore\\ShopCore\\IM.Application\\IM.Application.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\IM.Application\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application\\IM.Application.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj"
               }
             }
           }
@@ -1352,7 +1417,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1361,48 +1427,47 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\IM.Configuration\\IM.Configuration.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Configuration\\IM.Configuration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\IM.Configuration\\IM.Configuration.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Configuration\\IM.Configuration.csproj",
         "projectName": "IM.Configuration",
-        "projectPath": "D:\\ShopCore\\ShopCore\\IM.Configuration\\IM.Configuration.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\IM.Configuration\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Configuration\\IM.Configuration.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Configuration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\IM.Application\\IM.Application.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Application\\IM.Application.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application\\IM.Application.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application\\IM.Application.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj"
               }
             }
           }
@@ -1428,7 +1493,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1437,42 +1503,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj",
         "projectName": "IM.Domain",
-        "projectPath": "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\IM.Domain\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj"
               }
             }
           }
@@ -1492,7 +1557,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1501,45 +1567,44 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj",
         "projectName": "IM.Infrastracture.Efcore",
-        "projectPath": "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
               }
             }
           }
@@ -1554,29 +1619,37 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             }
           },
           "imports": [
@@ -1585,7 +1658,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1594,51 +1668,50 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\Query\\Query.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\Query\\Query.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj",
         "projectName": "Query",
-        "projectPath": "D:\\ShopCore\\ShopCore\\Query\\Query.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\Query\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Infrastracture.Efcore\\BM.Infrastracture.Efcore.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.infrastructure.Efcore\\DM.infrastructure.Efcore.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Infrastracture.Efcore\\IM.Infrastracture.Efcore.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
               }
             }
           }
@@ -1658,7 +1731,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1667,60 +1741,59 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\ServiceHost\\ServiceHost.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\ServiceHost\\ServiceHost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\ServiceHost\\ServiceHost.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\ServiceHost\\ServiceHost.csproj",
         "projectName": "ServiceHost",
-        "projectPath": "D:\\ShopCore\\ShopCore\\ServiceHost\\ServiceHost.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\ServiceHost\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\ServiceHost\\ServiceHost.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\ServiceHost\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Bootestrapper\\AM.Configuration.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\BM.Configuration\\BM.Configuration.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\BM.Configuration\\BM.Configuration.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Configuration\\BM.Configuration.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\BM.Configuration\\BM.Configuration.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\DM.Configuration\\DM.Configuration.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\IM.Configuration\\IM.Configuration.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Configuration\\IM.Configuration.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Configuration\\IM.Configuration.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Configuration\\IM.Configuration.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\Query\\Query.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Query\\Query.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj"
               }
             }
           }
@@ -1737,17 +1810,21 @@
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[5.0.13, )"
+              "version": "[5.0.16, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.1.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -1764,7 +1841,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1776,42 +1854,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj",
         "projectName": "SettingManagement",
-        "projectPath": "D:\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\SettingManagement\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SettingManagement\\SettingManagement.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SettingManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               }
             }
           }
@@ -1828,25 +1905,35 @@
           "dependencies": {
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             }
           },
           "imports": [
@@ -1855,7 +1942,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1864,42 +1952,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj",
         "projectName": "SM.Application.Contracts",
-        "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               }
             }
           }
@@ -1916,7 +2003,17 @@
           "dependencies": {
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
             }
           },
           "imports": [
@@ -1925,7 +2022,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -1934,51 +2032,50 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\SM.Application\\SM.Application.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application\\SM.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\SM.Application\\SM.Application.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application\\SM.Application.csproj",
         "projectName": "SM.Application",
-        "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application\\SM.Application.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\SM.Application\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application\\SM.Application.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
               }
             }
           }
@@ -1998,7 +2095,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -2007,57 +2105,56 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj",
         "projectName": "SM.Configuration",
-        "projectPath": "D:\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\SM.Configuration\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Configuration\\SM.Configuration.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Configuration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Application\\AM.Application.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\Query\\Query.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Query\\Query.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Query\\Query.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Application\\SM.Application.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application\\SM.Application.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application\\SM.Application.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application\\SM.Application.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj"
               }
             }
           }
@@ -2083,7 +2180,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -2092,45 +2190,44 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj",
         "projectName": "SM.Domain",
-        "projectPath": "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\SM.Domain\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Domain\\IM.Domain.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Application.Contracts\\SM.Application.Contracts.csproj"
               }
             }
           }
@@ -2150,7 +2247,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -2159,48 +2257,47 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
+    "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj",
+        "projectUniqueName": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj",
         "projectName": "SM.Infrastructure.EfCore",
-        "projectPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj",
-        "packagesPath": "C:\\Users\\alith\\.nuget\\packages\\",
-        "outputPath": "D:\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\obj\\",
+        "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\SM.Infrastructure.EfCore.csproj",
+        "packagesPath": "C:\\Users\\itsta\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Infrastructure.EfCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\alith\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\itsta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\AM.Infrastracture.Efcore\\AM.Infrastracture.Efcore.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\Frameworks\\Frameworks.csproj"
               },
-              "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
-                "projectPath": "D:\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
+              "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\SM.Domain\\SM.Domain.csproj"
               }
             }
           }
@@ -2215,29 +2312,37 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.16, )"
             },
             "SmsIrRestful": {
               "target": "Package",
@@ -2250,7 +2355,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -2259,7 +2365,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

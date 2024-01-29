@@ -10,3 +10,15 @@ D:\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\Frameworks.csproj.CoreCompileIn
 D:\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\Frameworks.dll
 D:\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\ref\Frameworks.dll
 D:\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\Frameworks.pdb
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\bin\Debug\net5.0\Frameworks.deps.json
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\bin\Debug\net5.0\Frameworks.dll
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\bin\Debug\net5.0\Frameworks.pdb
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\Frameworks.csproj.AssemblyReference.cache
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\Frameworks.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\Frameworks.AssemblyInfoInputs.cache
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\Frameworks.AssemblyInfo.cs
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\Frameworks.csproj.CoreCompileInputs.cache
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\Frameworks.dll
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\refint\Frameworks.dll
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\Frameworks.pdb
+D:\Projects\ShopCore\ShopCore\ShopCore\Frameworks\obj\Debug\net5.0\ref\Frameworks.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zm5vIBzIAgdShxQIWXHS2mypyoYsckhSyS+cm2028OqLcrSVFDEINmxNGU2i7IugrO52t27HOITotv7E+V9I/A==",
+  "dgSpecHash": "7ALziP8tuGL6P74IMcixe+sY5uZzn7mpfoNIiiqPDwZzxTt5gjlBwCxlIMF90K7SAm2QqDI96a4bthIr+Bgl6w==",
   "success": true,
-  "projectFilePath": "D:\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj",
+  "projectFilePath": "D:\\Projects\\ShopCore\\ShopCore\\ShopCore\\IM.Application.Contract\\IM.Application.Contract.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

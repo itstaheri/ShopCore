@@ -71,8 +71,9 @@
                                     <span class="old_price">@Model.Product.DoublePrice.ToMoney() تومان</span>
                                     @if (Model.Product.PriceAfterDiscount != null)
                                     {
-                                        <span class="current_price">@double.Parse(Model.Product.PriceAfterDiscount).ToMoney() تومان </span>
-                                    }
+                                        <span class="current_price">@Model.Product.PriceAfterDiscount تومان </span>
+@*                                        <span class="current_price">@double.Parse(Model.Product.PriceAfterDiscount).ToMoney() تومان </span>
+*@                                    }
                                 </div>
                                 <div class="product_desc">
                                     <p>@Model.Product.ShortDescription</p>
